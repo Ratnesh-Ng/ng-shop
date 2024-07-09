@@ -21,7 +21,15 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@shared/const/*": ["./src/app/shared/constants/*"],
+      "@core/base/*": ["./src/app/core/base/*"],
+      "@core/components/*": ["./src/app/core/components/*"],
+      "@core/directives/*": ["./src/app/core/directives/*"],
+      "@core/pipe/*": ["./src/app/core/pipe/*"],
+      "@app/faker/*": ["./src/app/core/faker/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
