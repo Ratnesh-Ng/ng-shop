@@ -30,6 +30,7 @@
       "@core/pipe/*": ["./src/app/core/pipe/*"],
       "@app/faker/*": ["./src/app/core/faker/*"],
       "@app/modals/*": ["./src/app/core/modals/*"],
+      "@store/*": ["./src/app/pages/store/*"],
     }
   },
   "angularCompilerOptions": {
