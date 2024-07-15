@@ -22,7 +22,72 @@ const generateProductDescription = () => {
     return `${features} ${benefit}`;
 };
 
+const generateOffers = (numOffers: number) => {
+    let offers = [];
 
+    // Define meaningful link labels
+    const linkLabels = [
+        "Learn More",
+        "Get It Now",
+        "Discover",
+        "Explore",
+        "Find Out More",
+        "Shop Now",
+        "Check It Out"
+    ];
+
+    for (let i = 0; i < numOffers; i++) {
+        // Generate random number of info items (between 1 to 4)
+        const numInfoItems = faker.datatype.number({ min: 1, max: 4 });
+        let info = [];
+        for (let j = 0; j < numInfoItems; j++) {
+            // Generate random info text between 30 to 60 characters long
+            let infoText = faker.lorem.sentence();
+            while (infoText.length < 30 || infoText.length > 60) {
+                infoText = faker.lorem.sentence();
+            }
+            info.push(infoText);
+        }
+
+        let offer = {
+            title: faker.commerce.productName(),  // Generate a product name as title
+            info: info,  // Store info as array of sentences
+            link: faker.internet.url(),  // Generate a random URL
+            linkLabel: faker.helpers.arrayElement(linkLabels)  // Pick a random meaningful link label
+        };
+
+        offers.push(offer);
+    }
+
+    return offers;
+}
+
+const generateSpecifications = (numSpecifications: number) => {
+    let specifications = [];
+
+    // Define meaningful titles and corresponding generators
+    const specificationTypes = [
+        { title: "Main Trend", generator: () => faker.lorem.words(2) + ' ' + faker.word.words() },
+        { title: "Fit", generator: () => faker.helpers.arrayElement(["Oversized", "Slim Fit", "Regular Fit"]) },
+        { title: "Fabric", generator: () => faker.helpers.arrayElement(["Cotton", "Polyester", "Silk", "Denim"]) },
+        { title: "Color", generator: () => faker.color.human() + ' ' + faker.color.human() },
+        { title: "Season", generator: () => faker.helpers.arrayElement(["Spring", "Summer", "Autumn", "Winter"]) + ' ' + faker.helpers.arrayElement(["Collection", "Line"]) },
+        { title: "Occasion", generator: () => faker.helpers.arrayElement(["Casual", "Formal", "Party", "Work"]) + ' ' + faker.word.words() }
+    ];
+
+    // Generate specified number of specifications
+    for (let i = 0; i < numSpecifications; i++) {
+        // Randomly choose a specification type
+        const { title, generator } = faker.helpers.arrayElement(specificationTypes);
+
+        // Generate specification info
+        const info = generator();
+
+        specifications.push({ title, info });
+    }
+
+    return specifications;
+}
 
 // Function to generate random product details
 const createRandomProduct = () => {
@@ -30,6 +95,7 @@ const createRandomProduct = () => {
     const id = faker.number.int();
     const uuid = faker.string.uuid();
     const name = generateProductName();
+    const brand = faker.company.name();
     const description = generateProductDescription();
     const actualPrice = parseFloat(faker.commerce.price());
     const discountPercentage = faker.number.int({ min: 5, max: 50 });
@@ -47,13 +113,16 @@ const createRandomProduct = () => {
     }
 
     // Generate random sizes
-    const sizes = ['Small', 'Medium', 'Large', 'XL']; // Example sizes, customize as needed
-
+    const sizes = ['S', 'M', 'L', 'XL']; // Example sizes, customize as needed
+    const otherInfo = ['100% Original Products', 'Pay on delivery might be available', 'Easy 14 days returns and exchanges']
+    const offers = generateOffers(5);
+    const specifications = generateSpecifications(5)
     // Return object with generated details
     return {
         id: id,
         uuid: uuid,
         name: name,
+        brand: brand,
         description: description,
         actualPrice: actualPrice,
         sellingPrice: sellingPrice,
@@ -62,7 +131,10 @@ const createRandomProduct = () => {
         reviewsCount: reviewsCount,
         promotion: promotion,
         urls: urls,
-        sizes: sizes
+        sizes: sizes,
+        otherInfo: otherInfo,
+        offers: offers,
+        specifications: specifications
     };
 };
 

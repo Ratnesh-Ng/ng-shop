@@ -2,6 +2,7 @@ export interface Product {
     id: number;
     uuid: string;
     name: string;
+    brand: string;
     description: string;
     actualPrice: number;
     sellingPrice: number;
@@ -11,4 +12,19 @@ export interface Product {
     promotion: boolean;
     urls: string[];
     sizes: string[];
+    otherInfo:string[];
+    offers:Offers[],
+    specifications:Specifications[]
+}
+
+interface Offers{
+    title:string;
+    info:string[];
+    link:string
+    linkLabel:string
+}
+
+interface Specifications{
+    title:string;
+    info:string;
 }
