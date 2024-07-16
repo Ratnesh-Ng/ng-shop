@@ -31,10 +31,12 @@ export class Store<T> extends StoreOptions {
     set data(val: T) {
         this._data = val;
         this.updatedAt = new Date();
-        this.readyToRefresh = false;
-        if (this._options?.refreshAfter) {
-            clearTimeout(this._timeoutId);
-            this.setNextFetchTimeout(this._options.refreshAfter);
+        if (val) {
+            this.readyToRefresh = false;
+            if (this._options?.refreshAfter) {
+                clearTimeout(this._timeoutId);
+                this.setNextFetchTimeout(this._options.refreshAfter);
+            }
         }
     }
 

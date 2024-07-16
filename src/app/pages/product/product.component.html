@@ -1,4 +1,4 @@
-<div class="flex mt-12">
+<div class="flex mt-12" *ngIf="product$|async as product">
   <div class="w-7/12">
     <div class="columns-2 px-4 gap-2">
       <img class="py-1" *ngFor="let img of product.urls" [src]="img" alt="" srcset="">

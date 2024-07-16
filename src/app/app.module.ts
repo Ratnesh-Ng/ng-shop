@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -15,11 +16,12 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    HttpClientModule,
     HeaderComponent,
     FooterComponent
   ],
   providers: [
-    provideClientHydration()
+    // provideClientHydration() //TODO
   ],
   bootstrap: [AppComponent]
 })

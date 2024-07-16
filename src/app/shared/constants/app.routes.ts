@@ -1,7 +1,7 @@
 export const AppRoutes = {
     home: '/home',
     shop: '/shop',
-    product: '/product',
+    product: (UUID: string) => `/product/${UUID}`,
     login: '/auth/login',
     signup: '/auth/signup',
 };

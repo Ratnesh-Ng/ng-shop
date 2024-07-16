@@ -14,6 +14,6 @@ import { CoreModule } from "../../core/core.module";
     CommonModule,
     ProductRoutingModule,
     CoreModule
-]
+  ]
 })
 export class ProductModule { }

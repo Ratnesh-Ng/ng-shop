@@ -5,7 +5,7 @@ const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
   { path: 'shop', loadChildren: () => import('./pages/shop/shop.module').then(m => m.ShopModule) },
-  { path: 'product', loadChildren: () => import('./pages/product/product.module').then(m => m.ProductModule) },
+  { path: 'product/:UUID', loadChildren: () => import('./pages/product/product.module').then(m => m.ProductModule) },
   { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
 ];
 

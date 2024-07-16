@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { fakeProducts } from '@app/faker/product.faker';
+import { ProductStoreService } from '@store/product-store.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,10 @@ import { fakeProducts } from '@app/faker/product.faker';
 })
 export class HomeComponent {
 
-  products = fakeProducts(20);
+  private productStore: ProductStoreService = inject(ProductStoreService);
+  public products$ = this.productStore.queryProducts()
 
   log(event: any) {
-    console.log(event)
+    // console.log(event)
   }
 }

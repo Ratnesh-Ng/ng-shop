@@ -38,7 +38,7 @@ const generateOffers = (numOffers: number) => {
 
     for (let i = 0; i < numOffers; i++) {
         // Generate random number of info items (between 1 to 4)
-        const numInfoItems = faker.datatype.number({ min: 1, max: 4 });
+        const numInfoItems = faker.number.int({ min: 1, max: 4 });
         let info = [];
         for (let j = 0; j < numInfoItems; j++) {
             // Generate random info text between 30 to 60 characters long
@@ -90,7 +90,7 @@ const generateSpecifications = (numSpecifications: number) => {
 }
 
 // Function to generate random product details
-const createRandomProduct = () => {
+export const createFakeProduct = () => {
     // Generate random details
     const id = faker.number.int();
     const uuid = faker.string.uuid();
@@ -139,5 +139,4 @@ const createRandomProduct = () => {
 };
 
 // Example usage:
-export const fakeProduct = createRandomProduct();
-export const fakeProducts = (length: number) => Array.from<Product>({ length: length }).map(createRandomProduct);
+export const fakeProducts = (length: number) => Array.from<Product>({ length: length }).map(createFakeProduct);
