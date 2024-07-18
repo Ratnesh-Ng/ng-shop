@@ -15,7 +15,7 @@
         </div>
         <div class="flex items-center md:w-[40%] justify-between">
             <input class="hidden md:inline-block w-9/12 p-1 border-2" placeholder="Search for product brand and more" type="text" pInputText 
-            [(ngModel)]="fullText"/>
+            [(ngModel)]="fullText" (keydown.enter)="search()"/>
             <div class="space-x-4">
                 <span id="iconSeacrh" class="md:hidden pi pi-search"></span>
                 <span id="iconUser" class="hidden md:inline-block pi pi-user"></span>
