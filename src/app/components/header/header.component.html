@@ -1,4 +1,4 @@
-<nav>
+<nav class="fixed top-0 left-0 w-full bg-white z-40">
     <div class="flex justify-between p-4 px-8">
         <div class="flex space-x-8 items-center md:w-[50%]">
             <div class="space-x-4">
@@ -6,16 +6,23 @@
                 <a routerLink="/" class="text-2xl font-semibold text-orange-500 cursor-pointer">NG Shop</a>
             </div>
             <ul class="hidden flex-wrap space-x-8 md:flex">
-                <li class="cursor-pointer">Men</li>
-                <li class="cursor-pointer">Women</li>
-                <li class="cursor-pointer">Kid</li>
-                <li class="cursor-pointer">Home & Living</li>
-                <li class="cursor-pointer">Beauty</li>
+                <li class="cursor-pointer navbar-item" *ngFor="let options of menu.options let i =index">
+                    <a href="#" class="navbar-link">{{ options.name }}</a>
+                    <ul class="dropdown-menu flex">
+                        <li *ngFor="let category of options.category">
+                            <a class="text-[11px] font-bold uppercase text-orange-500" [href]="category.link">{{
+                                category.name }}</a>
+                            <div *ngFor="let subCategories of category.subCategories" class=" flex flex-col flex-wrap">
+                                <a class="text-[11px]" [href]="subCategories.link">{{ subCategories.name }}</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div class="flex items-center md:w-[40%] justify-between">
-            <input class="hidden md:inline-block w-9/12 p-1 border-2" placeholder="Search for product brand and more" type="text" pInputText 
-            [(ngModel)]="fullText" (keydown.enter)="search()"/>
+            <input class="hidden md:inline-block w-9/12 p-1 border-2" placeholder="Search for product brand and more"
+                type="text" pInputText [(ngModel)]="fullText" (keydown.enter)="search()" />
             <div class="space-x-4">
                 <span id="iconSeacrh" class="md:hidden pi pi-search"></span>
                 <span id="iconUser" class="hidden md:inline-block pi pi-user"></span>
