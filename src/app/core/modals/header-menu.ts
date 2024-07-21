@@ -1,6 +1,7 @@
 export interface HeaderMenu {
     options: {
         name: string;
+        link: string,
         category: HeaderCategory[]
     }[]
 }

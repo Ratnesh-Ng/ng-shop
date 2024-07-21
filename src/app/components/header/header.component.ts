@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { headerMenu } from '@app/faker/header-menu.faker';
 import { HeaderCategory, HeaderMenu } from '@app/modals/header-menu';
 import { BaseComponent } from '@core/base/base.component';
-import { removeExtraSpaces, removeSpecialCharacter } from '@core/utils/string.util';
+import { generateRoute, removeExtraSpaces, removeSpecialCharacter, specialCharacters } from '@core/utils/string.util';
 import { InputTextModule } from 'primeng/inputtext';
 @Component({
   selector: 'app-header',
@@ -22,8 +22,8 @@ export class HeaderComponent extends BaseComponent {
   public dropdownVisible = false;
 
   public search() {
-    const searchedKeyword = removeSpecialCharacter(removeExtraSpaces(this.fullText), "@/#");
-    const route = searchedKeyword?.split(" ")?.join('-');
+    const searchedKeyword = removeSpecialCharacter(removeExtraSpaces(this.fullText), specialCharacters);
+    const route = generateRoute(this.fullText);
     this.router.navigateByUrl(`/${route}?rawQuery=${searchedKeyword}`)
   }
   

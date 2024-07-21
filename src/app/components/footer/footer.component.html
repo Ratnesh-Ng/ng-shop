@@ -7,7 +7,7 @@
                 <nav class="mb-10 list-none">
                     <li *ngFor="let subGroup of group.group">
                         <a class="text-gray-500 hover:text-black text-[13px]"
-                            [href]="subGroup.link">{{subGroup.title|titlecase}}</a>
+                            [routerLink]="subGroup.link">{{subGroup.title|titlecase}}</a>
                     </li>
                 </nav>
             </div>

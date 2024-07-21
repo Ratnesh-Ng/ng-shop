@@ -67,7 +67,7 @@
         <b class="text-xs">{{offer.title}}</b>
         <p *ngFor="let offerInfo of offer.info" class="text-[13px] tracking-wide text-gray-600"><span
             class="mr-2">&#x2022;</span>{{offerInfo}}.</p>
-        <a class="text-[11px] text-orange-500 font-bold" [href]="offer.link">{{offer.linkLabel}}</a>
+        <a class="text-[11px] text-orange-500 font-bold" [routerLink]="offer.link">{{offer.linkLabel}}</a>
       </div>
       }
     </div>

@@ -1,11 +1,11 @@
 import { HeaderMenu } from "@app/modals/header-menu";
-import { faker } from "@faker-js/faker";
+import { generateRoute } from "@core/utils/string.util";
 
 // Function to generate subcategories
 const generateSubCategories = (subCategoryNames: string[]) => {
     return subCategoryNames.map((name: string) => ({
         name,
-        link: faker.internet.url()
+        link: generateRoute(name)
     }));
 };
 
@@ -13,7 +13,7 @@ const generateSubCategories = (subCategoryNames: string[]) => {
 const generateCategories = (categoryData: { name: string; subCategories: string[]; }[]) => {
     return categoryData.map(category => ({
         name: category.name,
-        link: faker.internet.url(),
+        link: generateRoute(category.name),
         subCategories: generateSubCategories(category.subCategories)
     }));
 };
@@ -96,22 +96,27 @@ export const headerMenu: HeaderMenu = {
     options: [
         {
             name: "Men",
+            link: "shop/men",
             category: generateCategories(categoryData.men)
         },
         {
             name: "Women",
+            link: "shop/women",
             category: generateCategories(categoryData.women)
         },
         {
             name: "Kids",
+            link: "shop/kids",
             category: generateCategories(categoryData.kids)
         },
         {
             name: "Home & Living",
+            link: "shop/home-living",
             category: generateCategories(categoryData.home)
         },
         {
             name: "Beauty",
+            link: "shop/beauty",
             category: generateCategories(categoryData.beauty)
         },
     ]

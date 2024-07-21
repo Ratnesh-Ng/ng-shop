@@ -1,4 +1,4 @@
-<nav class="navbar fixed top-0 left-0 w-full bg-white z-40" >
+<nav class="navbar fixed top-0 left-0 w-full bg-white z-40">
     <div class="flex justify-between px-8">
         <div class="flex space-x-8 items-center lg:w-[50%]">
             <div class="space-x-4 py-4">
@@ -8,7 +8,7 @@
             <ul class="hidden flex-wrap space-x-8 lg:flex h-full" (mouseleave)="hideDropdown()">
                 <li class="cursor-pointer flex items-center h-full" *ngFor="let options of menu.options"
                     (mouseenter)="showDropdown(options.category)">
-                    <a href="#" class="navbar-link">{{ options.name }}</a>
+                    <a [routerLink]="options.link" class="navbar-link">{{ options.name }}</a>
                 </li>
             </ul>
         </div>
@@ -28,10 +28,11 @@
 <ul class="dropdown-menu flex z-20" (mouseenter)="keepDropdownVisible()" (mouseleave)="hideDropdown()"
     [class.show]="dropdownVisible">
     <li *ngFor="let category of currentSubItems">
-        <a class="text-[11px] font-bold uppercase text-orange-500" [href]="category.link">{{
-            category.name }}</a>
-        <div *ngFor="let subCategories of category.subCategories" class=" flex flex-col flex-wrap">
-            <a class="text-[11px]" [href]="subCategories.link">{{ subCategories.name }}</a>
+        <a class="text-[11px] font-bold uppercase text-orange-500" [routerLink]="category.link">{{category.name }}</a>
+        <div *ngFor="let subCategories of category.subCategories" class="flex flex-col flex-wrap">
+            <a class="text-[11px] hover:font-bold text-gray-600 hover:text-black" [routerLink]="subCategories.link">
+                {{subCategories.name }}
+            </a>
         </div>
     </li>
 </ul>
