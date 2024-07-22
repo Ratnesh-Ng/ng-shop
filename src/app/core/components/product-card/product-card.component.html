@@ -1,5 +1,5 @@
 <a [routerLink]="appRoutes.product(data.uuid)">
-    <div id="card" class="cursor-pointer" (click)="OnClick.emit(this.data)">
+    <div id="card" class="cursor-pointer" (click)="OnClick.emit(this.data)" class="hover:shadow-md">
         <div id="image" class="relative h-[35vh]">
             <span *ngIf="data.promotion"
                 class="absolute right-3 top-3 z-10 rounded-sm bg-orange-500 p-[2px] text-[10px] text-white">AD</span>
@@ -7,16 +7,19 @@
             <span class="absolute bottom-3 left-3 bg-slate-100 px-[6px] py-1 text-[10px]">{{data.ratings}} ⭐ |
                 {{data.reviewsCount}}</span>
         </div>
-        <div id="description" class="space-y-1 mt-2">
-            <h3 id="p-name" class="font-semibold text-[14px]">{{data.name}}</h3>
-            <h4 id="p-description" class="text-[13px]">{{data.description|slice:0:60}}
-                @if(data.description.length>60){...}</h4>
+        <div id="description" class="p-2">
+            <h3 id="p-name" class="font-semibold text-[13px]">{{data.brand|slice:0:20}}</h3>
+            <h4 id="p-description" class="text-[12px] text-gray-600">{{data.name|slice:0:23}}@if(data.name.length>20){...}</h4>
             <div class="space-x-1">
                 <span class="text-[13px]">Rs. {{data.sellingPrice}}</span>
-                <span class="text-[11px] text-gray-500 line-through">Rs. {{data.actualPrice}}</span>
-                <span class="text-[11px] text-orange-500 opacity-70">({{data.discount}}% OFF)</span>
+                <span class="text-[11px] text-gray-600 line-through">Rs. {{data.actualPrice}}</span>
+                <span class="text-[11px] text-orange-500">({{data.discount}}% OFF)</span>
             </div>
-            <p class="text-[11px]">Only few left</p>
+            <p class="h-[11px] mb-2">
+                <span *ngIf="data.availableQuantity<50" class="text-[10px] text-orange-500 font-semibold">
+                    Only few left
+                </span>
+            </p>
         </div>
     </div>
 </a>

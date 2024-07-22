@@ -116,7 +116,8 @@ export const createFakeProduct = () => {
     const sizes = ['S', 'M', 'L', 'XL']; // Example sizes, customize as needed
     const otherInfo = ['100% Original Products', 'Pay on delivery might be available', 'Easy 14 days returns and exchanges']
     const offers = generateOffers(5);
-    const specifications = generateSpecifications(5)
+    const specifications = generateSpecifications(5);
+    const availableQuantity = faker.number.int({max:100});
     // Return object with generated details
     return {
         id: id,
@@ -134,7 +135,8 @@ export const createFakeProduct = () => {
         sizes: sizes,
         otherInfo: otherInfo,
         offers: offers,
-        specifications: specifications
+        specifications: specifications,
+        availableQuantity: availableQuantity
     };
 };
 

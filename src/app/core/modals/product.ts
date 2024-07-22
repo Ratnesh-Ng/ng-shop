@@ -15,6 +15,7 @@ export interface Product {
     otherInfo:string[];
     offers:Offers[],
     specifications:Specifications[]
+    availableQuantity:number
 }
 
 interface Offers{

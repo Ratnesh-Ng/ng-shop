@@ -1,1 +1,18 @@
-<p>shop works!</p>
+<div class="">
+    <p-carousel [value]="shopDashboard.carousel" [numVisible]="1" [numScroll]="3" [circular]="true"
+        autoplayInterval="3000">
+        <ng-template let-carousel pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 p-3 h-96">
+                <img [src]="carousel.image" class="h-full w-full object-cover" [routerLink]="carousel.link" />
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+<div *ngFor="let item of shopDashboard.options" class="space-y-10 mb-10 px-10" [ngClass]="item.optionsCss">
+    <h2 class="uppercase font-bold text-2xl text-gray-600">{{item.title}}</h2>
+    <div class="flex overflow-x-auto space-x-10 hide-scrollbar">
+        <div *ngFor="let card of item.cards" class="min-h-60 min-w-60" [ngClass]="card.cardCss">
+            <img [src]="card.image" class="h-full w-full object-cover" [routerLink]="card.link" />
+        </div>
+    </div>
+</div>
