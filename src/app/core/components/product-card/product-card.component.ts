@@ -9,5 +9,6 @@ import { BaseComponent } from '@core/base/base.component';
 })
 export class ProductCardComponent extends BaseComponent {
   @Input({ required: true }) data!: Product;
+  @Input() wishListed: boolean = false;
   @Output() OnClick: EventEmitter<Product> = new EventEmitter<Product>();
 }

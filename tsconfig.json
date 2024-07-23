@@ -31,7 +31,7 @@
       "@app/faker/*": ["./src/app/core/faker/*"],
       "@core/utils/*": ["./src/app/core/utils/*"],
       "@app/modals/*": ["./src/app/core/modals/*"],
-      "@store/*": ["./src/app/pages/store/*"],
+      "@store/*": ["./src/app/store/*"],
     }
   },
   "angularCompilerOptions": {

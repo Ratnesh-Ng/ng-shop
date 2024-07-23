@@ -1,5 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { fakeProducts } from '@app/faker/product.faker';
+import { Component, inject } from '@angular/core';
 import { ProductStoreService } from '@store/product-store.service';
 
 @Component({

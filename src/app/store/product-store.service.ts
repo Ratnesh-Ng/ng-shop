@@ -18,6 +18,7 @@ export class ProductStoreService {
   private productsLength: number = 20;
   private http: HttpClient = inject(HttpClient);
   public products: Store<Product[] | null> = new Store(null, { refreshAfter: { minutes: 5 } });
+  public wishListedProducts: Store<Product[] | null> = new Store(null);
 
   public queryProducts(): Observable<Product[] | null> {
     if ((this.products.data?.length ?? 0) < this.productsLength) {
@@ -53,4 +54,16 @@ export class ProductStoreService {
     )
   }
 
+  public queryWishListedProducts(): Observable<Product[] | null> {
+    if ((this.wishListedProducts.data?.length ?? 0) < 1) {
+      return this.http.get<Product[]>('../../../assets/dummy.json').pipe(
+        map(() => fakeProducts(7)),
+        tap((a) => { this.wishListedProducts.data = a; }),
+        catchError((e) => {
+          return throwError(() => e)
+        })
+      );
+    }
+    return of(this.wishListedProducts.data)
+  }
 }
