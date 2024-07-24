@@ -38,7 +38,7 @@ export class ProductStoreService {
   public queryProductByID(UUID: string): Observable<Product> {
     let product;
     if (UUID) {
-      product = this.products.data?.find(a => a.uuid == UUID);
+      product = this.wishListedProducts.data?.find(a => a.uuid == UUID) || this.products.data?.find(a => a.uuid == UUID);
     }
     if (product) {
       return of(product);
