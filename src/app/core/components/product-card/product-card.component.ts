@@ -15,8 +15,20 @@ export class ProductCardComponent extends BaseComponent {
   @Input() wishListed: boolean = false;
   @Output() OnClick: EventEmitter<ProductCardEvent> = new EventEmitter<ProductCardEvent>();
 
+  public mouseOver: boolean = false;
+
   public emitEvent(type: ProductCardEventType): void {
     this.OnClick.emit({ data: this.data, eventType: type });
   }
 
+  show() {
+    if(!this.wishListed){
+      this.mouseOver = true;
+    }
+  }
+
+  hide() {
+    this.mouseOver = false;
+
+  }
 }

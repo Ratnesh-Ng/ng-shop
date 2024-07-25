@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { ProductCardEvent } from '@core/components/product-card/type';
 import { ProductStoreService } from '@store/product-store.service';
 
 @Component({
@@ -11,7 +12,11 @@ export class HomeComponent {
   private productStore: ProductStoreService = inject(ProductStoreService);
   public products$ = this.productStore.queryProducts()
 
-  log(event: any) {
-    // console.log(event)
+  public onEventCapture(event: ProductCardEvent): void {
+    if (event.eventType == 'addToWishlist') {
+      if(this.productStore.wishListedProducts.data?.every(a=>a.uuid != event.data.uuid)){
+        this.productStore.wishListedProducts.data?.push(event.data);
+      }
+    }
   }
 }
