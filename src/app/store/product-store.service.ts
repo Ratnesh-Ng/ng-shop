@@ -1,18 +1,20 @@
 import { inject, Injectable } from '@angular/core';
 import { Product } from '@app/modals/product';
 import { Store } from './store';
-import { createFakeProduct, fakeProducts } from '@app/faker/product.faker';
+import { fakeProducts } from '@app/faker/product.faker';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
+import { DbService } from './db.service';
 
 @Injectable({ providedIn: 'root' })
 
 export class ProductStoreService {
 
-  constructor() {
+  constructor(private db:DbService) {
     this.products.refreshEvent.subscribe(() => {
       this.products.data = [...fakeProducts(this.productsLength), ...this.products.data ?? []]
     });
+    // db.clearProductsFromDB();
   }
 
   private productsLength: number = 20;
@@ -22,8 +24,7 @@ export class ProductStoreService {
 
   public queryProducts(): Observable<Product[] | null> {
     if ((this.products.data?.length ?? 0) < this.productsLength) {
-      return this.http.get<Product[]>('../../../assets/dummy.json').pipe(
-        map(() => fakeProducts(this.productsLength)),
+      return this.http.get<Product[]>('http://localhost:3000/products').pipe(
         tap((a) => {
           this.products.data = a;
         }),
@@ -43,8 +44,8 @@ export class ProductStoreService {
     if (product) {
       return of(product);
     }
-    return this.http.get<Product>('../../../assets/dummy.json').pipe(
-      map(() => createFakeProduct()),
+    return this.http.get<Product[]>(`http://localhost:3000/products?uuid=${UUID}`).pipe(
+      map((x) => x[0]),
       tap((a) => {
         this.products.data?.push(a);
       }),
