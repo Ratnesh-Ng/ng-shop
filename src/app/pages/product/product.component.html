@@ -39,8 +39,9 @@
         <button
           class="rounded uppercase bg-orange-500 p-3 px-16 text-[#ffffff] inline-flex justify-center items-center"><span
             class="material-icons mr-2 text-[18px]">local_mall</span> add to cart</button>
-        <button class="rounded uppercase border-[2px] p-3 px-16 inline-flex justify-center items-center"><span
-            class="material-icons-outlined mr-2 text-[18px]">favorite</span> Wishlist</button>
+        <button class="rounded uppercase border-[2px] p-3 px-16 inline-flex justify-center items-center"
+          (click)="addProductToWishlist(product)"><span class="material-icons-outlined mr-2 text-[18px]">favorite</span>
+          Wishlist</button>
       </div>
     </div>
     <hr />

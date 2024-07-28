@@ -23,4 +23,8 @@ export class ProductService extends BaseService {
     return this.http.post<Product>(this.apiRoutes.wishlist, data);
   }
 
+  public removeProductFromWishlist(id: string | number) {
+    return this.http.delete<Product>(this.apiRoutes.wishlistByID(id));
+  }
+
 }

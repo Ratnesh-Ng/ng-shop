@@ -5,6 +5,7 @@ import { fakeProducts } from '@app/faker/product.faker';
 import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
 import { BaseService } from '@core/base/base.service';
 import { ProductService } from '@services/product.service';
+import { getData, postData } from '@core/utils/common.util';
 
 @Injectable({ providedIn: 'root' })
 
@@ -66,5 +67,29 @@ export class ProductStoreService extends BaseService {
       );
     }
     return of(this.wishListedProducts.data)
+  }
+
+  public async addProductToWishlist(data: Product): Promise<boolean> {
+    // Check if wishListedProducts data exists and is not empty
+    if (this.wishListedProducts.data?.length) {
+      // Check if the product is not already wishlisted
+      if (this.wishListedProducts.data.every(a => a.id !== data.id)) {
+        try {
+          await postData(this.productService.addProductToWishlist(data));
+          this.wishListedProducts.data.push(data);
+          return true;
+        } catch (error) {
+          console.error("Error adding product to wishlist:", error);
+          return false;
+        }
+      }
+      // Return false if product is already in wishlist
+      return false;
+    } else {
+      // If wishListedProducts data is empty or undefined, fetch it
+      await getData(this.queryWishListedProducts());
+      // Retry adding product to wishlist after fetching
+      return this.addProductToWishlist(data);
+    }
   }
 }

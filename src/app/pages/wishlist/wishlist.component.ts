@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Product } from '@app/modals/product';
 import { BaseComponent } from '@core/base/base.component';
 import { ProductCardEvent } from '@core/components/product-card/type';
+import { postData } from '@core/utils/common.util';
 import { ProductStoreService } from '@store/product-store.service';
 import { Observable } from 'rxjs';
 
@@ -21,8 +22,10 @@ export class WishlistComponent extends BaseComponent {
 
   public onEventCapture(event: ProductCardEvent, index: number): void {
     if (event.eventType == 'removeFromWishlist') {
-      this.productStore.wishListedProducts.data?.splice(index, 1);
-      // this.products$ = this.queryWishListedProducts()
+      postData(this.productStore.productService.removeProductFromWishlist(event.data.id)).then(()=>{
+        this.productStore.wishListedProducts.data?.splice(index, 1);
+        this.products$ = this.queryWishListedProducts()
+      })
     }
   }
 }

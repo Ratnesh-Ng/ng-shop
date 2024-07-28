@@ -1,4 +1,12 @@
-<div id="card" class="cursor-pointer" class="hover:shadow-md" (mouseenter)="show()" (mouseleave)="hide()">
+<div id="card" class="hidden md:block cursor-pointer hover:shadow-md" (mouseenter)="show()" (mouseleave)="hide()">
+    <ng-container *ngTemplateOutlet="product;context:{data:data}"></ng-container>
+</div>
+
+<div id="card" class="md:hidden cursor-pointer hover:shadow-md">
+    <ng-container *ngTemplateOutlet="product;context:{data:data}"></ng-container>
+</div>
+
+<ng-template #product let-data="data">
     <div id="image" class="relative h-[35vh]">
         <button *ngIf="wishListed" (click)="emitEvent('removeFromWishlist')"
             class="absolute right-3 top-3 z-10 rounded-full bg-gray-300 bg-opacity-50 hover:bg-opacity-100 p-[2px] flex items-center justify-center">
@@ -12,13 +20,13 @@
         <span class="absolute bottom-3 left-3 bg-slate-100 px-[6px] py-1 text-[10px]">{{data.ratings}} ⭐ |
             {{data.reviewsCount}}</span>
     </div>
-    <div class="h-24 p-2" [ngClass]="{'border-x':wishListed}">
+    <div class="h-24 p-2 relative" [ngClass]="{'border-x':wishListed}">
         @if(!mouseOver){
+        <button (click)="emitEvent('addToWishlist')" class="absolute right-3 top-2 md:hidden">
+            <span class="pi pi-heart"></span>
+        </button>
         <a [routerLink]="appRoutes.product(data.uuid)">
-            <div id="description" class="relative">
-                <button (click)="emitEvent('addToWishlist')" class="absolute right-3 top-0 md:hidden">
-                    <span class="pi pi-heart"></span>
-                </button>
+            <div id="description">
                 <h3 id="p-name" class="font-semibold text-[13px]">{{data.brand|slice:0:20}}</h3>
                 <h4 id="p-description" class="text-[12px] text-gray-600">
                     {{data.name|slice:0:23}}@if(data.name.length>20){...}</h4>
@@ -41,8 +49,7 @@
             Move to bag
         </button>
     </div>
-</div>
-
+</ng-template>
 
 <ng-template #priceAndInfo let-data="data">
     <div class="space-x-1">
