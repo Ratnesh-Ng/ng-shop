@@ -32,6 +32,9 @@
       "@core/utils/*": ["./src/app/core/utils/*"],
       "@app/modals/*": ["./src/app/core/modals/*"],
       "@store/*": ["./src/app/store/*"],
+      "@core/service/*": ["./src/app/core/services/*"],
+      "@environment/*": ["./src/environment/*"],
+      "@services/*": ["./src/app/services/*"],
     }
   },
   "angularCompilerOptions": {

@@ -2,29 +2,30 @@ import { inject, Injectable } from '@angular/core';
 import { Product } from '@app/modals/product';
 import { Store } from './store';
 import { fakeProducts } from '@app/faker/product.faker';
-import { HttpClient } from '@angular/common/http';
 import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
-import { DbService } from './db.service';
+import { BaseService } from '@core/base/base.service';
+import { ProductService } from '@services/product.service';
 
 @Injectable({ providedIn: 'root' })
 
-export class ProductStoreService {
+export class ProductStoreService extends BaseService {
 
-  constructor(private db:DbService) {
+  constructor() {
+    super();
     this.products.refreshEvent.subscribe(() => {
       this.products.data = [...fakeProducts(this.productsLength), ...this.products.data ?? []]
     });
-    // db.clearProductsFromDB();
+    // this.db.clearProductsFromDB();
   }
 
   private productsLength: number = 20;
-  private http: HttpClient = inject(HttpClient);
+  public productService = inject(ProductService)
   public products: Store<Product[] | null> = new Store(null, { refreshAfter: { minutes: 5 } });
   public wishListedProducts: Store<Product[] | null> = new Store(null);
 
   public queryProducts(): Observable<Product[] | null> {
     if ((this.products.data?.length ?? 0) < this.productsLength) {
-      return this.http.get<Product[]>('http://localhost:3000/products').pipe(
+      return this.productService.queryProducts().pipe(
         tap((a) => {
           this.products.data = a;
         }),
@@ -44,7 +45,7 @@ export class ProductStoreService {
     if (product) {
       return of(product);
     }
-    return this.http.get<Product[]>(`http://localhost:3000/products?uuid=${UUID}`).pipe(
+    return this.productService.getProduct(UUID).pipe(
       map((x) => x[0]),
       tap((a) => {
         this.products.data?.push(a);
@@ -57,8 +58,7 @@ export class ProductStoreService {
 
   public queryWishListedProducts(): Observable<Product[] | null> {
     if ((this.wishListedProducts.data?.length ?? 0) < 1) {
-      return this.http.get<Product[]>('../../../assets/dummy.json').pipe(
-        map(() => fakeProducts(7)),
+      return this.productService.queryWishlist().pipe(
         tap((a) => { this.wishListedProducts.data = a; }),
         catchError((e) => {
           return throwError(() => e)

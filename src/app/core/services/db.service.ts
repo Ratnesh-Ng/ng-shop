@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { fakeProducts } from '@app/faker/product.faker';
 import { Product } from '@app/modals/product';
+import { ApiRoutes } from '@shared/const/api.routes';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -15,17 +16,18 @@ export class DbService {
     })
   }
 
+  protected apiRoutes = ApiRoutes;
   public allProductDeleted: Subject<void> = new Subject<void>();
   public clearProductsFromDB() {
     let counter = 0;
-    this.http.get<Product[]>('http://localhost:3000/products').subscribe({
+    this.http.get<Product[]>(this.apiRoutes.products).subscribe({
       next: (value) => {
         if (!value.length) {
           this.loadProductsInDB();
           return;
         }
         value.forEach(a => {
-          this.http.delete(`http://localhost:3000/products/${a.id}`).subscribe(() => {
+          this.http.delete(this.apiRoutes.productByID(a.id)).subscribe(() => {
             counter++;
             if (counter == value.length) {
               this.allProductDeleted.next();
@@ -40,7 +42,7 @@ export class DbService {
     fakeProducts(20).forEach(product => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { id, ...restValues } = product;
-      this.http.post('http://localhost:3000/products', restValues).subscribe();
+      this.http.post(this.apiRoutes.products, restValues).subscribe();
     })
   }
 }
