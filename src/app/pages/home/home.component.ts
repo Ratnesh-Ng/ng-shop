@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { BaseComponent } from '@core/base/base.component';
+import { ProductBase } from '@shared/base/product.base';
 import { ProductCardEvent } from '@core/components/product-card/type';
 import { ProductStoreService } from '@store/product-store.service';
 
@@ -8,9 +8,8 @@ import { ProductStoreService } from '@store/product-store.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent extends BaseComponent {
+export class HomeComponent extends ProductBase {
 
-  private productStore: ProductStoreService = inject(ProductStoreService);
   public products$ = this.productStore.queryProducts()
 
   public async onEventCapture(event: ProductCardEvent): Promise<void> {
@@ -18,4 +17,5 @@ export class HomeComponent extends BaseComponent {
       await this.productStore.addProductToWishlist(event.data)
     }
   }
+  
 }

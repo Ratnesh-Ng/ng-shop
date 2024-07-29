@@ -77,12 +77,14 @@ export class ProductStoreService extends BaseService {
         try {
           await postData(this.productService.addProductToWishlist(data));
           this.wishListedProducts.data.push(data);
+          this.showAddedToWishlistToast(data);
           return true;
         } catch (error) {
           console.error("Error adding product to wishlist:", error);
           return false;
         }
       }
+      this.showAddedToWishlistToast(data);
       // Return false if product is already in wishlist
       return false;
     } else {
@@ -92,4 +94,27 @@ export class ProductStoreService extends BaseService {
       return this.addProductToWishlist(data);
     }
   }
+
+  public async addProductToCart(data: Product): Promise<boolean> {
+    return true;
+  }
+
+  public showAddedToWishlistToast(data: Product) {
+    this.messageService.add({
+      severity: 'info',
+      summary: 'Product Added to Wishlist!',
+      detail: `You have successfully added ${data.name} to your wishlist.`,
+      life: 2000
+    })
+  }
+
+  public showAddedToCartToast(data: Product) {
+    this.messageService.add({
+        severity: 'success',
+        summary: 'Product Added to Cart!',
+        detail: `You have successfully added ${data.name} to your cart.`,
+        life: 2000 // duration in milliseconds
+    })
+}
+
 }

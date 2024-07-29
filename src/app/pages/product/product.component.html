@@ -1,10 +1,10 @@
-<div class="flex mt-12" *ngIf="product$|async as product">
-  <div class="w-7/12">
+<div class="md:flex mt-12 p-2" *ngIf="product$|async as product">
+  <div class="md:w-7/12">
     <div class="columns-2 px-4 gap-2">
       <img class="py-1" *ngFor="let img of product.urls" [src]="img" alt="" srcset="">
     </div>
   </div>
-  <div class="w-5/12 space-y-5">
+  <div class="mt-5 md:mt-0 md:w-5/12 space-y-5">
     <div class="">
       <b class="text-xl uppercase">{{product.brand}}</b>
       <span class="block text-gray-600 text-xl">{{product.name}}</span>
@@ -35,11 +35,11 @@
         </div>
         }
       </div>
-      <div class="font-semibold space-x-2 text-[13px]">
+      <div class="font-semibold md:space-x-2 text-[13px] space-y-2">
         <button
-          class="rounded uppercase bg-orange-500 p-3 px-16 text-[#ffffff] inline-flex justify-center items-center"><span
+          class="rounded uppercase bg-orange-500 p-3 px-16 text-[#ffffff] w-full md:w-fit inline-flex justify-center items-center"><span
             class="material-icons mr-2 text-[18px]">local_mall</span> add to cart</button>
-        <button class="rounded uppercase border-[2px] p-3 px-16 inline-flex justify-center items-center"
+        <button class="rounded uppercase border-[2px] p-3 px-16 w-full md:w-fit inline-flex justify-center items-center"
           (click)="addProductToWishlist(product)"><span class="material-icons-outlined mr-2 text-[18px]">favorite</span>
           Wishlist</button>
       </div>
@@ -49,7 +49,7 @@
       <b class="text-[13px] uppercase flex items-center">Delivery options <span
           class="material-icons-outlined ml-2 text-[18px]">local_shipping</span></b>
       <div class="">
-        <input type="text" placeholder="Enter pincode" />
+        <input type="text" placeholder="Enter pincode" class="w-full md:w-fit"/>
         <p class="" for="" class="text-gray-600 text-[10px]">Please enter PIN code to check delivery time & Pay on
           Delivery Availability</p>
       </div>

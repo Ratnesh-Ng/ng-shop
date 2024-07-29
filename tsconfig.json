@@ -24,6 +24,7 @@
     ],
     "paths": {
       "@shared/const/*": ["./src/app/shared/constants/*"],
+      "@shared/base/*": ["./src/app/shared/base/*"],
       "@core/base/*": ["./src/app/core/base/*"],
       "@core/components/*": ["./src/app/core/components/*"],
       "@core/directives/*": ["./src/app/core/directives/*"],

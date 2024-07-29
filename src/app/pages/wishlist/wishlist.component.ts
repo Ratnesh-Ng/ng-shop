@@ -1,9 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from '@app/modals/product';
-import { BaseComponent } from '@core/base/base.component';
+import { ProductBase } from '@shared/base/product.base';
 import { ProductCardEvent } from '@core/components/product-card/type';
 import { postData } from '@core/utils/common.util';
-import { ProductStoreService } from '@store/product-store.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,8 +10,9 @@ import { Observable } from 'rxjs';
   templateUrl: './wishlist.component.html',
   styleUrl: './wishlist.component.scss'
 })
-export class WishlistComponent extends BaseComponent {
-  private productStore: ProductStoreService = inject(ProductStoreService);
+
+export class WishlistComponent extends ProductBase {
+
   public totalWishListedItem = 0;
   public products$ = this.queryWishListedProducts();
 
@@ -22,10 +22,12 @@ export class WishlistComponent extends BaseComponent {
 
   public onEventCapture(event: ProductCardEvent, index: number): void {
     if (event.eventType == 'removeFromWishlist') {
-      postData(this.productStore.productService.removeProductFromWishlist(event.data.id)).then(()=>{
+      postData(this.productStore.productService.removeProductFromWishlist(event.data.id)).then(() => {
         this.productStore.wishListedProducts.data?.splice(index, 1);
         this.products$ = this.queryWishListedProducts()
       })
+    } else if (event.eventType == 'moveToBag') {
+      this.productStore.showAddedToCartToast(event.data);
     }
   }
 }
