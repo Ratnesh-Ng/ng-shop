@@ -1,6 +1,15 @@
 <div class="md:flex mt-12 p-2" *ngIf="product$|async as product">
   <div class="md:w-7/12">
-    <div class="columns-2 px-4 gap-2">
+    <div class="md:hidden">
+      <p-carousel [value]="product.urls" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="3000">
+        <ng-template let-carousel pTemplate="item">
+          <div class="border-1 surface-border border-round  h-96">
+            <img [src]="carousel" class="h-full w-full object-cover" [alt]="product.name" />
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <div class="columns-2 px-4 gap-2 hidden md:block">
       <img class="py-1" *ngFor="let img of product.urls" [src]="img" alt="" srcset="">
     </div>
   </div>
@@ -49,7 +58,7 @@
       <b class="text-[13px] uppercase flex items-center">Delivery options <span
           class="material-icons-outlined ml-2 text-[18px]">local_shipping</span></b>
       <div class="">
-        <input type="text" placeholder="Enter pincode" class="w-full md:w-fit"/>
+        <input type="text" placeholder="Enter pincode" class="w-full md:w-fit" />
         <p class="" for="" class="text-gray-600 text-[10px]">Please enter PIN code to check delivery time & Pay on
           Delivery Availability</p>
       </div>

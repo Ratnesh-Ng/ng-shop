@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
   { path: 'wishlist', loadChildren: () => import('./pages/wishlist/wishlist.module').then(m => m.WishlistModule) },
   { path: ':search', loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule) },
+  { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
 ];
 
 @NgModule({

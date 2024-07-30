@@ -6,7 +6,8 @@
                 <a routerLink="/" class="text-2xl font-semibold text-orange-500 cursor-pointer">NG Shop</a>
             </div>
             <div class="hidden lg:flex h-full" (mouseleave)="hideDropdown()">
-                <a [routerLink]="options.link" *ngFor="let options of menu.options" (mouseenter)="showDropdown(options.category)"
+                <a [routerLink]="options.link" *ngFor="let options of menu.options"
+                    (mouseenter)="showDropdown(options.category)"
                     class="px-4 cursor-pointer flex items-center h-full border-y-4 border-y-transparent hover:border-b-orange-500 hover:text-orange-600">
                     <span class="w-full text-xs font-semibold uppercase ">{{ options.name }}</span>
                 </a>
@@ -19,7 +20,7 @@
                 <span id="iconSeacrh" class="lg:hidden pi pi-search"></span>
                 <span id="iconUser" class="hidden lg:inline-block pi pi-user"></span>
                 <a id="iconWishlist" routerLink="/wishlist"><span class="pi pi-heart"></span></a>
-                <span id="iconCart" class="pi pi-shopping-bag"></span>
+                <a id="iconCart" routerLink="/checkout/cart"><span class="pi pi-shopping-bag"></span></a>
             </div>
         </div>
     </div>
