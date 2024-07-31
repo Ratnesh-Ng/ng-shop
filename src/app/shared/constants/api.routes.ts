@@ -7,5 +7,7 @@ export const ApiRoutes = {
     productByUUID: (UUID: string) => `${baseUrl}/products?uuid=${UUID}`,
     productByID: (ID: string | number) => `${baseUrl}/products/${ID}`,
     products: `${baseUrl}/products`,
+    offers: `${baseUrl}/offers`,
+    offerByID: (ID: string | number) => `${baseUrl}/offers/${ID}`,
 };
 

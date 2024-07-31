@@ -23,7 +23,7 @@ const generateProductDescription = () => {
 };
 
 const generateOffers = (numOffers: number) => {
-    let offers = [];
+    const offers = [];
 
     // Define meaningful link labels
     const linkLabels = [
@@ -39,7 +39,7 @@ const generateOffers = (numOffers: number) => {
     for (let i = 0; i < numOffers; i++) {
         // Generate random number of info items (between 1 to 4)
         const numInfoItems = faker.number.int({ min: 1, max: 4 });
-        let info = [];
+        const info = [];
         for (let j = 0; j < numInfoItems; j++) {
             // Generate random info text between 30 to 60 characters long
             let infoText = faker.lorem.sentence();
@@ -49,7 +49,7 @@ const generateOffers = (numOffers: number) => {
             info.push(infoText);
         }
 
-        let offer = {
+        const offer = {
             title: faker.commerce.productName(),  // Generate a product name as title
             info: info,  // Store info as array of sentences
             link: faker.internet.url(),  // Generate a random URL
@@ -63,7 +63,7 @@ const generateOffers = (numOffers: number) => {
 }
 
 const generateSpecifications = (numSpecifications: number) => {
-    let specifications = [];
+    const specifications = [];
 
     // Define meaningful titles and corresponding generators
     const specificationTypes = [

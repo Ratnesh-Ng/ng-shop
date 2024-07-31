@@ -132,7 +132,7 @@
                         </div>
                         <button class="absolute top-2 right-2"><span class="material-icons">close</span></button>
                     </div>
-                    
+
                 </div>
                 <div class="border p-4 rounded-md flex justify-between items-center">
                     <div class="flex items-center space-x-2">
@@ -147,7 +147,54 @@
                 </div>
             </div>
         </div>
-        <div class="w-3/12 p-2"></div>
+        <div class="w-3/12 p-2 pl-4">
+            <div class="space-y-4 text-[12px] font-semibold">
+                <div id="coupon" class="space-y-2 border-b pb-4">
+                    <div class="uppercase text-[11px] text-gray-600">Coupons</div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex justify-between items-center space-x-4">
+                            <span class="material-icons-outlined text-[20px]">sell</span>
+                            <span class="capitalize font-semibold">Apply Coupons</span>
+                        </div>
+                        <button
+                            class="rounded-[2px] border border-orange-500 font-semibold px-3 py-1 uppercase text-orange-600 align-middle">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+                <div id="donation" class="space-y-4 border-b pb-4">
+                    <div class="uppercase text-[11px] text-gray-600">
+                        support transformative social work in india
+                    </div>
+                    <div class="space-x-2 flex items-center">
+                        <input type="checkbox" name="" id=""> <span class="font-bold">Donate and make a
+                            difference</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button *ngFor="let item of [10,20,50,100]" class="rounded-3xl border text-center p-2 px-3 font-bold">{{item|currency:'INR'}}</button>
+                    </div>
+                    <button class="capitalize text-orange-500">Know more</button>
+                </div>
+                <div id="price-breakup" class="space-y-4 border-b pb-4">
+                    <div class="text-gray-600 space-x-1"><span class="uppercase">product details</span><span class="text-[10px]">(2 Items)</span></div>
+                    <div class="grid grid-cols-3 gap-y-2 font-normal">
+                       <div class="col-span-2">Total MRP</div><div class="text-right">{{1205|currency:'INR'}}</div>
+                       <div class="col-span-2">Discount on MRP</div><div class="text-right text-green-600">{{-500|currency:'INR'}}</div>
+                       <div class="col-span-2">Coupon Discount</div><div class="text-right text-orange-500">Apply Coupon</div>
+                       <div class="col-span-2">Platform Fee</div><div class="text-right">{{20|currency:'INR'}}</div>
+                       <div class="col-span-2">Shipping Fee</div><div class="text-right text-green-600">Free</div>
+                    </div>
+                </div>
+                <div id="total" class="space-y-4">
+                    <div class="flex justify-between items-center font-bold text-[13px]">
+                        <span class="uppercase">total amount</span><span>{{692|currency:'INR'}}</span>
+                    </div>
+                    <button class="uppercase text-center py-3 w-full bg-orange-500 text-white rounded">
+                        place order
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- border border-red-500 -->

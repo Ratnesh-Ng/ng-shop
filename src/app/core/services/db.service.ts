@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { generateFakeOffer } from '@app/faker/offer.faker';
 import { fakeProducts } from '@app/faker/product.faker';
 import { Product } from '@app/modals/product';
 import { ApiRoutes } from '@shared/const/api.routes';
@@ -10,27 +12,33 @@ import { Subject } from 'rxjs';
 })
 export class DbService {
 
+  protected apiRoutes = ApiRoutes;
+
   constructor(private http: HttpClient) {
-    this.allProductDeleted.subscribe(() => {
-      this.loadProductsInDB();
+
+    this.allDataDeleted.subscribe((a) => {
+      this.loadDateInDB(a);
     })
+
+    this.clearDataFromDB({ data: generateFakeOffer(), getUrl: this.apiRoutes.offers, getOneUrl: this.apiRoutes.offerByID });
+    this.clearDataFromDB({ data: fakeProducts(20), getUrl: this.apiRoutes.products, getOneUrl: this.apiRoutes.productByID });
   }
 
-  protected apiRoutes = ApiRoutes;
-  public allProductDeleted: Subject<void> = new Subject<void>();
-  public clearProductsFromDB() {
+
+  public allDataDeleted: Subject<{ getUrl: string, data: any[] }> = new Subject<{ getUrl: string, data: any[] }>();
+  public clearDataFromDB(options: { getUrl: string, getOneUrl: (ID: string | number) => string, data: any[] }) {
     let counter = 0;
-    this.http.get<Product[]>(this.apiRoutes.products).subscribe({
+    this.http.get<Product[]>(options.getUrl).subscribe({
       next: (value) => {
         if (!value.length) {
-          this.loadProductsInDB();
+          this.loadDateInDB({ getUrl: options.getUrl, data: options.data });
           return;
         }
         value.forEach(a => {
-          this.http.delete(this.apiRoutes.productByID(a.id)).subscribe(() => {
+          this.http.delete(options.getOneUrl(a.id)).subscribe(() => {
             counter++;
             if (counter == value.length) {
-              this.allProductDeleted.next();
+              this.allDataDeleted.next({ getUrl: options.getUrl, data: options.data });
             }
           });
         });
@@ -38,11 +46,11 @@ export class DbService {
     })
   }
 
-  public loadProductsInDB() {
-    fakeProducts(20).forEach(product => {
+  public loadDateInDB(options: { getUrl: string, data: any[] }) {
+    options.data.forEach(data => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { id, ...restValues } = product;
-      this.http.post(this.apiRoutes.products, restValues).subscribe();
+      const { id, ...restValues } = data;
+      this.http.post(options.getUrl, restValues).subscribe();
     })
   }
 }
