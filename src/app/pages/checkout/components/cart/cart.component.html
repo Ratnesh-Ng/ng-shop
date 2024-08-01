@@ -20,17 +20,25 @@
                         <span class="material-icons text-sm">local_offer</span>
                         <span>Available Offers</span>
                     </div>
-                    <div>
-                        <p class="text-wrap text-[11px] text-gray-600"><span class="mr-2">&#x2022;</span>Lorem ipsum
-                            dolor sit amet
-                            consectetur adipisicing elit. Ea repellendus consequuntur voluptas facilis lcmalc alsmclma
-                            akscml</p>
-                    </div>
-                    <div>
-                        <button
-                            class="space-x-2 flex items-center text-[12px] font-semibold capitalize text-orange-500"><span>Show
-                                More</span><span class="material-icons text-sm">expand_more</span></button>
-                    </div>
+                    <ng-container *ngIf="offers|async as offers">
+                        <div *ngFor="let offer of offers|slice:0:VisibleOffers" class="flex space-x-2 items-center">
+                            <span>&#x2022;</span><span class="text-wrap text-[11px] text-gray-600">{{offer.info}}</span>
+                        </div>
+                        <div>
+                            <button
+                                (click)="VisibleOffers === offers.length?VisibleOffers = 1:VisibleOffers = offers.length"
+                                class="space-x-2 flex items-center text-[12px] font-semibold capitalize text-orange-500">
+                                <ng-container *ngIf="VisibleOffers === 1">
+                                    <span>Show More</span>
+                                    <span class="material-icons text-sm">expand_more</span>
+                                </ng-container>
+                                <ng-container *ngIf="VisibleOffers === offers.length">
+                                    <span>Show Less</span>
+                                    <span  class="material-icons text-sm">keyboard_arrow_up</span>
+                                </ng-container>
+                            </button>
+                        </div>
+                    </ng-container>
                 </div>
                 <div id="action-add-remove" class="p-4 flex justify-between items-center text-sm">
                     <div class="space-x-2 flex items-center">
@@ -171,18 +179,25 @@
                             difference</span>
                     </div>
                     <div class="flex space-x-2">
-                        <button *ngFor="let item of [10,20,50,100]" class="rounded-3xl border text-center p-2 px-3 font-bold">{{item|currency:'INR'}}</button>
+                        <button *ngFor="let item of [10,20,50,100]"
+                            class="rounded-3xl border text-center p-2 px-3 font-bold">{{item|currency:'INR'}}</button>
                     </div>
                     <button class="capitalize text-orange-500">Know more</button>
                 </div>
                 <div id="price-breakup" class="space-y-4 border-b pb-4">
-                    <div class="text-gray-600 space-x-1"><span class="uppercase">product details</span><span class="text-[10px]">(2 Items)</span></div>
+                    <div class="text-gray-600 space-x-1"><span class="uppercase">product details</span><span
+                            class="text-[10px]">(2 Items)</span></div>
                     <div class="grid grid-cols-3 gap-y-2 font-normal">
-                       <div class="col-span-2">Total MRP</div><div class="text-right">{{1205|currency:'INR'}}</div>
-                       <div class="col-span-2">Discount on MRP</div><div class="text-right text-green-600">{{-500|currency:'INR'}}</div>
-                       <div class="col-span-2">Coupon Discount</div><div class="text-right text-orange-500">Apply Coupon</div>
-                       <div class="col-span-2">Platform Fee</div><div class="text-right">{{20|currency:'INR'}}</div>
-                       <div class="col-span-2">Shipping Fee</div><div class="text-right text-green-600">Free</div>
+                        <div class="col-span-2">Total MRP</div>
+                        <div class="text-right">{{1205|currency:'INR'}}</div>
+                        <div class="col-span-2">Discount on MRP</div>
+                        <div class="text-right text-green-600">{{-500|currency:'INR'}}</div>
+                        <div class="col-span-2">Coupon Discount</div>
+                        <div class="text-right text-orange-500">Apply Coupon</div>
+                        <div class="col-span-2">Platform Fee</div>
+                        <div class="text-right">{{20|currency:'INR'}}</div>
+                        <div class="col-span-2">Shipping Fee</div>
+                        <div class="text-right text-green-600">Free</div>
                     </div>
                 </div>
                 <div id="total" class="space-y-4">

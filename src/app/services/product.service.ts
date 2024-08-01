@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Offer } from '@app/modals/offer';
 import { Product } from '@app/modals/product';
 import { BaseService } from '@core/base/base.service';
 
@@ -25,6 +26,10 @@ export class ProductService extends BaseService {
 
   public removeProductFromWishlist(id: string | number) {
     return this.http.delete<Product>(this.apiRoutes.wishlistByID(id));
+  }
+
+  public queryOffers() {
+    return this.http.get<Offer[]>(this.apiRoutes.offers);
   }
 
 }

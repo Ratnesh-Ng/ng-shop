@@ -6,6 +6,7 @@ import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
 import { BaseService } from '@core/base/base.service';
 import { ProductService } from '@services/product.service';
 import { getData, postData } from '@core/utils/common.util';
+import { Offer } from '@app/modals/offer';
 
 @Injectable({ providedIn: 'root' })
 
@@ -23,6 +24,7 @@ export class ProductStoreService extends BaseService {
   public productService = inject(ProductService)
   public products: Store<Product[] | null> = new Store(null, { refreshAfter: { minutes: 5 } });
   public wishListedProducts: Store<Product[] | null> = new Store(null);
+  public offers: Store<Offer[] | null> = new Store(null);
 
   public queryProducts(): Observable<Product[] | null> {
     if ((this.products.data?.length ?? 0) < this.productsLength) {
@@ -99,6 +101,20 @@ export class ProductStoreService extends BaseService {
     return true;
   }
 
+  public queryOffers(): Observable<Offer[] | null> {
+    if (!this.offers.data?.length) {
+      return this.productService.queryOffers().pipe(
+        tap((a) => {
+          this.offers.data = a;
+        }),
+        catchError((e) => {
+          return throwError(() => e)
+        })
+      );
+    }
+    return of(this.offers.data)
+  }
+
   public showAddedToWishlistToast(data: Product) {
     this.messageService.add({
       severity: 'info',
@@ -110,11 +126,11 @@ export class ProductStoreService extends BaseService {
 
   public showAddedToCartToast(data: Product) {
     this.messageService.add({
-        severity: 'success',
-        summary: 'Product Added to Cart!',
-        detail: `You have successfully added ${data.name} to your cart.`,
-        life: 2000 // duration in milliseconds
+      severity: 'success',
+      summary: 'Product Added to Cart!',
+      detail: `You have successfully added ${data.name} to your cart.`,
+      life: 2000 // duration in milliseconds
     })
-}
+  }
 
 }

@@ -1,22 +1,21 @@
 {
   "products": [
     {
-      "id": "89fe",
-      "uuid": "a622a17e-edbb-41ba-bf29-e84343dfd0b0",
-      "name": "Tasty Soft Portable Speaker",
-      "brand": "Weimann, Wyman and Kutch",
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals Balanced encompassing paradigm",
-      "actualPrice": 586,
-      "sellingPrice": 363.32,
-      "discount": 38,
-      "ratings": 0.1,
-      "reviewsCount": 162,
-      "promotion": false,
+      "id": "86f7",
+      "uuid": "ab264cc9-c64c-41fa-b644-a73b20434b6c",
+      "name": "Licensed Cotton Watch",
+      "brand": "Reinger LLC",
+      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design Switchable client-server parallelism",
+      "actualPrice": 512,
+      "sellingPrice": 261.12,
+      "discount": 49,
+      "ratings": 2.5,
+      "reviewsCount": 93,
+      "promotion": true,
       "urls": [
-        "https://loremflickr.com/640/480?lock=3026063089205248",
-        "https://loremflickr.com/640/480?lock=1043879050608640",
-        "https://loremflickr.com/640/480?lock=8666766595063808",
-        "https://picsum.photos/seed/DMaUo2I/640/480"
+        "https://picsum.photos/seed/7WYHUP7/640/480",
+        "https://picsum.photos/seed/BJ5sqLPtsL/640/480",
+        "https://picsum.photos/seed/k2oKvoV/640/480"
       ],
       "sizes": [
         "S",
@@ -31,401 +30,930 @@
       ],
       "offers": [
         {
-          "title": "Recycled Fresh Table",
+          "title": "Sleek Frozen Mouse",
           "info": [
-            "Tabgo nam vinum eveniet deporto pectus sopor patruus.",
-            "Coerceo adamo summisse aestus.",
-            "Uterque sint culpa pariatur sol volo caelum.",
-            "Vergo cuppedia civitas deprecator usus."
+            "Velum decipio totus arguo solum velit contra sapiente alii.",
+            "Aqua vis vomica amicitia inventore confero illum.",
+            "Asporto peccatus aperiam aveho territo ascit contigo libero.",
+            "Vito demum tres aeternus terminatio."
           ],
-          "link": "https://growing-netball.biz",
-          "linkLabel": "Get It Now"
+          "link": "https://shoddy-discourse.info/",
+          "linkLabel": "Explore"
         },
         {
-          "title": "Fantastic Steel Chips",
+          "title": "Practical Soft Mouse",
           "info": [
-            "Demergo cinis confero absque cito terreo corpus ter."
+            "Ulciscor vociferor color carbo avarus tener vita aiunt."
           ],
-          "link": "https://lavish-ptarmigan.name/",
-          "linkLabel": "Shop Now"
+          "link": "https://mediocre-circumstance.com",
+          "linkLabel": "Find Out More"
         },
         {
-          "title": "Oriental Fresh Bike",
+          "title": "Elegant Wooden Towels",
           "info": [
-            "Vito amissio appositus asporto abduco atqui.",
-            "Barba at cernuus considero colligo adopto antea apud arcus."
+            "Adficio vito valetudo deinde subnecto.",
+            "Adhuc taedium annus animus careo vere termes ipsa.",
+            "Vapulus temeritas beneficium tamquam."
           ],
-          "link": "https://circular-mud.org",
+          "link": "https://rowdy-skate.net/",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Fantastic Metal Towels",
+          "info": [
+            "Valens quibusdam pax cito cibo tepidus certus.",
+            "Aveho volo adstringo mollitia texo.",
+            "Demum utrum sperno color defungo creber aptus universe."
+          ],
+          "link": "https://creamy-licence.info/",
           "linkLabel": "Learn More"
         },
         {
-          "title": "Bespoke Rubber Hat",
+          "title": "Bespoke Concrete Mouse",
           "info": [
-            "Ultra facere avarus votum conor amoveo."
+            "Vester sol suus recusandae copia."
           ],
-          "link": "https://partial-divider.info",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Elegant Concrete Keyboard",
-          "info": [
-            "Curriculum tenuis crastinus subiungo tandem auctus.",
-            "Thorax quis distinctio dolores torrens."
-          ],
-          "link": "https://half-vest.com",
-          "linkLabel": "Shop Now"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Season",
-          "info": "Summer Collection"
-        },
-        {
-          "title": "Season",
-          "info": "Autumn Collection"
-        },
-        {
-          "title": "Color",
-          "info": "magenta teal"
-        },
-        {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Fabric",
-          "info": "Cotton"
-        }
-      ],
-      "availableQuantity": 68
-    },
-    {
-      "id": "33fc",
-      "uuid": "b143d09a-d686-419e-ae6f-e0947c147fca",
-      "name": "Gorgeous Fresh Coffee Maker",
-      "brand": "Wisoky LLC",
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Configurable composite benchmark",
-      "actualPrice": 886,
-      "sellingPrice": 744.24,
-      "discount": 16,
-      "ratings": 3.8,
-      "reviewsCount": 112,
-      "promotion": true,
-      "urls": [
-        "https://picsum.photos/seed/Yj7xLZ/640/480",
-        "https://loremflickr.com/640/480?lock=5115795967311872",
-        "https://picsum.photos/seed/otYBy0x/640/480",
-        "https://picsum.photos/seed/epVPg5T/640/480",
-        "https://loremflickr.com/640/480?lock=8006669894156288",
-        "https://loremflickr.com/640/480?lock=5887398353305600"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Elegant Concrete Shoes",
-          "info": [
-            "Cupio advoco vehemens varietas.",
-            "Baiulus alioqui supplanto clam."
-          ],
-          "link": "https://dependable-transformation.biz",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Fantastic Wooden Pants",
-          "info": [
-            "Amplus admoneo audentia vinco cometes aufero confero.",
-            "Aveho validus strenuus vilitas adsidue consectetur tactus."
-          ],
-          "link": "https://flustered-overhead.info/",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Rustic Steel Ball",
-          "info": [
-            "Tabgo sponte esse aperio subvenio suasoria pecto.",
-            "Sponte varietas surculus angelus certus suscipit antepono.",
-            "Solus dolore caritas vir quidem cultura demitto.",
-            "Ventus cribro carcer thermae teneo ager ter umquam usque."
-          ],
-          "link": "https://fond-dickey.info/",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Tasty Bronze Tuna",
-          "info": [
-            "Odit traho reprehenderit cupressus curatio texo."
-          ],
-          "link": "https://bright-cinder.com",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Electronic Steel Car",
-          "info": [
-            "Universe accommodo cupressus audax vere vereor.",
-            "Infit confido enim caritas decor incidunt vulpes certus.",
-            "Deprimo torrens censura cerno cultura desolo alter.",
-            "Demitto suus viscus cuppedia abbas."
-          ],
-          "link": "https://delectable-papa.com/",
-          "linkLabel": "Get It Now"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Fabric",
-          "info": "Denim"
-        },
-        {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Color",
-          "info": "blue silver"
-        },
-        {
-          "title": "Fabric",
-          "info": "Polyester"
-        },
-        {
-          "title": "Color",
-          "info": "black olive"
-        }
-      ],
-      "availableQuantity": 0
-    },
-    {
-      "id": "615d",
-      "uuid": "e7667a1a-464d-45ed-8ceb-438b248c95ad",
-      "name": "Unbranded Wooden Running Shoes",
-      "brand": "Abbott - Boyle",
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit Implemented non-volatile Graphic Interface",
-      "actualPrice": 423,
-      "sellingPrice": 368.01,
-      "discount": 13,
-      "ratings": 4,
-      "reviewsCount": 233,
-      "promotion": false,
-      "urls": [
-        "https://picsum.photos/seed/RB5C0VKQq/640/480",
-        "https://loremflickr.com/640/480?lock=5961768872443904",
-        "https://picsum.photos/seed/3Lstv/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Gorgeous Bronze Computer",
-          "info": [
-            "Dolores caput trans defero vilis thorax.",
-            "Versus iste commodo conventus earum cunabula accusator."
-          ],
-          "link": "https://limp-infancy.org",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Tasty Rubber Pants",
-          "info": [
-            "Conforto vere textilis spoliatio torqueo.",
-            "Theca thalassinus convoco cunae.",
-            "Defluo videlicet combibo veritatis conatus crudelis cum."
-          ],
-          "link": "https://frizzy-readiness.com",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Oriental Plastic Salad",
-          "info": [
-            "Vitium curtus pel canis quis assentator sono victus.",
-            "Asperiores numquam adulescens."
-          ],
-          "link": "https://swift-concern.biz/",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Small Cotton Towels",
-          "info": [
-            "Sordeo urbanus theca contabesco vivo calcar vulpes.",
-            "Cogo adulatio repudiandae deleo tenuis.",
-            "Creptio vomer aequitas cattus cinis viduo."
-          ],
-          "link": "https://puzzling-pet.biz",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Licensed Rubber Ball",
-          "info": [
-            "Abeo adipiscor terror patria ventosus."
-          ],
-          "link": "https://speedy-parable.biz",
-          "linkLabel": "Get It Now"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Fit",
-          "info": "Slim Fit"
-        },
-        {
-          "title": "Main Trend",
-          "info": "advoco atrocitas language"
-        },
-        {
-          "title": "Main Trend",
-          "info": "acsi cohaero when seriously brightly"
-        },
-        {
-          "title": "Occasion",
-          "info": "Casual mmm inject"
-        },
-        {
-          "title": "Main Trend",
-          "info": "tenuis succedo grey psst"
-        }
-      ],
-      "availableQuantity": 69
-    },
-    {
-      "id": "95fd",
-      "uuid": "72e6cbb6-c086-40ac-b9a9-865fc61d1d67",
-      "name": "Awesome Fresh Backpack",
-      "brand": "Lemke LLC",
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart Triple-buffered context-sensitive monitoring",
-      "actualPrice": 662,
-      "sellingPrice": 350.86,
-      "discount": 47,
-      "ratings": 4.7,
-      "reviewsCount": 94,
-      "promotion": true,
-      "urls": [
-        "https://picsum.photos/seed/O3pkpuGYtr/640/480",
-        "https://picsum.photos/seed/eSm6eqpyt/640/480",
-        "https://loremflickr.com/640/480?lock=3652333462355968",
-        "https://picsum.photos/seed/XEXM4ADiD/640/480",
-        "https://loremflickr.com/640/480?lock=4515543834951680"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Oriental Wooden Shirt",
-          "info": [
-            "Amiculum taedium cresco aranea cuius.",
-            "Nobis vulnus aliquid coniecto communis aperio minus.",
-            "Vulnus deprimo delectatio voluptate."
-          ],
-          "link": "https://weary-airship.org",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Intelligent Frozen Cheese",
-          "info": [
-            "Ara bestia dedico fuga tamisium uxor arguo."
-          ],
-          "link": "https://front-farm.com",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Fantastic Metal Soap",
-          "info": [
-            "Sol curo sed caute civitas ter stella placeat vito.",
-            "Tamen officiis cupiditate corrigo cena trucido abutor."
-          ],
-          "link": "https://cute-dredger.org",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Luxurious Fresh Towels",
-          "info": [
-            "Aufero tabernus aequus nam ara.",
-            "At creta depereo minus defessus.",
-            "Unde tamisium culpa amoveo curso sortitus claustrum."
-          ],
-          "link": "https://square-cent.biz",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Intelligent Granite Shoes",
-          "info": [
-            "Accusamus accendo tergeo dolorem clamo auctus.",
-            "Suppono tametsi bis coruscus vetus ullam voluptate coerceo."
-          ],
-          "link": "https://simple-violence.net",
+          "link": "https://untimely-garlic.biz",
           "linkLabel": "Check It Out"
         }
       ],
       "specifications": [
         {
-          "title": "Fit",
-          "info": "Oversized"
+          "title": "Fabric",
+          "info": "Polyester"
+        },
+        {
+          "title": "Season",
+          "info": "Autumn Line"
+        },
+        {
+          "title": "Occasion",
+          "info": "Formal phew riding"
+        },
+        {
+          "title": "Main Trend",
+          "info": "laborum sortitus while"
+        },
+        {
+          "title": "Season",
+          "info": "Autumn Line"
+        }
+      ],
+      "availableQuantity": 75
+    },
+    {
+      "id": "072d",
+      "uuid": "9d128f71-8fc3-49e8-8131-99ecc594dc9a",
+      "name": "Luxurious Steel Jeans",
+      "brand": "Roob, Reichert and Rohan",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart Future-proofed global local area network",
+      "actualPrice": 373,
+      "sellingPrice": 350.62,
+      "discount": 6,
+      "ratings": 0.3,
+      "reviewsCount": 170,
+      "promotion": false,
+      "urls": [
+        "https://picsum.photos/seed/Dnfeib/640/480",
+        "https://picsum.photos/seed/XiJVf/640/480",
+        "https://picsum.photos/seed/vV0OVZX1K/640/480",
+        "https://loremflickr.com/640/480?lock=1805523898859520",
+        "https://loremflickr.com/640/480?lock=1089201493770240",
+        "https://loremflickr.com/640/480?lock=8888594898878464"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Bespoke Cotton Shoes",
+          "info": [
+            "Sortitus triumphus admoveo socius tonsor.",
+            "Qui administratio ultra deorsum solum solus."
+          ],
+          "link": "https://delirious-register.org/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Bespoke Granite Chair",
+          "info": [
+            "Mollitia totidem varius credo cubicularis.",
+            "Dicta theologus aveho cultura sol.",
+            "Adfero canonicus curso toties admitto denique et territo.",
+            "Acceptus adulescens comitatus confero decens solum."
+          ],
+          "link": "https://thorny-affiliate.org/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Tasty Concrete Computer",
+          "info": [
+            "Denuncio defaeco agnitio volva maiores.",
+            "Degero brevis corroboro supplanto constans asper eligendi.",
+            "Traho caries tam sequi summisse aggero vigor auxilium.",
+            "Sed dolorem nostrum turpis adnuo cubitum."
+          ],
+          "link": "https://virtual-coach.name",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Handmade Rubber Pants",
+          "info": [
+            "Stillicidium debilito combibo defungo super ubi.",
+            "Advoco velut infit dens ancilla stella.",
+            "Beatus thesis desparatus deputo derelinquo.",
+            "Cerno tremo voluptate natus vir deinde."
+          ],
+          "link": "https://warm-licence.net",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Handmade Steel Chair",
+          "info": [
+            "Caveo vomer cernuus uxor vomer tristis talus arguo.",
+            "Clam aspicio cognatus acquiro denique tenus neque eius.",
+            "Aeternus illo vito suspendo adipiscor defungo."
+          ],
+          "link": "https://passionate-wolf.biz/",
+          "linkLabel": "Explore"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Occasion",
+          "info": "Work guava eek"
+        },
+        {
+          "title": "Main Trend",
+          "info": "thesaurus unus over bridge"
+        },
+        {
+          "title": "Color",
+          "info": "blue purple"
         },
         {
           "title": "Fabric",
           "info": "Silk"
         },
         {
+          "title": "Fabric",
+          "info": "Denim"
+        }
+      ],
+      "availableQuantity": 64
+    },
+    {
+      "id": "aa5a",
+      "uuid": "9e3a9428-8909-40c8-8dda-7f76c4b68a1e",
+      "name": "Fantastic Wooden Running Shoes",
+      "brand": "Rohan - Kassulke",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart Balanced multimedia help-desk",
+      "actualPrice": 303,
+      "sellingPrice": 254.52,
+      "discount": 16,
+      "ratings": 2,
+      "reviewsCount": 466,
+      "promotion": true,
+      "urls": [
+        "https://loremflickr.com/640/480?lock=6384006438322176",
+        "https://picsum.photos/seed/FAqWWzDD8/640/480",
+        "https://picsum.photos/seed/SngCP9/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Handmade Wooden Soap",
+          "info": [
+            "Eligendi magnam tui claudeo aurum solutio trepide.",
+            "Constans dapifer demum cumque.",
+            "Deficio suscipit degenero caveo campana."
+          ],
+          "link": "https://first-sunbeam.name",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Handmade Bronze Cheese",
+          "info": [
+            "Quis cresco ipsum comprehendo crux.",
+            "Veritatis utpote tandem coadunatio caelum."
+          ],
+          "link": "https://motherly-progress.info",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Incredible Bronze Computer",
+          "info": [
+            "Coniecto abduco voluptatum terra cras vobis."
+          ],
+          "link": "https://virtuous-clavicle.info",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Luxurious Frozen Hat",
+          "info": [
+            "Demulceo vae solus cibo esse thorax virtus tenus.",
+            "Accusantium combibo vilitas arto.",
+            "Benevolentia delectus cibus coniuratio tui turbo."
+          ],
+          "link": "https://rapid-rayon.org/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Oriental Fresh Sausages",
+          "info": [
+            "Cursim quo carbo unus adinventitias.",
+            "Tergiversatio usitas caries territo.",
+            "Terror sustineo creator tabernus.",
+            "Aestus copiose victoria ceno delicate carbo adamo trans."
+          ],
+          "link": "https://criminal-drill.name/",
+          "linkLabel": "Discover"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Main Trend",
+          "info": "desipio textor furthermore macaroon rough"
+        },
+        {
+          "title": "Fabric",
+          "info": "Denim"
+        },
+        {
+          "title": "Fit",
+          "info": "Slim Fit"
+        },
+        {
           "title": "Occasion",
-          "info": "Formal kindly"
+          "info": "Casual apud pish"
         },
         {
           "title": "Color",
-          "info": "lavender maroon"
+          "info": "blue turquoise"
+        }
+      ],
+      "availableQuantity": 29
+    },
+    {
+      "id": "67ca",
+      "uuid": "6e05f339-7dbd-4993-9e47-cc4ae2264fce",
+      "name": "Ergonomic Metal Smartphone",
+      "brand": "Kerluke LLC",
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016 Cloned 4th generation initiative",
+      "actualPrice": 778,
+      "sellingPrice": 622.4,
+      "discount": 20,
+      "ratings": 1.5,
+      "reviewsCount": 226,
+      "promotion": true,
+      "urls": [
+        "https://picsum.photos/seed/IbFewwe2Ha/640/480",
+        "https://loremflickr.com/640/480?lock=2473976156651520",
+        "https://picsum.photos/seed/n8iUO/640/480",
+        "https://picsum.photos/seed/wp1X42K/640/480",
+        "https://loremflickr.com/640/480?lock=3518024457912320"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Elegant Frozen Chair",
+          "info": [
+            "Venia necessitatibus denique adhaero nobis temporibus.",
+            "Pariatur error alter distinctio adsidue nemo.",
+            "Sperno tempore convoco bos admoneo video ago sint."
+          ],
+          "link": "https://needy-surround.name",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Tasty Granite Gloves",
+          "info": [
+            "Charisma appello ambitus curo volutabrum sublime teres unde.",
+            "Armarium benevolentia taceo somnus."
+          ],
+          "link": "https://old-fashioned-sampan.info",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Refined Steel Cheese",
+          "info": [
+            "Termes sonitus curriculum careo ullam.",
+            "Clamo summopere agnosco vox quis.",
+            "Stips sulum socius admoveo tracto reprehenderit."
+          ],
+          "link": "https://disguised-broker.info",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Unbranded Bronze Ball",
+          "info": [
+            "Ullus depono summopere pecco speciosus.",
+            "Doloremque thermae praesentium cunae.",
+            "Stillicidium coma thalassinus.",
+            "Quisquam suppellex admiratio terminatio cumque aer adsuesco."
+          ],
+          "link": "https://overcooked-excess.com/",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Handcrafted Soft Soap",
+          "info": [
+            "Magnam cumque tempore sonitus."
+          ],
+          "link": "https://outlandish-liquidity.net",
+          "linkLabel": "Explore"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Occasion",
+          "info": "Casual via gah"
+        },
+        {
+          "title": "Season",
+          "info": "Spring Collection"
+        },
+        {
+          "title": "Season",
+          "info": "Autumn Line"
+        },
+        {
+          "title": "Color",
+          "info": "sky blue ivory"
+        },
+        {
+          "title": "Occasion",
+          "info": "Formal who"
+        }
+      ],
+      "availableQuantity": 32
+    },
+    {
+      "id": "7344",
+      "uuid": "436dae09-fe30-4ce1-8ff4-ceff446613a5",
+      "name": "Intelligent Soft Portable Speaker",
+      "brand": "Sporer Inc",
+      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive Reactive 3rd generation knowledge base",
+      "actualPrice": 508,
+      "sellingPrice": 457.2,
+      "discount": 10,
+      "ratings": 0.4,
+      "reviewsCount": 348,
+      "promotion": true,
+      "urls": [
+        "https://picsum.photos/seed/XEHX9xUkPG/640/480",
+        "https://loremflickr.com/640/480?lock=5662571363303424",
+        "https://picsum.photos/seed/rVX2uv6A/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Sleek Metal Bacon",
+          "info": [
+            "Labore quas ustulo caste tabesco sodalitas.",
+            "Ago voluptatum cursus eum careo vis alius pecus.",
+            "Caput ait tantum vulgivagus alioqui clam carus.",
+            "Desipio utor tactus succurro sophismata voluptatem audeo."
+          ],
+          "link": "https://everlasting-ink.info",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Bespoke Granite Soap",
+          "info": [
+            "Articulus coerceo tubineus comedo.",
+            "Sollers circumvenio ulciscor aer."
+          ],
+          "link": "https://proud-wheat.net",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Ergonomic Frozen Table",
+          "info": [
+            "Demonstro annus inflammatio depereo talio debeo cursim.",
+            "Vitium amplus natus somnus architecto."
+          ],
+          "link": "https://red-sensor.info/",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Practical Frozen Car",
+          "info": [
+            "Eos cilicium comparo tracto cui.",
+            "Constans vulgo vulticulus consectetur delinquo.",
+            "Ulterius adsuesco delicate casus admoveo.",
+            "Commemoro cuppedia vado atavus conor appello."
+          ],
+          "link": "https://vibrant-killer.org",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Incredible Frozen Pizza",
+          "info": [
+            "Anser aufero atque aestivus adduco causa.",
+            "Amoveo antepono capitulus venio cogo civitas utilis.",
+            "Aspernatur absens torrens caput demens pecus.",
+            "Exercitationem veniam uredo audentia absconditus teres."
+          ],
+          "link": "https://lonely-incident.name",
+          "linkLabel": "Find Out More"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Main Trend",
+          "info": "tertius antiquus although unethically"
+        },
+        {
+          "title": "Fabric",
+          "info": "Denim"
+        },
+        {
+          "title": "Fabric",
+          "info": "Polyester"
+        },
+        {
+          "title": "Fabric",
+          "info": "Denim"
+        },
+        {
+          "title": "Fit",
+          "info": "Oversized"
+        }
+      ],
+      "availableQuantity": 28
+    },
+    {
+      "id": "16ca",
+      "uuid": "da934ff8-2b48-4f56-88ca-dbda0e9a65ae",
+      "name": "Bespoke Metal Coffee Maker",
+      "brand": "Brown - Hauck",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients Face to face object-oriented monitoring",
+      "actualPrice": 556,
+      "sellingPrice": 389.2,
+      "discount": 30,
+      "ratings": 3.9,
+      "reviewsCount": 24,
+      "promotion": true,
+      "urls": [
+        "https://picsum.photos/seed/2umoyISL/640/480",
+        "https://loremflickr.com/640/480?lock=2749384227815424",
+        "https://picsum.photos/seed/M8Vki/640/480",
+        "https://loremflickr.com/640/480?lock=7498850717663232",
+        "https://picsum.photos/seed/UEAoQiu/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Oriental Rubber Pants",
+          "info": [
+            "Eum conculco tepidus sol vinum."
+          ],
+          "link": "https://fake-inn.com/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Modern Metal Shoes",
+          "info": [
+            "Vomica thymum aeneus ullus odio tactus."
+          ],
+          "link": "https://klutzy-chord.info",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Rustic Steel Bike",
+          "info": [
+            "Curso vivo theologus abstergo.",
+            "Caecus admiratio articulus adimpleo.",
+            "Valens amaritudo textus valde adopto cunae.",
+            "Tergiversatio terebro conspergo capio caries comparo."
+          ],
+          "link": "https://important-preface.biz",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Fantastic Metal Shirt",
+          "info": [
+            "Addo perferendis taedium deprimo.",
+            "Color tutis defungo crebro acies accusantium ducimus.",
+            "Thymum tristis consequuntur quod aiunt."
+          ],
+          "link": "https://personal-scallops.biz/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Tasty Wooden Shirt",
+          "info": [
+            "Decerno comparo sonitus comis adsidue deprecator amitto.",
+            "Ademptio delectus aiunt verbum vis distinctio."
+          ],
+          "link": "https://somber-pottery.name",
+          "linkLabel": "Shop Now"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Main Trend",
+          "info": "theatrum conicio yahoo gray shakily"
+        },
+        {
+          "title": "Color",
+          "info": "white indigo"
+        },
+        {
+          "title": "Main Trend",
+          "info": "tepidus ustilo jeweller streetcar cudgel"
+        },
+        {
+          "title": "Main Trend",
+          "info": "creta paulatim that"
+        },
+        {
+          "title": "Occasion",
+          "info": "Party boohoo"
+        }
+      ],
+      "availableQuantity": 38
+    },
+    {
+      "id": "9948",
+      "uuid": "eb4f528d-0cf2-426a-aba4-9952dad9c69b",
+      "name": "Generic Fresh Sneakers",
+      "brand": "Hammes Group",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients Proactive explicit internet solution",
+      "actualPrice": 680,
+      "sellingPrice": 571.2,
+      "discount": 16,
+      "ratings": 2.1,
+      "reviewsCount": 278,
+      "promotion": false,
+      "urls": [
+        "https://picsum.photos/seed/boy5k/640/480",
+        "https://loremflickr.com/640/480?lock=8661662122901504",
+        "https://picsum.photos/seed/OiWfCm9Fl/640/480",
+        "https://loremflickr.com/640/480?lock=4159300813455360"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Licensed Cotton Mouse",
+          "info": [
+            "Sperno rem curto vallum supra cursim victus.",
+            "Amoveo sapiente depromo porro tenus patrocinor caritas.",
+            "Hic congregatio tamisium dignissimos aliquid.",
+            "Fugit demergo quo capio bonus claro adfectus commodi culpa."
+          ],
+          "link": "https://gloomy-distribution.name/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Unbranded Metal Soap",
+          "info": [
+            "Uterque amplus adficio conqueror.",
+            "Decerno tamen stips crapula trado aureus."
+          ],
+          "link": "https://sane-boot.org",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Modern Cotton Car",
+          "info": [
+            "Delicate sortitus textus cunctatio.",
+            "Comes ver celer vulnus stabilis arcus arma valde.",
+            "Voluntarius amor sonitus explicabo subvenio cur."
+          ],
+          "link": "https://zesty-spool.biz",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Incredible Steel Table",
+          "info": [
+            "Vir temptatio abbas aspicio tutamen speculum turbo utpote.",
+            "Vivo aeger cedo adsuesco testimonium sufficio artificiose."
+          ],
+          "link": "https://dishonest-parrot.info",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Elegant Wooden Pizza",
+          "info": [
+            "Aranea caelum caute tibi solio tredecim aeger turpis.",
+            "Curriculum clam textus territo delego cito.",
+            "Adsum talus verto thymbra nam."
+          ],
+          "link": "https://excited-playground.net",
+          "linkLabel": "Explore"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Fit",
+          "info": "Regular Fit"
+        },
+        {
+          "title": "Color",
+          "info": "black white"
+        },
+        {
+          "title": "Main Trend",
+          "info": "ver acceptus adjourn"
+        },
+        {
+          "title": "Main Trend",
+          "info": "aeger allatus outside"
+        },
+        {
+          "title": "Color",
+          "info": "yellow gold"
+        }
+      ],
+      "availableQuantity": 7
+    },
+    {
+      "id": "8309",
+      "uuid": "db047b78-8a4b-45c2-b261-f27a4da51ee9",
+      "name": "Oriental Concrete Headphones",
+      "brand": "Ruecker Group",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles Front-line logistical architecture",
+      "actualPrice": 897,
+      "sellingPrice": 565.11,
+      "discount": 37,
+      "ratings": 3.3,
+      "reviewsCount": 1,
+      "promotion": true,
+      "urls": [
+        "https://loremflickr.com/640/480?lock=3522641367400448",
+        "https://picsum.photos/seed/4ZPitJAzhs/640/480",
+        "https://picsum.photos/seed/5LrBd/640/480",
+        "https://loremflickr.com/640/480?lock=2272946422808576",
+        "https://picsum.photos/seed/bwEMc/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Rustic Plastic Computer",
+          "info": [
+            "Spero illum sordeo admoneo amicitia.",
+            "Tumultus sophismata circumvenio.",
+            "Tendo accedo crux adulatio conspergo minus.",
+            "Utor vulgaris sum distinctio contigo."
+          ],
+          "link": "https://married-venom.org",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Electronic Concrete Keyboard",
+          "info": [
+            "Suggero admoveo ex demitto aut virga apto corona odio.",
+            "Cruciamentum adeo advoco ascit decor bestia.",
+            "Complectus certe vix avaritia carmen terror tolero claro.",
+            "Ex corpus tricesimus articulus calamitas deinde."
+          ],
+          "link": "https://opulent-food.biz/",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Ergonomic Cotton Gloves",
+          "info": [
+            "Benevolentia ea acerbitas magni ait.",
+            "Subseco timor ratione acceptus video cultellus vos convoco."
+          ],
+          "link": "https://beloved-moai.com",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Generic Soft Pants",
+          "info": [
+            "Cornu debilito claustrum natus."
+          ],
+          "link": "https://exemplary-cockroach.com",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Generic Rubber Pants",
+          "info": [
+            "Adsidue adamo canis amplitudo vinco tandem tamquam aranea.",
+            "Suffoco voluptas ultio torrens clarus turpis labore trepide.",
+            "Vae solutio admitto eius tres venio.",
+            "Theologus theca caput venustas."
+          ],
+          "link": "https://graceful-afoul.name",
+          "linkLabel": "Discover"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Season",
+          "info": "Winter Collection"
+        },
+        {
+          "title": "Season",
+          "info": "Autumn Line"
+        },
+        {
+          "title": "Color",
+          "info": "salmon purple"
+        },
+        {
+          "title": "Fabric",
+          "info": "Cotton"
+        },
+        {
+          "title": "Occasion",
+          "info": "Formal unrealistic fortunately pro"
+        }
+      ],
+      "availableQuantity": 66
+    },
+    {
+      "id": "8310",
+      "uuid": "cfaf948e-55b9-4b84-b56c-5fa70d29f4fa",
+      "name": "Refined Cotton Watch",
+      "brand": "Howell, Kirlin and Cummerata",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients Centralized local methodology",
+      "actualPrice": 130,
+      "sellingPrice": 98.8,
+      "discount": 24,
+      "ratings": 1,
+      "reviewsCount": 272,
+      "promotion": true,
+      "urls": [
+        "https://picsum.photos/seed/pWs2dLgu/640/480",
+        "https://loremflickr.com/640/480?lock=8170831947497472",
+        "https://picsum.photos/seed/o6enp/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Generic Steel Mouse",
+          "info": [
+            "Vulgus angelus subvenio tero coniecto perferendis conspergo.",
+            "Paens accusamus concedo volup valens benevolentia tremo."
+          ],
+          "link": "https://well-groomed-gall-bladder.name",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Gorgeous Wooden Chips",
+          "info": [
+            "Usus desidero commodo decumbo debeo.",
+            "Alii corporis coadunatio clibanus caute.",
+            "Voluptate utpote cilicium condico.",
+            "Exercitationem modi acer pauper."
+          ],
+          "link": "https://lonely-inconvenience.net",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Tasty Granite Towels",
+          "info": [
+            "Uberrime strenuus conatus delibero virgo pecco vacuus arceo.",
+            "Valeo cohibeo sto cumque somnus viscus terreo temptatio.",
+            "Turba sto suscipit iste tempus cuius caries.",
+            "Deludo capitulus crastinus suppellex conitor caute theca."
+          ],
+          "link": "https://icy-patty.name/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Generic Fresh Pizza",
+          "info": [
+            "Curia antea desparatus ante earum tendo.",
+            "Amplus color vorago audentia vinculum quod sulum.",
+            "Incidunt caveo admoneo utique.",
+            "Clam caste ara nesciunt compello credo texo."
+          ],
+          "link": "https://second-hand-reputation.name",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Licensed Granite Sausages",
+          "info": [
+            "Vel vero attonbitus conforto decumbo harum.",
+            "Coruscus conqueror curriculum timor amet summopere."
+          ],
+          "link": "https://loving-remnant.name",
+          "linkLabel": "Learn More"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Main Trend",
+          "info": "tego vapulus on itinerary"
+        },
+        {
+          "title": "Main Trend",
+          "info": "accedo sunt unlawful"
         },
         {
           "title": "Season",
           "info": "Winter Collection"
+        },
+        {
+          "title": "Season",
+          "info": "Winter Line"
+        },
+        {
+          "title": "Season",
+          "info": "Winter Line"
         }
       ],
-      "availableQuantity": 92
+      "availableQuantity": 34
     },
     {
-      "id": "ff39",
-      "uuid": "0ae67c94-9908-49c2-91e7-25d81e2b7810",
-      "name": "Bespoke Frozen Digital Camera",
-      "brand": "Bartoletti LLC",
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles Future-proofed client-server monitoring",
-      "actualPrice": 70,
-      "sellingPrice": 49.7,
-      "discount": 29,
-      "ratings": 2.4,
-      "reviewsCount": 114,
+      "id": "a049",
+      "uuid": "7c58e9b5-9bfa-4a26-abee-76590cc19a78",
+      "name": "Recycled Cotton Sneakers",
+      "brand": "Okuneva - Witting",
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support Sharable dedicated concept",
+      "actualPrice": 580,
+      "sellingPrice": 516.2,
+      "discount": 11,
+      "ratings": 0.5,
+      "reviewsCount": 323,
       "promotion": false,
       "urls": [
-        "https://loremflickr.com/640/480?lock=4726076850831360",
-        "https://picsum.photos/seed/zsPwvQ/640/480",
-        "https://picsum.photos/seed/O4naQPAgYH/640/480",
-        "https://loremflickr.com/640/480?lock=6785204010090496",
-        "https://picsum.photos/seed/AjgAN/640/480",
-        "https://picsum.photos/seed/BUNY0G7/640/480"
+        "https://picsum.photos/seed/Ucyf7/640/480",
+        "https://loremflickr.com/640/480?lock=370033077256192",
+        "https://loremflickr.com/640/480?lock=8871474509119488"
       ],
       "sizes": [
         "S",
@@ -440,291 +968,93 @@
       ],
       "offers": [
         {
-          "title": "Small Concrete Tuna",
+          "title": "Luxurious Fresh Pizza",
           "info": [
-            "Capto error clarus excepturi tener.",
-            "Adopto vereor spero bibo quibusdam accusantium decet."
+            "Clementia carus carmen curto suus adulescens.",
+            "Cubo ullus tracto cogo curtus absque custodia corrigo cibo.",
+            "Consuasor nihil adulatio custodia cicuta."
           ],
-          "link": "https://watery-veranda.com",
+          "link": "https://gargantuan-shelf.net",
           "linkLabel": "Get It Now"
         },
         {
-          "title": "Licensed Cotton Pizza",
+          "title": "Elegant Granite Towels",
           "info": [
-            "Desparatus at turbo textor cupiditas asperiores theca."
+            "Commemoro clarus adeptio cauda.",
+            "Attonbitus ultra vesica viduo corpus."
           ],
-          "link": "https://sweaty-relief.net/",
+          "link": "https://positive-step-sister.info/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Recycled Bronze Shirt",
+          "info": [
+            "Eligendi tersus praesentium acsi tres vetus.",
+            "Varietas audeo pel suffoco turbo.",
+            "Ubi demens traho tracto curis.",
+            "Alii repellat vespillo sursum."
+          ],
+          "link": "https://boring-eternity.info/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Fantastic Plastic Chips",
+          "info": [
+            "Enim solium debeo decet cohibeo corporis."
+          ],
+          "link": "https://squiggly-provision.biz",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Bespoke Rubber Keyboard",
+          "info": [
+            "Tenetur venia cibo tui crebro virga adaugeo quas crebro.",
+            "Vomito atqui aureus cur adaugeo."
+          ],
+          "link": "https://frayed-algorithm.net",
           "linkLabel": "Learn More"
-        },
-        {
-          "title": "Unbranded Granite Pants",
-          "info": [
-            "Rerum spargo vesco stella amplitudo basium acerbitas delego.",
-            "Aperiam voluptas arto una sopor clamo cursus brevis."
-          ],
-          "link": "https://pleasing-convenience.name/",
-          "linkLabel": "Explore"
-        },
-        {
-          "title": "Licensed Plastic Keyboard",
-          "info": [
-            "Aduro depulso solvo tamisium copiose victoria."
-          ],
-          "link": "https://ornery-gasp.info/",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Bespoke Frozen Bike",
-          "info": [
-            "Culpo colo considero bellicus."
-          ],
-          "link": "https://far-injury.info",
-          "linkLabel": "Find Out More"
         }
       ],
       "specifications": [
-        {
-          "title": "Season",
-          "info": "Summer Line"
-        },
-        {
-          "title": "Occasion",
-          "info": "Casual economy till"
-        },
-        {
-          "title": "Fabric",
-          "info": "Denim"
-        },
-        {
-          "title": "Main Trend",
-          "info": "thesaurus crudelis key"
-        },
         {
           "title": "Season",
           "info": "Autumn Collection"
-        }
-      ],
-      "availableQuantity": 49
-    },
-    {
-      "id": "2984",
-      "uuid": "8cc12c32-6a11-461a-b9b2-3bf15ce2c3a4",
-      "name": "Fantastic Wooden Backpack",
-      "brand": "Bode, Willms and Donnelly",
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support Pre-emptive full-range definition",
-      "actualPrice": 840,
-      "sellingPrice": 604.8,
-      "discount": 28,
-      "ratings": 3.1,
-      "reviewsCount": 57,
-      "promotion": true,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=8823386796982272",
-        "https://picsum.photos/seed/1BMGL/640/480",
-        "https://picsum.photos/seed/w4IGsy/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Luxurious Granite Pizza",
-          "info": [
-            "Nisi utpote sponte canis assumenda.",
-            "Aeternus caveo perferendis caute vigor versus.",
-            "Demo aperte tricesimus cedo color vero volo umerus minima."
-          ],
-          "link": "https://skeletal-flair.name",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Incredible Frozen Chair",
-          "info": [
-            "Vulgivagus utor crinis thema tenax comminor communis.",
-            "Valde approbo explicabo decretum deduco voluptas.",
-            "Debeo vesica depereo cotidie pectus illo.",
-            "Adipiscor suggero cognomen teres depono."
-          ],
-          "link": "https://urban-stitcher.net",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Gorgeous Rubber Soap",
-          "info": [
-            "Crur tutamen aureus autus cribro accommodo basium.",
-            "Umquam quis summisse delinquo undique vulnero."
-          ],
-          "link": "https://impressive-inhabitant.name",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Modern Rubber Cheese",
-          "info": [
-            "Timor est temperantia somniculosus statim ducimus defero.",
-            "Aer texo adipisci adnuo vulticulus.",
-            "Animadverto venio aegre atavus benevolentia vinculum."
-          ],
-          "link": "https://elderly-preoccupation.biz/",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Gorgeous Fresh Car",
-          "info": [
-            "Ubi correptius caste caelum decretum usque urbanus.",
-            "Adaugeo adhuc clibanus undique addo."
-          ],
-          "link": "https://ornery-comprehension.biz",
-          "linkLabel": "Discover"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Color",
-          "info": "lime tan"
-        },
-        {
-          "title": "Season",
-          "info": "Autumn Line"
-        },
-        {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Color",
-          "info": "ivory sky blue"
-        },
-        {
-          "title": "Main Trend",
-          "info": "vado vilicus defog"
-        }
-      ],
-      "availableQuantity": 27
-    },
-    {
-      "id": "cfd1",
-      "uuid": "f30855d7-8ec7-4703-aa3c-c052e2fdc4ad",
-      "name": "Incredible Frozen Guitar",
-      "brand": "Graham, Langworth and Grady",
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit Reverse-engineered client-driven encoding",
-      "actualPrice": 602,
-      "sellingPrice": 481.6,
-      "discount": 20,
-      "ratings": 0.3,
-      "reviewsCount": 189,
-      "promotion": true,
-      "urls": [
-        "https://picsum.photos/seed/0apJW3a/640/480",
-        "https://loremflickr.com/640/480?lock=2763945739812864",
-        "https://loremflickr.com/640/480?lock=8814032106553344"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Small Concrete Gloves",
-          "info": [
-            "Utor deduco iure approbo nisi aduro.",
-            "Vae subito doloremque confugo."
-          ],
-          "link": "https://pungent-compliance.org/",
-          "linkLabel": "Explore"
-        },
-        {
-          "title": "Sleek Steel Mouse",
-          "info": [
-            "Aeternus tametsi debitis nesciunt."
-          ],
-          "link": "https://scaly-separation.name",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Incredible Steel Bacon",
-          "info": [
-            "Architecto suppono cunae corrigo compello."
-          ],
-          "link": "https://forsaken-executor.biz/",
-          "linkLabel": "Check It Out"
-        },
-        {
-          "title": "Modern Granite Shirt",
-          "info": [
-            "Vitiosus via ater vulgaris arca ait aut.",
-            "Officiis vis teres video quos.",
-            "Debitis perspiciatis consectetur demo torqueo strenuus."
-          ],
-          "link": "https://embarrassed-present.org",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Awesome Plastic Mouse",
-          "info": [
-            "Cognatus suscipit voluptatibus tunc triumphus valde tepidus.",
-            "Theca curso amitto taceo tepesco contabesco audax aut."
-          ],
-          "link": "https://stunning-hostess.net",
-          "linkLabel": "Check It Out"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Occasion",
-          "info": "Work overconfidently lute safeguard"
-        },
-        {
-          "title": "Occasion",
-          "info": "Party ha gah"
         },
         {
           "title": "Fit",
           "info": "Oversized"
-        },
-        {
-          "title": "Main Trend",
-          "info": "vulgaris ultio drat astrologer"
         },
         {
           "title": "Fabric",
           "info": "Denim"
+        },
+        {
+          "title": "Occasion",
+          "info": "Party welly after hmph"
+        },
+        {
+          "title": "Fabric",
+          "info": "Polyester"
         }
       ],
-      "availableQuantity": 93
+      "availableQuantity": 69
     },
     {
-      "id": "c986",
-      "uuid": "37a88904-2446-4a7c-bd43-003a40a8a047",
-      "name": "Elegant Plastic Smart TV",
-      "brand": "Heidenreich Group",
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles Multi-channelled fresh-thinking superstructure",
-      "actualPrice": 137,
-      "sellingPrice": 119.19,
-      "discount": 13,
-      "ratings": 4.2,
-      "reviewsCount": 299,
-      "promotion": true,
+      "id": "eb6a",
+      "uuid": "d4a0533c-5a1c-4804-aff2-30f02c916e0d",
+      "name": "Refined Cotton E-reader",
+      "brand": "Marks LLC",
+      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design Progressive 4th generation open system",
+      "actualPrice": 592,
+      "sellingPrice": 390.72,
+      "discount": 34,
+      "ratings": 3.4,
+      "reviewsCount": 414,
+      "promotion": false,
       "urls": [
-        "https://picsum.photos/seed/sBLL5Cn/640/480",
-        "https://picsum.photos/seed/TJd9HyOgzE/640/480",
-        "https://picsum.photos/seed/tmas3gYG/640/480",
-        "https://picsum.photos/seed/gsdP5g/640/480",
-        "https://loremflickr.com/640/480?lock=4488209587240960"
+        "https://loremflickr.com/640/480?lock=6917394916179968",
+        "https://loremflickr.com/640/480?lock=6688915507380224",
+        "https://loremflickr.com/640/480?lock=6462493786374144"
       ],
       "sizes": [
         "S",
@@ -739,91 +1069,95 @@
       ],
       "offers": [
         {
-          "title": "Handmade Rubber Fish",
+          "title": "Handcrafted Rubber Shirt",
           "info": [
-            "Chirographum tamquam cultellus torqueo.",
-            "Curso articulus depulso thymbra."
+            "Auctus absque vilitas caste adicio.",
+            "Tempus clibanus vulgivagus vox cedo atqui succurro.",
+            "Comes ars aperte tum tredecim.",
+            "Reprehenderit utor curriculum ab arx amoveo."
           ],
-          "link": "https://timely-scripture.biz",
+          "link": "https://agonizing-cutting.biz",
           "linkLabel": "Discover"
         },
         {
-          "title": "Electronic Metal Chips",
+          "title": "Oriental Rubber Chair",
           "info": [
-            "Minus desipio ipsam tamquam sumptus pariatur."
+            "Verto vere cibo itaque surculus venustas curatio.",
+            "Bos cubitum cognomen cunabula clementia undique nesciunt.",
+            "Aspernatur apostolus aestas tolero accedo venia."
           ],
-          "link": "https://mellow-honeybee.biz/",
-          "linkLabel": "Learn More"
+          "link": "https://sharp-bagel.com",
+          "linkLabel": "Shop Now"
         },
         {
-          "title": "Elegant Concrete Fish",
+          "title": "Handmade Fresh Sausages",
           "info": [
-            "Corrigo aperiam antepono asper."
+            "Tracto canonicus defungo crapula."
           ],
-          "link": "https://healthy-participation.com/",
+          "link": "https://bright-distance.biz/",
           "linkLabel": "Discover"
         },
         {
-          "title": "Recycled Metal Car",
+          "title": "Practical Bronze Keyboard",
           "info": [
-            "Coruscus magni vulticulus crapula solutio.",
-            "Commodo mollitia sit caute administratio thesaurus carpo."
+            "Minus vestigium solum umquam textus solitudo vado amo vergo.",
+            "Collum doloremque thorax velociter adstringo.",
+            "Degusto theca adhuc verbum adeo amitto corrupti depromo.",
+            "Quam degero adimpleo laborum terga."
           ],
-          "link": "https://close-ladder.net",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Awesome Steel Salad",
-          "info": [
-            "Cuppedia curso consequuntur maxime dedico strenuus.",
-            "Aliquam defaeco tracto sapiente tabula vitae.",
-            "Conscendo summisse viduo demulceo tenus et.",
-            "Tego accusantium ipsum carpo cursim amissio carpo vir."
-          ],
-          "link": "https://possible-mechanism.org/",
+          "link": "https://important-mallard.com",
           "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Handcrafted Frozen Soap",
+          "info": [
+            "Adinventitias sub provident canonicus."
+          ],
+          "link": "https://elementary-distance.info/",
+          "linkLabel": "Discover"
         }
       ],
       "specifications": [
-        {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Color",
-          "info": "blue lavender"
-        },
-        {
-          "title": "Occasion",
-          "info": "Casual disaster astride model"
-        },
-        {
-          "title": "Occasion",
-          "info": "Formal delightfully"
-        },
         {
           "title": "Fit",
           "info": "Oversized"
+        },
+        {
+          "title": "Occasion",
+          "info": "Party aboard if sore"
+        },
+        {
+          "title": "Color",
+          "info": "mint green ivory"
+        },
+        {
+          "title": "Color",
+          "info": "azure white"
+        },
+        {
+          "title": "Occasion",
+          "info": "Work furthermore"
         }
       ],
-      "availableQuantity": 75
+      "availableQuantity": 80
     },
     {
-      "id": "9230",
-      "uuid": "6a979a12-8eb2-4a9b-a7b7-dc166f2b05f2",
-      "name": "Generic Fresh Digital Camera",
-      "brand": "Denesik - Greenfelder",
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients Sharable actuating instruction set",
-      "actualPrice": 312,
-      "sellingPrice": 268.32,
-      "discount": 14,
-      "ratings": 3.6,
-      "reviewsCount": 90,
-      "promotion": true,
+      "id": "4085",
+      "uuid": "4383280a-5714-48ea-a375-3c74ca2e9754",
+      "name": "Small Steel Smart TV",
+      "brand": "Buckridge, Mayer and Cartwright",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Robust next generation Graphical User Interface",
+      "actualPrice": 210,
+      "sellingPrice": 195.3,
+      "discount": 7,
+      "ratings": 0.1,
+      "reviewsCount": 98,
+      "promotion": false,
       "urls": [
-        "https://loremflickr.com/640/480?lock=4862946805022720",
-        "https://loremflickr.com/640/480?lock=7503534117355520",
-        "https://loremflickr.com/640/480?lock=8969867988303872"
+        "https://picsum.photos/seed/Dz2VR8D/640/480",
+        "https://loremflickr.com/640/480?lock=4880817681596416",
+        "https://picsum.photos/seed/z0h055q/640/480",
+        "https://picsum.photos/seed/93jG5W5q/640/480"
       ],
       "sizes": [
         "S",
@@ -838,189 +1172,95 @@
       ],
       "offers": [
         {
-          "title": "Gorgeous Fresh Chair",
+          "title": "Handmade Rubber Keyboard",
           "info": [
-            "Textus corroboro contra considero deludo alii sumo."
+            "Vesica nostrum admiratio adversus triduana.",
+            "Trucido cupiditate ascisco valde ceno degero curis acsi."
           ],
-          "link": "https://excellent-witch.com/",
+          "link": "https://metallic-marten.net/",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Awesome Fresh Fish",
+          "info": [
+            "Voluptate cunae eius appositus.",
+            "Conventus timor altus adulatio causa quis.",
+            "Valens artificiose bibo depereo.",
+            "Assumenda sublime accusator sui solutio thermae cupiditas."
+          ],
+          "link": "https://calculating-grab-bag.biz",
           "linkLabel": "Discover"
         },
         {
-          "title": "Tasty Wooden Pizza",
+          "title": "Handmade Fresh Towels",
           "info": [
-            "Odio curriculum bibo cultellus cribro conor acies.",
-            "Adfectus tumultus veniam eligendi.",
-            "Valde repellat adiuvo deripio talis.",
-            "Assentator comprehendo armarium."
+            "Maxime aperiam tenax cohors adflicto maxime allatus nam."
           ],
-          "link": "https://quick-witted-entertainment.com",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Electronic Steel Chair",
-          "info": [
-            "Torqueo excepturi tendo atque synagoga thymum quis."
-          ],
-          "link": "https://mammoth-roll.name",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Generic Cotton Gloves",
-          "info": [
-            "Compono quis concido demo subiungo soleo cetera.",
-            "Sapiente verecundia adsuesco pecus arma."
-          ],
-          "link": "https://far-flung-monitoring.org",
+          "link": "https://insubstantial-urn.info/",
           "linkLabel": "Check It Out"
         },
         {
-          "title": "Electronic Plastic Pizza",
+          "title": "Rustic Concrete Table",
           "info": [
-            "Summopere solvo talis subvenio catena combibo tamdiu."
+            "Aro numquam animus exercitationem.",
+            "Talus surculus aer argentum absens iusto.",
+            "Aranea thesis ustulo terra bardus congregatio agnosco."
           ],
-          "link": "https://tidy-palate.biz/",
-          "linkLabel": "Explore"
+          "link": "https://great-cross-contamination.org/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Modern Soft Sausages",
+          "info": [
+            "Tepidus cunctatio quo virtus deporto.",
+            "Patria angulus cito eum cur impedit attero.",
+            "Tristis vulnus vos voro adsum color auctus convoco.",
+            "Curis audax ante contra maiores caelum quos dedico."
+          ],
+          "link": "https://lively-verification.biz/",
+          "linkLabel": "Learn More"
         }
       ],
       "specifications": [
         {
-          "title": "Season",
-          "info": "Autumn Line"
+          "title": "Color",
+          "info": "orchid green"
         },
         {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Season",
-          "info": "Summer Line"
+          "title": "Fabric",
+          "info": "Polyester"
         },
         {
           "title": "Occasion",
-          "info": "Work but"
+          "info": "Party pace fear fumbling"
+        },
+        {
+          "title": "Fabric",
+          "info": "Silk"
         },
         {
           "title": "Season",
-          "info": "Summer Line"
+          "info": "Summer Collection"
         }
       ],
       "availableQuantity": 79
     },
     {
-      "id": "93dc",
-      "uuid": "0b634cc2-f932-4f59-99ba-d66cbcf3acda",
-      "name": "Modern Cotton Headphones",
-      "brand": "Dietrich - Friesen",
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart Streamlined explicit circuit",
-      "actualPrice": 695,
-      "sellingPrice": 472.6,
-      "discount": 32,
-      "ratings": 2.4,
-      "reviewsCount": 56,
-      "promotion": false,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=4180549730041856",
-        "https://picsum.photos/seed/2CQNidKam/640/480",
-        "https://loremflickr.com/640/480?lock=8858085753880576"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Intelligent Metal Tuna",
-          "info": [
-            "Paulatim derelinquo adulescens suasoria vox vereor.",
-            "Terra vulgaris antepono qui tui.",
-            "Explicabo campana vivo pariatur surgo conscendo.",
-            "Comburo vinculum comptus talis confugo atqui."
-          ],
-          "link": "https://expensive-row.net",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Unbranded Bronze Pants",
-          "info": [
-            "Demergo campana approbo vigor."
-          ],
-          "link": "https://gleaming-fright.biz",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Unbranded Frozen Shoes",
-          "info": [
-            "Aufero coepi pecco aggredior pecco sol arbor."
-          ],
-          "link": "https://generous-bikini.biz",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Bespoke Bronze Shoes",
-          "info": [
-            "Condico turpis celebrer ventosus cribro voluntarius tabesco.",
-            "Consequuntur ver concido victus ea ara vindico deorsum."
-          ],
-          "link": "https://tan-bookmark.net/",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Rustic Plastic Mouse",
-          "info": [
-            "Ustilo compono esse tamen via sint certus vallum virgo."
-          ],
-          "link": "https://graceful-expansionism.name/",
-          "linkLabel": "Explore"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Color",
-          "info": "pink black"
-        },
-        {
-          "title": "Fabric",
-          "info": "Cotton"
-        },
-        {
-          "title": "Fit",
-          "info": "Slim Fit"
-        },
-        {
-          "title": "Season",
-          "info": "Autumn Collection"
-        },
-        {
-          "title": "Fabric",
-          "info": "Cotton"
-        }
-      ],
-      "availableQuantity": 26
-    },
-    {
-      "id": "b2ef",
-      "uuid": "d1a26dae-6bd4-4e13-a057-91aa3e649072",
-      "name": "Handmade Concrete Sneakers",
-      "brand": "Bartoletti - Hills",
-      "description": "The Football Is Good For Training And Recreational Purposes Cloned static functionalities",
-      "actualPrice": 644,
-      "sellingPrice": 450.8,
-      "discount": 30,
-      "ratings": 0.4,
-      "reviewsCount": 128,
+      "id": "1fb8",
+      "uuid": "388f2507-c93a-4d90-bf26-881e3ded6749",
+      "name": "Tasty Concrete Sneakers",
+      "brand": "Jacobson, Heller and Schmeler",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients Right-sized multi-tasking monitoring",
+      "actualPrice": 884,
+      "sellingPrice": 724.88,
+      "discount": 18,
+      "ratings": 2.9,
+      "reviewsCount": 178,
       "promotion": true,
       "urls": [
-        "https://loremflickr.com/640/480?lock=7506289169006592",
-        "https://loremflickr.com/640/480?lock=3466370490564608",
-        "https://loremflickr.com/640/480?lock=5387893489008640",
-        "https://loremflickr.com/640/480?lock=5674231511646208"
+        "https://loremflickr.com/640/480?lock=8373795167404032",
+        "https://loremflickr.com/640/480?lock=6489161984901120",
+        "https://picsum.photos/seed/b3CLavRp/640/480"
       ],
       "sizes": [
         "S",
@@ -1035,159 +1275,54 @@
       ],
       "offers": [
         {
-          "title": "Gorgeous Frozen Hat",
+          "title": "Modern Wooden Chair",
           "info": [
-            "Verumtamen thymbra deripio ultio cuppedia succurro utrimque.",
-            "Crudelis cetera assumenda vallum.",
-            "Paens vesco ambulo abduco consequuntur."
+            "Centum angulus accommodo admiratio adnuo.",
+            "Suspendo vitium cupiditate spiritus.",
+            "Contego tres tantum aperiam corona catena."
           ],
-          "link": "https://bruised-exhaustion.net",
-          "linkLabel": "Get It Now"
+          "link": "https://good-natured-coinsurance.name/",
+          "linkLabel": "Discover"
         },
         {
-          "title": "Bespoke Plastic Bacon",
+          "title": "Ergonomic Frozen Salad",
           "info": [
-            "Cogito adsidue solus testimonium.",
-            "Tandem conqueror dolorum attero comprehendo solitudo.",
-            "Absorbeo amiculum crastinus vulpes articulus."
+            "Bos caute vigilo aeternus callide taceo aufero.",
+            "Contabesco terebro adiuvo cura vulpes."
           ],
-          "link": "https://yummy-rice.info",
+          "link": "https://scaly-soil.biz/",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Unbranded Soft Bike",
+          "info": [
+            "Nihil velit aiunt thesaurus sollicito cumque.",
+            "Absorbeo contego dolore placeat at admoneo.",
+            "Depromo pecco vesper sequi totus attero.",
+            "Pauper acerbitas condico arbitro."
+          ],
+          "link": "https://secret-lawmaker.com/",
           "linkLabel": "Check It Out"
         },
         {
-          "title": "Generic Rubber Bacon",
+          "title": "Rustic Concrete Towels",
           "info": [
-            "Acies subvenio decumbo vulticulus ex basium volo.",
-            "Iste thesis bis comes ulterius paulatim vesica nulla."
+            "Tabgo vitae depereo advenio ullam pauper voveo.",
+            "Admoneo desolo concido amita blandior.",
+            "Spero tripudio abundans convoco cohaero eos summa.",
+            "Voro surculus temporibus utor volva."
           ],
-          "link": "https://granular-nothing.name/",
+          "link": "https://favorite-ruffle.net/",
           "linkLabel": "Shop Now"
         },
         {
-          "title": "Small Fresh Tuna",
+          "title": "Ergonomic Cotton Towels",
           "info": [
-            "Esse sponte avarus patrocinor denuo tabernus atrocitas.",
-            "Damno varietas apostolus aduro.",
-            "Ventosus acerbitas truculenter cubo caritas creber."
+            "Cernuus cohaero desparatus arto.",
+            "Nobis adversus decimus supplanto confugo absconditus traho."
           ],
-          "link": "https://back-snowsuit.info",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Unbranded Steel Soap",
-          "info": [
-            "Demo caritas culpo ultra vita cunae aliquam.",
-            "Perferendis conduco consuasor somnus acceptus qui comptus.",
-            "Comparo aspicio tricesimus ustulo celer cubitum odit."
-          ],
-          "link": "https://early-oxford.net",
-          "linkLabel": "Discover"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Fabric",
-          "info": "Polyester"
-        },
-        {
-          "title": "Season",
-          "info": "Winter Line"
-        },
-        {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Occasion",
-          "info": "Formal yearningly"
-        }
-      ],
-      "availableQuantity": 37
-    },
-    {
-      "id": "e6e0",
-      "uuid": "89c41893-b577-4c44-8096-5abb0aa8cd1c",
-      "name": "Recycled Concrete Digital Camera",
-      "brand": "Maggio, Ondricka and Quitzon",
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals Future-proofed radical framework",
-      "actualPrice": 328,
-      "sellingPrice": 272.24,
-      "discount": 17,
-      "ratings": 0,
-      "reviewsCount": 154,
-      "promotion": false,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=1876314676002816",
-        "https://picsum.photos/seed/DlIQK/640/480",
-        "https://loremflickr.com/640/480?lock=4114153625092096",
-        "https://loremflickr.com/640/480?lock=2511866098089984",
-        "https://picsum.photos/seed/gjbUKW/640/480",
-        "https://picsum.photos/seed/nbZmdp/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Elegant Fresh Chair",
-          "info": [
-            "Valde desidero arguo avarus valeo allatus peccatus statim.",
-            "Utilis delibero tam aliqua debeo."
-          ],
-          "link": "https://cuddly-institution.org",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Modern Rubber Shirt",
-          "info": [
-            "Canis textilis ante congregatio.",
-            "Sono decipio ustilo vir ustulo tametsi fuga.",
-            "Sortitus curriculum solitudo attonbitus.",
-            "Enim consuasor volup depopulo cui aptus."
-          ],
-          "link": "https://present-measure.com",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Fantastic Metal Pizza",
-          "info": [
-            "Fuga absque cariosus earum cribro cuppedia coepi eligendi.",
-            "Ipsa vinco cupiditas depereo illum."
-          ],
-          "link": "https://wasteful-girlfriend.com/",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Ergonomic Cotton Keyboard",
-          "info": [
-            "Argentum cultura vicinus tutamen ratione.",
-            "Cognomen unde cinis depromo timor vilis talio."
-          ],
-          "link": "https://rundown-vitro.com/",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Electronic Granite Table",
-          "info": [
-            "Cariosus undique collum deputo copiose.",
-            "Atque vulpes sapiente molestias credo aufero sono porro.",
-            "Depereo denuo baiulus umquam tremo cultura.",
-            "Coepi decerno uter copia bibo adamo crapula et."
-          ],
-          "link": "https://hilarious-residue.org/",
-          "linkLabel": "Shop Now"
+          "link": "https://orderly-servant.biz",
+          "linkLabel": "Explore"
         }
       ],
       "specifications": [
@@ -1196,40 +1331,41 @@
           "info": "Summer Line"
         },
         {
-          "title": "Fit",
-          "info": "Slim Fit"
+          "title": "Main Trend",
+          "info": "damno cetera violently likely"
         },
         {
-          "title": "Fit",
-          "info": "Regular Fit"
+          "title": "Fabric",
+          "info": "Polyester"
         },
         {
-          "title": "Color",
-          "info": "lime orchid"
+          "title": "Main Trend",
+          "info": "textus thema considering gadzooks gee"
         },
         {
-          "title": "Color",
-          "info": "mint green cyan"
+          "title": "Season",
+          "info": "Spring Line"
         }
       ],
-      "availableQuantity": 42
+      "availableQuantity": 73
     },
     {
-      "id": "81a0",
-      "uuid": "c7241229-0de6-4241-b1fe-93a408cd6cbb",
-      "name": "Unbranded Metal Coffee Maker",
-      "brand": "Renner Group",
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart Organic bandwidth-monitored productivity",
-      "actualPrice": 547,
-      "sellingPrice": 355.55,
-      "discount": 35,
-      "ratings": 2.5,
-      "reviewsCount": 58,
+      "id": "fb10",
+      "uuid": "f19e741f-33ca-4345-b095-97d940f46173",
+      "name": "Sleek Granite Digital Camera",
+      "brand": "Beer, Mitchell and Harris",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart Configurable value-added process improvement",
+      "actualPrice": 216,
+      "sellingPrice": 166.32,
+      "discount": 23,
+      "ratings": 1.3,
+      "reviewsCount": 35,
       "promotion": false,
       "urls": [
-        "https://picsum.photos/seed/YRwNQ/640/480",
-        "https://picsum.photos/seed/KXjx2/640/480",
-        "https://loremflickr.com/640/480?lock=5800681822748672"
+        "https://picsum.photos/seed/fRqC1S/640/480",
+        "https://loremflickr.com/640/480?lock=261035990712320",
+        "https://loremflickr.com/640/480?lock=3992686797258752",
+        "https://loremflickr.com/640/480?lock=2636723114737664"
       ],
       "sizes": [
         "S",
@@ -1244,723 +1380,401 @@
       ],
       "offers": [
         {
-          "title": "Unbranded Wooden Pizza",
+          "title": "Licensed Rubber Towels",
           "info": [
-            "Creber aureus solvo numquam illum.",
-            "Saepe creptio cunabula catena.",
-            "Cohaero tibi umerus facilis votum speculum.",
-            "Delicate defluo pax cunae vulariter praesentium corona quis."
+            "Omnis praesentium accedo una comparo earum.",
+            "Vere vigor omnis vos vilicus benigne terra officiis.",
+            "Universe thorax cuius numquam tot.",
+            "Consequuntur unde sunt demens vergo illum coniuratio."
           ],
-          "link": "https://active-fifth.info/",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Practical Soft Shoes",
-          "info": [
-            "Admitto aestivus addo accusantium certe.",
-            "Apostolus aspernatur attollo ustilo calco addo quasi.",
-            "Strues videlicet templum ventus vulnus ducimus.",
-            "Agnitio dolor caput tametsi ventus tibi aut."
-          ],
-          "link": "https://vicious-respite.org",
+          "link": "https://accomplished-fact.name",
           "linkLabel": "Shop Now"
         },
         {
-          "title": "Rustic Fresh Car",
+          "title": "Gorgeous Steel Cheese",
           "info": [
-            "Adipisci vinco contigo terga auctor conduco vinum hic.",
-            "Arbor vilitas admoneo tepidus cilicium votum aveho vindico."
+            "Eius amplexus cultellus qui tabella tero peccatus."
           ],
-          "link": "https://wooden-icicle.org/",
+          "link": "https://delightful-brief.name",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Elegant Rubber Tuna",
+          "info": [
+            "Tunc versus tabula caput cilicium."
+          ],
+          "link": "https://obvious-widow.org/",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Incredible Steel Gloves",
+          "info": [
+            "Cattus vetus acsi ultra tumultus.",
+            "Cervus tondeo magnam amicitia caecus bos.",
+            "Sapiente constans acies adfectus patria."
+          ],
+          "link": "https://lighthearted-croissant.net/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Practical Fresh Computer",
+          "info": [
+            "Coniuratio tepidus dolores patria repudiandae.",
+            "Capio civitas tutis temporibus."
+          ],
+          "link": "https://dramatic-ego.biz/",
+          "linkLabel": "Check It Out"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Color",
+          "info": "grey violet"
+        },
+        {
+          "title": "Color",
+          "info": "yellow cyan"
+        },
+        {
+          "title": "Fit",
+          "info": "Oversized"
+        },
+        {
+          "title": "Color",
+          "info": "orange orchid"
+        },
+        {
+          "title": "Main Trend",
+          "info": "abeo aptus bond"
+        }
+      ],
+      "availableQuantity": 75
+    },
+    {
+      "id": "ac9f",
+      "uuid": "b17ff8b7-1bf4-48c9-99c9-e6c592d4b340",
+      "name": "Recycled Concrete Running Shoes",
+      "brand": "Wolff - Block",
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016 Self-enabling impactful utilisation",
+      "actualPrice": 651,
+      "sellingPrice": 494.76,
+      "discount": 24,
+      "ratings": 3.6,
+      "reviewsCount": 473,
+      "promotion": true,
+      "urls": [
+        "https://loremflickr.com/640/480?lock=1814854574800896",
+        "https://picsum.photos/seed/SABmVjhv/640/480",
+        "https://picsum.photos/seed/3N5EybE3L/640/480",
+        "https://picsum.photos/seed/XQOOQ5U92/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Licensed Fresh Chips",
+          "info": [
+            "Voluntarius dolor tenax synagoga ara.",
+            "Comparo strues verto dapifer demo."
+          ],
+          "link": "https://noteworthy-directive.org",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Modern Concrete Sausages",
+          "info": [
+            "Qui sol quos audentia cui vivo.",
+            "In patior avaritia soleo umbra triumphus pauper.",
+            "Sulum debeo suffoco corrumpo cuppedia cribro."
+          ],
+          "link": "https://tidy-iridescence.name",
           "linkLabel": "Get It Now"
         },
         {
-          "title": "Handcrafted Plastic Pizza",
+          "title": "Awesome Metal Hat",
           "info": [
-            "Vespillo damno tenax succedo coerceo succedo cernuus."
+            "Cura voro dolor deleo thesis adamo quod."
           ],
-          "link": "https://loyal-scope.name/",
+          "link": "https://coarse-phone.com/",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Sleek Wooden Salad",
+          "info": [
+            "Sodalitas spectaculum vado et certus tantillus vulnus."
+          ],
+          "link": "https://exciting-swell.biz/",
           "linkLabel": "Learn More"
+        },
+        {
+          "title": "Sleek Rubber Mouse",
+          "info": [
+            "Numquam deserunt desolo vinculum.",
+            "Delinquo usus benigne trepide videlicet appositus.",
+            "Verumtamen saepe eum talus tamisium ea congregatio.",
+            "Creta addo voveo accusamus esse audentia."
+          ],
+          "link": "https://impossible-microlending.net/",
+          "linkLabel": "Get It Now"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Fabric",
+          "info": "Silk"
+        },
+        {
+          "title": "Color",
+          "info": "salmon tan"
+        },
+        {
+          "title": "Main Trend",
+          "info": "coniuratio vindico er"
+        },
+        {
+          "title": "Main Trend",
+          "info": "aliqua aeternus unpleasant"
+        },
+        {
+          "title": "Fit",
+          "info": "Oversized"
+        }
+      ],
+      "availableQuantity": 10
+    },
+    {
+      "id": "a233",
+      "uuid": "e4a8fd2d-1936-4a4c-83fd-06d050ffd271",
+      "name": "Licensed Concrete Headphones",
+      "brand": "Boehm Inc",
+      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive Visionary multi-state emulation",
+      "actualPrice": 490,
+      "sellingPrice": 274.4,
+      "discount": 44,
+      "ratings": 1.5,
+      "reviewsCount": 303,
+      "promotion": true,
+      "urls": [
+        "https://picsum.photos/seed/JZb04VbVpc/640/480",
+        "https://loremflickr.com/640/480?lock=120960365625344",
+        "https://picsum.photos/seed/ZGg1qQY/640/480",
+        "https://loremflickr.com/640/480?lock=5678561589460992",
+        "https://loremflickr.com/640/480?lock=1392146579980288",
+        "https://picsum.photos/seed/axmCxJ/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Ergonomic Frozen Bacon",
+          "info": [
+            "Terminatio valeo alius comprehendo.",
+            "Aduro desipio circumvenio sollers ventosus cogo."
+          ],
+          "link": "https://reckless-brother.com",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Incredible Granite Hat",
+          "info": [
+            "Impedit inflammatio aer truculenter vir abeo vinum."
+          ],
+          "link": "https://blind-autumn.org/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Licensed Bronze Sausages",
+          "info": [
+            "Cauda illum neque adsuesco conventus verbera.",
+            "Aliquam comedo debitis super tristis pauper."
+          ],
+          "link": "https://vital-public.info",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Ergonomic Concrete Bike",
+          "info": [
+            "Adversus copiose quae color fuga stultus."
+          ],
+          "link": "https://back-weather.net/",
+          "linkLabel": "Shop Now"
         },
         {
           "title": "Unbranded Rubber Car",
           "info": [
-            "Cohors cito volup inventore tepesco alter.",
-            "Culpa vorax vulnero vinculum quisquam vitae."
+            "Demonstro pauper minus clamo vestigium.",
+            "Doloremque annus caries damnatio cotidie alo.",
+            "Sonitus sub solus aut undique denique.",
+            "Conservo demonstro umbra thymbra commodo solvo volo."
           ],
-          "link": "https://gracious-character.biz",
-          "linkLabel": "Check It Out"
+          "link": "https://failing-cormorant.name",
+          "linkLabel": "Discover"
         }
       ],
       "specifications": [
         {
-          "title": "Color",
-          "info": "red mint green"
-        },
-        {
           "title": "Fabric",
           "info": "Cotton"
+        },
+        {
+          "title": "Color",
+          "info": "gold ivory"
+        },
+        {
+          "title": "Main Trend",
+          "info": "advoco cultellus thankfully whenever uh-huh"
+        },
+        {
+          "title": "Fit",
+          "info": "Oversized"
+        },
+        {
+          "title": "Occasion",
+          "info": "Formal foster"
+        }
+      ],
+      "availableQuantity": 29
+    },
+    {
+      "id": "44f5",
+      "uuid": "ceb8cc5c-d91b-4003-90fb-0659774e18d0",
+      "name": "Ergonomic Plastic Digital Camera",
+      "brand": "Hermiston, Predovic and Sipes",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles Triple-buffered modular emulation",
+      "actualPrice": 790,
+      "sellingPrice": 726.8,
+      "discount": 8,
+      "ratings": 2.5,
+      "reviewsCount": 130,
+      "promotion": true,
+      "urls": [
+        "https://loremflickr.com/640/480?lock=697174878846976",
+        "https://picsum.photos/seed/GFrxrw/640/480",
+        "https://loremflickr.com/640/480?lock=6746723032498176",
+        "https://loremflickr.com/640/480?lock=3007571891847168"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Elegant Rubber Sausages",
+          "info": [
+            "Decerno at calculus adipisci comparo beatus umerus."
+          ],
+          "link": "https://outstanding-filter.biz",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Licensed Wooden Shoes",
+          "info": [
+            "Xiphias tardus repellendus cena.",
+            "Repellendus pax terra utilis voluptas.",
+            "Charisma vitiosus explicabo adipisci venia vestigium.",
+            "Curriculum artificiose uter argumentum angulus."
+          ],
+          "link": "https://grubby-vinyl.com",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Small Metal Gloves",
+          "info": [
+            "Verus ait aspernatur conventus cubicularis carcer velit.",
+            "Tristis aut sublime defluo esse cotidie.",
+            "Delinquo ustilo vitium dolorem tenus clamo tertius."
+          ],
+          "link": "https://frightening-orient.biz",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Unbranded Fresh Mouse",
+          "info": [
+            "Verumtamen rerum armarium vae unde.",
+            "Abstergo depopulo teres vado stabilis derideo curtus.",
+            "Vae spiculum ultio demoror victoria eligendi termes utpote."
+          ],
+          "link": "https://productive-drop.info/",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Rustic Plastic Chair",
+          "info": [
+            "Conscendo vulpes tondeo defero cariosus vita.",
+            "Crastinus vindico utroque aetas quam.",
+            "Tantillus vapulus usus tenuis avarus itaque candidus.",
+            "Voluptatem brevis cupressus vinco."
+          ],
+          "link": "https://dearest-impulse.name",
+          "linkLabel": "Shop Now"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Season",
+          "info": "Spring Line"
+        },
+        {
+          "title": "Color",
+          "info": "plum fuchsia"
         },
         {
           "title": "Season",
           "info": "Summer Line"
         },
         {
-          "title": "Season",
-          "info": "Winter Line"
-        },
-        {
-          "title": "Occasion",
-          "info": "Formal dearly quirkily"
-        }
-      ],
-      "availableQuantity": 47
-    },
-    {
-      "id": "d8b3",
-      "uuid": "c9a84396-6577-402b-8ba8-c4f6c863fdfd",
-      "name": "Recycled Metal Watch",
-      "brand": "Schuppe Inc",
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients Synergized bandwidth-monitored array",
-      "actualPrice": 81,
-      "sellingPrice": 76.95,
-      "discount": 5,
-      "ratings": 2.4,
-      "reviewsCount": 463,
-      "promotion": false,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=5524193093353472",
-        "https://loremflickr.com/640/480?lock=5695552599621632",
-        "https://picsum.photos/seed/gbQ35/640/480",
-        "https://picsum.photos/seed/vDXyrz/640/480",
-        "https://loremflickr.com/640/480?lock=3726721471741952",
-        "https://picsum.photos/seed/9cmcjKD/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Luxurious Frozen Shirt",
-          "info": [
-            "Conturbo virgo vilis aro velum deorsum.",
-            "Valeo aperte crepusculum iure sordeo tam.",
-            "Colligo confido comparo harum.",
-            "Creptio truculenter aperte coepi voluptates decor."
-          ],
-          "link": "https://absolute-thunderstorm.info",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Intelligent Granite Salad",
-          "info": [
-            "Campana defluo voluptatibus delego carcer."
-          ],
-          "link": "https://enlightened-crawdad.net",
-          "linkLabel": "Explore"
-        },
-        {
-          "title": "Handcrafted Fresh Keyboard",
-          "info": [
-            "Verumtamen delego coruscus arto ambulo."
-          ],
-          "link": "https://jovial-gigantism.org/",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Modern Plastic Towels",
-          "info": [
-            "Vulgivagus clementia arx aetas talio tribuo.",
-            "Thesaurus colo vulgaris abstergo denuo et corrumpo textus.",
-            "Deleniti cura debeo thymbra infit abstergo stips."
-          ],
-          "link": "https://simplistic-accountability.info/",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Refined Steel Fish",
-          "info": [
-            "Beatae talio ara abscido tardus amaritudo tolero aegre.",
-            "Comprehendo subito acervus voco magnam condico auditor.",
-            "Atque spero id trucido calculus textor.",
-            "Defetiscor subiungo caelestis deinde demitto tenuis patruus."
-          ],
-          "link": "https://extroverted-mileage.biz/",
-          "linkLabel": "Check It Out"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Fit",
-          "info": "Oversized"
-        },
-        {
-          "title": "Color",
-          "info": "olive turquoise"
-        },
-        {
-          "title": "Occasion",
-          "info": "Formal pole"
-        },
-        {
-          "title": "Color",
-          "info": "tan yellow"
-        },
-        {
-          "title": "Fit",
-          "info": "Oversized"
-        }
-      ],
-      "availableQuantity": 92
-    },
-    {
-      "id": "d9d0",
-      "uuid": "77025a3e-e3a4-4b45-9e00-d48388b9e0b9",
-      "name": "Tasty Soft Gaming Laptop",
-      "brand": "Auer and Sons",
-      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design Exclusive dedicated orchestration",
-      "actualPrice": 980,
-      "sellingPrice": 754.6,
-      "discount": 23,
-      "ratings": 3.8,
-      "reviewsCount": 200,
-      "promotion": true,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=8356371447676928",
-        "https://picsum.photos/seed/DPAXVG/640/480",
-        "https://loremflickr.com/640/480?lock=5192110370193408"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Refined Bronze Cheese",
-          "info": [
-            "Absque cras aliqua harum cura hic excepturi unus.",
-            "Sponte cognomen cupiditas vinitor."
-          ],
-          "link": "https://critical-sanity.org",
-          "linkLabel": "Check It Out"
-        },
-        {
-          "title": "Generic Cotton Shoes",
-          "info": [
-            "Atque facilis creator traho tres coepi valeo.",
-            "Volubilis eos autus accusator.",
-            "Bardus perspiciatis congregatio strenuus conduco."
-          ],
-          "link": "https://pleasing-canvas.name/",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Rustic Rubber Gloves",
-          "info": [
-            "Unus vigor pel sophismata una velut centum.",
-            "Tener defluo atrox deleniti vicinus carpo vicinus aspicio.",
-            "Repellat clarus amplus pecco triduana cornu terror defendo.",
-            "Cribro terga commodi caste umerus conitor magnam."
-          ],
-          "link": "https://wretched-exploration.com/",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Oriental Metal Table",
-          "info": [
-            "Corpus certe supellex vestrum."
-          ],
-          "link": "https://marvelous-lymphocyte.com",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Tasty Rubber Shirt",
-          "info": [
-            "Advoco nisi coma aegre aureus sursum coniuratio solus.",
-            "Combibo solium bonus aspicio abstergo.",
-            "At speculum apparatus thesaurus considero astrum substantia."
-          ],
-          "link": "https://harmonious-fill.org",
-          "linkLabel": "Explore"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Season",
-          "info": "Autumn Line"
-        },
-        {
-          "title": "Color",
-          "info": "grey yellow"
-        },
-        {
-          "title": "Fit",
-          "info": "Oversized"
-        },
-        {
-          "title": "Fit",
-          "info": "Oversized"
-        },
-        {
-          "title": "Fabric",
-          "info": "Polyester"
-        }
-      ],
-      "availableQuantity": 89
-    },
-    {
-      "id": "e858",
-      "uuid": "9ec9061c-fd43-493b-aa8b-fbf60f59268f",
-      "name": "Bespoke Granite Guitar",
-      "brand": "Metz LLC",
-      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016 Monitored non-volatile initiative",
-      "actualPrice": 791,
-      "sellingPrice": 490.42,
-      "discount": 38,
-      "ratings": 0.7,
-      "reviewsCount": 140,
-      "promotion": false,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=2795815596720128",
-        "https://loremflickr.com/640/480?lock=5289552000319488",
-        "https://picsum.photos/seed/ED0hW3W/640/480",
-        "https://loremflickr.com/640/480?lock=3033495192469504",
-        "https://loremflickr.com/640/480?lock=8016076036112384",
-        "https://picsum.photos/seed/IZfcOz3Zf/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Incredible Concrete Bike",
-          "info": [
-            "Adversus utrum comburo aestus.",
-            "Vespillo temporibus bos soluta addo.",
-            "Supplanto aranea thermae eum tempore aeternus sophismata."
-          ],
-          "link": "https://triangular-socialism.biz",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Unbranded Concrete Mouse",
-          "info": [
-            "Aperte blanditiis spoliatio curso minus curis ago.",
-            "Teres demitto absens arbor tibi asperiores."
-          ],
-          "link": "https://pristine-inlay.name",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Refined Cotton Bike",
-          "info": [
-            "Cornu virtus sub excepturi subvenio acervus exercitationem.",
-            "Creber cognatus adfectus perspiciatis.",
-            "Certe conventus custodia cribro tam est aegrus.",
-            "Tolero viduo cui video video ancilla curis adulatio addo."
-          ],
-          "link": "https://average-reach.biz",
-          "linkLabel": "Explore"
-        },
-        {
-          "title": "Sleek Cotton Bacon",
-          "info": [
-            "Cura soluta approbo vulgo tendo.",
-            "Claustrum uxor vociferor comes.",
-            "Villa sortitus creber animus vix.",
-            "Vivo uterque tener labore volutabrum victus atrox tamen."
-          ],
-          "link": "https://hoarse-vibrissae.net",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Sleek Granite Pants",
-          "info": [
-            "Adfero inflammatio appello thema terga ago cinis cubitum.",
-            "Verecundia sopor denego totidem coma depraedor.",
-            "Carpo vomito contabesco color totus utrum cometes illum.",
-            "Tempora cruciamentum vociferor cultura debeo."
-          ],
-          "link": "https://sniveling-airfare.biz/",
-          "linkLabel": "Discover"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Color",
-          "info": "red yellow"
-        },
-        {
-          "title": "Season",
-          "info": "Winter Line"
-        },
-        {
-          "title": "Fabric",
-          "info": "Polyester"
-        },
-        {
-          "title": "Color",
-          "info": "magenta plum"
-        },
-        {
-          "title": "Fit",
-          "info": "Slim Fit"
-        }
-      ],
-      "availableQuantity": 5
-    },
-    {
-      "id": "c53d",
-      "uuid": "03f597a5-8329-45e7-938b-4479d0bfc898",
-      "name": "Rustic Soft Coffee Maker",
-      "brand": "Reilly Group",
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Innovative upward-trending utilisation",
-      "actualPrice": 128,
-      "sellingPrice": 113.92,
-      "discount": 11,
-      "ratings": 1.2,
-      "reviewsCount": 390,
-      "promotion": false,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=2128951684104192",
-        "https://picsum.photos/seed/qWrFwzHCf/640/480",
-        "https://loremflickr.com/640/480?lock=4626809085755392",
-        "https://loremflickr.com/640/480?lock=5089385823338496"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Intelligent Soft Keyboard",
-          "info": [
-            "Via appositus ullus iure vinum calcar censura depraedor.",
-            "Alii adsum soluta torqueo tergum aedificium."
-          ],
-          "link": "https://frank-training.biz/",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Gorgeous Granite Sausages",
-          "info": [
-            "Suscipio turpis thermae vitiosus atrocitas.",
-            "Aut tollo dolores acerbitas aer.",
-            "Casus voluntarius verus ea caries admitto speciosus ter.",
-            "Repudiandae comminor acer ubi."
-          ],
-          "link": "https://inexperienced-tote.org/",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Awesome Rubber Chair",
-          "info": [
-            "Quasi correptius ipsum varius volubilis molestias.",
-            "Strenuus nostrum cuppedia teneo aeneus annus viduo calcar.",
-            "Blandior cresco balbus absens truculenter labore."
-          ],
-          "link": "https://old-fashioned-oregano.org/",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Ergonomic Frozen Fish",
-          "info": [
-            "Desparatus tutamen cilicium creber."
-          ],
-          "link": "https://ragged-paw.net",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Refined Frozen Sausages",
-          "info": [
-            "Tertius contra spoliatio thesis debitis."
-          ],
-          "link": "https://daring-tuxedo.org/",
-          "linkLabel": "Explore"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Fabric",
-          "info": "Denim"
-        },
-        {
-          "title": "Fit",
-          "info": "Oversized"
-        },
-        {
-          "title": "Color",
-          "info": "purple sky blue"
-        },
-        {
-          "title": "Fit",
-          "info": "Slim Fit"
-        },
-        {
-          "title": "Fabric",
-          "info": "Denim"
-        }
-      ],
-      "availableQuantity": 88
-    },
-    {
-      "id": "162e",
-      "uuid": "7b3086b8-2561-4164-af99-93495cf07869",
-      "name": "Generic Rubber Digital Camera",
-      "brand": "Wyman, Harber and Moen",
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals Seamless client-driven analyzer",
-      "actualPrice": 132,
-      "sellingPrice": 69.96,
-      "discount": 47,
-      "ratings": 1.8,
-      "reviewsCount": 135,
-      "promotion": true,
-      "urls": [
-        "https://loremflickr.com/640/480?lock=1541120840433664",
-        "https://picsum.photos/seed/lfMNj/640/480",
-        "https://loremflickr.com/640/480?lock=2806116264181760",
-        "https://loremflickr.com/640/480?lock=4175720603451392",
-        "https://picsum.photos/seed/KLFu4/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Recycled Wooden Chicken",
-          "info": [
-            "Canto bestia taceo sapiente blanditiis.",
-            "Bis praesentium decor artificiose error titulus.",
-            "Tandem totidem deinde acceptus xiphias stips.",
-            "Turbo defetiscor conduco aeger avarus somniculosus."
-          ],
-          "link": "https://shy-ford.info/",
-          "linkLabel": "Explore"
-        },
-        {
-          "title": "Gorgeous Metal Shoes",
-          "info": [
-            "In defetiscor torrens vis aggero torrens.",
-            "Tutamen unde varietas adficio aedificium amo tollo ambulo.",
-            "Currus dignissimos admitto volva."
-          ],
-          "link": "https://acceptable-bake.info/",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Recycled Plastic Shoes",
-          "info": [
-            "Xiphias esse iure adfectus caelestis aegrotatio amitto.",
-            "Totam crastinus coruscus pel animi.",
-            "Aranea libero tergeo comitatus trucido molestias."
-          ],
-          "link": "https://easy-locomotive.name",
-          "linkLabel": "Shop Now"
-        },
-        {
-          "title": "Luxurious Wooden Pants",
-          "info": [
-            "Concedo trucido derelinquo ad sono sol argumentum.",
-            "Deficio ter trucido allatus benevolentia thymum.",
-            "Clamo sponte eaque vetus cauda triumphus.",
-            "Ratione animi timor sapiente adduco adhuc."
-          ],
-          "link": "https://obedient-candidate.info/",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Gorgeous Soft Chicken",
-          "info": [
-            "Acervus tabella vinitor vox voluptatem vox.",
-            "Textus vito calcar stabilis compono.",
-            "Clarus candidus dolorem credo eos vomer deserunt undique."
-          ],
-          "link": "https://subdued-sculpting.net/",
-          "linkLabel": "Shop Now"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Fit",
-          "info": "Regular Fit"
-        },
-        {
-          "title": "Occasion",
-          "info": "Work avalanche billet"
-        },
-        {
-          "title": "Color",
-          "info": "violet orange"
-        },
-        {
-          "title": "Occasion",
-          "info": "Formal muddy whose"
+          "title": "Main Trend",
+          "info": "quis culpa yum incidentally hops"
         },
         {
           "title": "Fabric",
           "info": "Cotton"
-        }
-      ],
-      "availableQuantity": 51
-    },
-    {
-      "id": "b0c6",
-      "uuid": "e922c879-c1f2-437c-905b-440cdcc98a4b",
-      "name": "Electronic Cotton T-shirt",
-      "brand": "Gibson Inc",
-      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design Future-proofed 24/7 open architecture",
-      "actualPrice": 979,
-      "sellingPrice": 763.62,
-      "discount": 22,
-      "ratings": 3.1,
-      "reviewsCount": 165,
-      "promotion": false,
-      "urls": [
-        "https://picsum.photos/seed/50UuaDHX1/640/480",
-        "https://picsum.photos/seed/N9OteFxk/640/480",
-        "https://picsum.photos/seed/JKWey4/640/480",
-        "https://loremflickr.com/640/480?lock=4051653160337408"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Elegant Granite Chair",
-          "info": [
-            "Versus totus adstringo agnitio acquiro demergo esse video.",
-            "Alienus uterque caput sollers vae."
-          ],
-          "link": "https://bad-mind.name/",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Luxurious Plastic Cheese",
-          "info": [
-            "Decens deorsum tergum capitulus ultio sol sonitus.",
-            "Pauper conduco tertius cresco comparo deleniti.",
-            "Bestia terminatio triduana volaticus ulciscor pax.",
-            "Substantia claro vorax ait canto viscus caritas sit."
-          ],
-          "link": "https://stupendous-accusation.name",
-          "linkLabel": "Discover"
-        },
-        {
-          "title": "Fantastic Concrete Tuna",
-          "info": [
-            "Deprecator cibo tutamen contigo vapulus thesis.",
-            "Curo nostrum accommodo amplus."
-          ],
-          "link": "https://ideal-tuna.org/",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Ergonomic Cotton Pants",
-          "info": [
-            "Barba ambulo quisquam ante clam valeo eius.",
-            "Casus defungo apparatus conscendo caries.",
-            "Deripio vinco tunc creta occaecati voco blanditiis vinum.",
-            "Deduco talio alter totam aequus animus incidunt."
-          ],
-          "link": "https://tense-meantime.net/",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Incredible Frozen Fish",
-          "info": [
-            "Ratione tenus aiunt quam odio.",
-            "Esse tergeo verto cubo alioqui."
-          ],
-          "link": "https://same-tempo.net",
-          "linkLabel": "Find Out More"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Fabric",
-          "info": "Denim"
-        },
-        {
-          "title": "Season",
-          "info": "Summer Line"
-        },
-        {
-          "title": "Color",
-          "info": "sky blue violet"
-        },
-        {
-          "title": "Occasion",
-          "info": "Formal stunning"
-        },
-        {
-          "title": "Fit",
-          "info": "Oversized"
         }
       ],
       "availableQuantity": 26
     },
     {
-      "id": "de2e",
-      "uuid": "2df62333-a8a9-436a-ad72-62d5ad5b102c",
-      "name": "Modern Steel Digital Camera",
-      "brand": "Schowalter, Bechtelar and Pouros",
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles Open-architected fresh-thinking service-desk",
-      "actualPrice": 396,
-      "sellingPrice": 328.68,
-      "discount": 17,
-      "ratings": 4.2,
-      "reviewsCount": 76,
+      "id": "442d",
+      "uuid": "f9582a53-a843-49f3-9d73-2a85ef589419",
+      "name": "Luxurious Rubber Backpack",
+      "brand": "Murray LLC",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients Versatile cohesive policy",
+      "actualPrice": 623,
+      "sellingPrice": 467.25,
+      "discount": 25,
+      "ratings": 4.3,
+      "reviewsCount": 380,
       "promotion": false,
       "urls": [
-        "https://picsum.photos/seed/adImSRgU1F/640/480",
-        "https://picsum.photos/seed/zXUCnjq/640/480",
-        "https://picsum.photos/seed/7ZywIbjKeJ/640/480"
+        "https://picsum.photos/seed/kYvW8Hp4l/640/480",
+        "https://picsum.photos/seed/BEo0IDN4/640/480",
+        "https://loremflickr.com/640/480?lock=5127796464549888",
+        "https://loremflickr.com/640/480?lock=4598323602259968"
       ],
       "sizes": [
         "S",
@@ -1975,76 +1789,283 @@
       ],
       "offers": [
         {
-          "title": "Intelligent Cotton Soap",
+          "title": "Fantastic Metal Bike",
           "info": [
-            "Aperiam vester cibus conservo deleo alo spes totidem.",
-            "Curia tyrannus vinitor anser adulescens aestas calco.",
-            "Volubilis commemoro molestias tonsor."
+            "Celer thesis victus deleniti templum caritas auctor cubo.",
+            "Beatae agnitio vehemens armarium cogito quidem considero."
           ],
-          "link": "https://amused-yoyo.org/",
+          "link": "https://prime-foot.net/",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Elegant Granite Sausages",
+          "info": [
+            "Esse celer acervus impedit assentator corrumpo venustas.",
+            "Varius acer cui tolero patria cometes canonicus ara cohaero.",
+            "Derideo bibo adiuvo ait coruscus beatus credo vilicus.",
+            "Suasoria acies tres confero aeternus aspicio."
+          ],
+          "link": "https://colorful-poncho.com/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Fantastic Plastic Soap",
+          "info": [
+            "Comptus delicate accusantium possimus antiquus."
+          ],
+          "link": "https://better-seizure.com",
           "linkLabel": "Shop Now"
         },
         {
-          "title": "Handcrafted Soft Chips",
+          "title": "Intelligent Soft Car",
           "info": [
-            "Stultus arcesso vulpes vicinus tempore aestas."
+            "Supplanto ter condico credo ullus.",
+            "Sustineo veniam somniculosus bibo magni esse spiculum.",
+            "Usque arguo molestias tristis suspendo."
           ],
-          "link": "https://conscious-conductor.org/",
-          "linkLabel": "Get It Now"
+          "link": "https://confused-truth.info",
+          "linkLabel": "Shop Now"
         },
         {
-          "title": "Incredible Cotton Sausages",
+          "title": "Handmade Bronze Pizza",
           "info": [
-            "Perspiciatis appono vitae amiculum nesciunt facere.",
-            "Totus toties ait pauper alii subvenio sordeo.",
-            "Cado aetas audax suppellex defero autem.",
-            "Apud amaritudo toties aggero recusandae suggero."
+            "Confero subseco cognatus sopor trans."
           ],
-          "link": "https://moist-sanity.com/",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Unbranded Concrete Bacon",
-          "info": [
-            "Eos bestia paulatim arcesso voluptatem cubicularis."
-          ],
-          "link": "https://shy-complex.biz",
-          "linkLabel": "Find Out More"
-        },
-        {
-          "title": "Sleek Steel Bike",
-          "info": [
-            "Sustineo amicitia victus contego degenero.",
-            "Summisse accendo vetus arbitro labore catena cubitum.",
-            "Depono urbanus venia cribro tergiversatio theatrum aestas."
-          ],
-          "link": "https://confused-reorganisation.com",
-          "linkLabel": "Explore"
+          "link": "https://moist-tuxedo.com/",
+          "linkLabel": "Discover"
         }
       ],
       "specifications": [
         {
-          "title": "Fit",
-          "info": "Slim Fit"
+          "title": "Main Trend",
+          "info": "cernuus ustulo crunch"
         },
         {
           "title": "Occasion",
-          "info": "Party internal"
+          "info": "Casual monthly aha blah"
+        },
+        {
+          "title": "Main Trend",
+          "info": "currus itaque rebuild tint"
+        },
+        {
+          "title": "Season",
+          "info": "Summer Collection"
+        },
+        {
+          "title": "Fabric",
+          "info": "Polyester"
+        }
+      ],
+      "availableQuantity": 4
+    },
+    {
+      "id": "6723",
+      "uuid": "1f122e52-d329-47c3-a90a-7fefcb835239",
+      "name": "Awesome Cotton Watch",
+      "brand": "Considine, Zulauf and Bednar",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Optional encompassing budgetary management",
+      "actualPrice": 596,
+      "sellingPrice": 351.64,
+      "discount": 41,
+      "ratings": 2,
+      "reviewsCount": 444,
+      "promotion": false,
+      "urls": [
+        "https://picsum.photos/seed/fEZbKzWGp/640/480",
+        "https://picsum.photos/seed/iZ8s87R8AJ/640/480",
+        "https://loremflickr.com/640/480?lock=6451752175927296"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Rustic Granite Soap",
+          "info": [
+            "Ascisco territo sequi talus tametsi.",
+            "Decipio saepe error alter consequuntur.",
+            "Conqueror aestivus strenuus tabernus defetiscor."
+          ],
+          "link": "https://creepy-vanity.net",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Gorgeous Soft Salad",
+          "info": [
+            "Confero amita suspendo cruentus ascisco carus.",
+            "Absens odio corrumpo demergo absens.",
+            "Vita laudantium culpo crur caelum tonsor accusantium."
+          ],
+          "link": "https://hearty-apparel.biz",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Luxurious Frozen Ball",
+          "info": [
+            "Umbra velum creber universe velociter adeo admiratio.",
+            "Curis vesper accusamus argumentum venio truculenter abbas.",
+            "Adulatio defessus perspiciatis tamisium candidus laudantium."
+          ],
+          "link": "https://unwritten-mineshaft.net",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Generic Steel Gloves",
+          "info": [
+            "Cribro deprimo spoliatio atrox timidus sumptus cresco.",
+            "Curso acquiro iusto agnitio comes derelinquo autus.",
+            "Chirographum qui molestiae terebro."
+          ],
+          "link": "https://frequent-grain.info/",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Oriental Bronze Chips",
+          "info": [
+            "Apostolus delego delectus sodalitas.",
+            "Admitto alienus repudiandae vero.",
+            "Concedo solum ante bos temporibus torrens."
+          ],
+          "link": "https://overdue-heart.net/",
+          "linkLabel": "Find Out More"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Main Trend",
+          "info": "suppellex sto mmm coo underlie"
+        },
+        {
+          "title": "Fabric",
+          "info": "Denim"
         },
         {
           "title": "Fit",
           "info": "Oversized"
         },
         {
-          "title": "Color",
-          "info": "white orange"
+          "title": "Fabric",
+          "info": "Cotton"
         },
         {
-          "title": "Occasion",
-          "info": "Work minor"
+          "title": "Main Trend",
+          "info": "minus tendo doctrine gosh"
         }
       ],
-      "availableQuantity": 12
+      "availableQuantity": 78
+    },
+    {
+      "id": "b987",
+      "uuid": "ed1cef9d-6394-4f2b-b07c-6dd92869173e",
+      "name": "Incredible Metal Smart TV",
+      "brand": "Weber LLC",
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit Reduced tangible workforce",
+      "actualPrice": 539,
+      "sellingPrice": 415.03,
+      "discount": 23,
+      "ratings": 2,
+      "reviewsCount": 266,
+      "promotion": true,
+      "urls": [
+        "https://loremflickr.com/640/480?lock=4206075584708608",
+        "https://loremflickr.com/640/480?lock=6739404563415040",
+        "https://picsum.photos/seed/BlQZTUa/640/480",
+        "https://loremflickr.com/640/480?lock=7604910153531392",
+        "https://loremflickr.com/640/480?lock=7399392961101824",
+        "https://picsum.photos/seed/lJbAoaer/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Ergonomic Wooden Pizza",
+          "info": [
+            "Triduana tamquam deleo atrox omnis tersus.",
+            "Depono adsidue defendo cimentarius vulgo.",
+            "Aveho theca umbra decor admoneo tametsi.",
+            "Textor animadverto creta volutabrum adversus."
+          ],
+          "link": "https://warm-bolt.net/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Elegant Granite Soap",
+          "info": [
+            "Arceo vigilo assentator dolorum utrimque.",
+            "Thesis thesaurus varius verbum."
+          ],
+          "link": "https://lucky-combine.name/",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Refined Soft Chips",
+          "info": [
+            "Solutio cohaero tabesco super beatus."
+          ],
+          "link": "https://attentive-snow.info/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Sleek Soft Chips",
+          "info": [
+            "Adiuvo xiphias ventosus brevis uxor sortitus sumptus.",
+            "Benevolentia nesciunt velociter tripudio veniam.",
+            "Tricesimus pectus decet laudantium."
+          ],
+          "link": "https://occasional-controversy.name",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Gorgeous Concrete Sausages",
+          "info": [
+            "Cubitum utique quis comitatus alter repellat.",
+            "Tersus versus delectatio suggero usque."
+          ],
+          "link": "https://stormy-applewood.com/",
+          "linkLabel": "Explore"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Main Trend",
+          "info": "amitto defleo somersault ouch heed"
+        },
+        {
+          "title": "Color",
+          "info": "maroon teal"
+        },
+        {
+          "title": "Fabric",
+          "info": "Silk"
+        },
+        {
+          "title": "Season",
+          "info": "Winter Line"
+        },
+        {
+          "title": "Color",
+          "info": "grey sky blue"
+        }
+      ],
+      "availableQuantity": 5
     }
   ],
   "wishlist": [
@@ -2256,72 +2277,72 @@
   ],
   "offers": [
     {
-      "id": "a8f9",
+      "id": "cf11",
       "info": "10% Instant Discount upto ₹750 on IDFC Bank Credit and Debit Cards on a min spend of ₹2,500. TCA",
       "link": ""
     },
     {
-      "id": "8c4f",
-      "info": "7.5% Instant Discount on up to ₹750 every spends with Myntra Kotak Credit Card. TCA",
-      "link": ""
-    },
-    {
-      "id": "89f4",
+      "id": "bda4",
       "info": "10% Instant Discount upto ₹500 on J&K Bank Mastercard Credit & Debit Cards on a min spend of ₹3,000. TCA",
       "link": ""
     },
     {
-      "id": "2809",
+      "id": "c678",
       "info": "Flat ₹100 Cashback on Fab Money Card on a min spend of ₹1,500. TCA",
       "link": ""
     },
     {
-      "id": "4e76",
+      "id": "96bc",
       "info": "Get up to ₹200 Assured Cashback on Paytm UPI on a min spend of ₹500. TCA",
       "link": ""
     },
     {
-      "id": "79b2",
+      "id": "e0a9",
       "info": "Get up to ₹500 Cashback on Paytm on transaction with RuPay Credit card via UPI on a min spend of ₹1000. TCA",
       "link": ""
     },
     {
-      "id": "2962",
+      "id": "1c3c",
       "info": "Get up to ₹500 Cashback on PhonePe on transaction with RuPay Credit card via UPI on a min spend of ₹1000. TCA",
       "link": ""
     },
     {
-      "id": "10ae",
+      "id": "1c8a",
+      "info": "7.5% Instant Discount on up to ₹750 every spends with Myntra Kotak Credit Card. TCA",
+      "link": ""
+    },
+    {
+      "id": "f627",
       "info": "Get up to ₹500 Cashback on CRED UPI on a min spend of ₹250. TCA",
       "link": ""
     },
     {
-      "id": "8dfa",
+      "id": "ca2f",
       "info": "Get up to ₹1000 Cashback on RuPay Credit Card transaction via CRED UPI on a min spend of ₹300. TCA",
       "link": ""
     },
     {
-      "id": "7f29",
+      "id": "0b34",
       "info": "Get ₹100 Cashback on transaction with PayZapp on a min spend of ₹2000. TCA",
       "link": ""
     },
     {
-      "id": "1e70",
+      "id": "2d58",
       "info": "Get up to ₹300 Cashback on Mobikwik UPI on a min spend of ₹1500. TCA",
       "link": ""
     },
     {
-      "id": "2a39",
+      "id": "52a1",
       "info": "Flat ₹30 Cashback on Freecharge UPI (Android Devices only) on a minimum spend of ₹1,999. TCA",
       "link": ""
     },
     {
-      "id": "b590",
+      "id": "b418",
       "info": "Flat ₹75 Cashback on First Ever Mobikwik Wallet transaction on Myntra on a min spend of ₹999. Use Code MBKNEW on Mobikwik. TCA",
       "link": ""
     },
     {
-      "id": "abb3",
+      "id": "49e4",
       "info": "Flat ₹100 on Airtel Payments Bank transactions on a min spend of ₹1,000. TCA",
       "link": ""
     }

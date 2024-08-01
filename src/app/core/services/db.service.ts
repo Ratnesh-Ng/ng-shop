@@ -20,8 +20,8 @@ export class DbService {
       this.loadDateInDB(a);
     })
 
-    this.clearDataFromDB({ data: generateFakeOffer(), getUrl: this.apiRoutes.offers, getOneUrl: this.apiRoutes.offerByID });
-    this.clearDataFromDB({ data: fakeProducts(20), getUrl: this.apiRoutes.products, getOneUrl: this.apiRoutes.productByID });
+    // this.clearDataFromDB({ data: generateFakeOffer(), getUrl: this.apiRoutes.offers, getOneUrl: this.apiRoutes.offerByID });
+    // this.clearDataFromDB({ data: fakeProducts(20), getUrl: this.apiRoutes.products, getOneUrl: this.apiRoutes.productByID });
   }
 
 
