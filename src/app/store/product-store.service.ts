@@ -24,6 +24,7 @@ export class ProductStoreService extends BaseService {
   public productService = inject(ProductService)
   public products: Store<Product[] | null> = new Store(null, { refreshAfter: { minutes: 5 } });
   public wishListedProducts: Store<Product[] | null> = new Store(null);
+  public cart: Store<Product[] | null> = new Store(null);
   public offers: Store<Offer[] | null> = new Store(null);
 
   public queryProducts(): Observable<Product[] | null> {
@@ -73,9 +74,9 @@ export class ProductStoreService extends BaseService {
 
   public async addProductToWishlist(data: Product): Promise<boolean> {
     // Check if wishListedProducts data exists and is not empty
-    if (this.wishListedProducts.data?.length) {
+    if ((this.wishListedProducts.data?.length ?? -1) > -1) {
       // Check if the product is not already wishlisted
-      if (this.wishListedProducts.data.every(a => a.id !== data.id)) {
+      if (this.wishListedProducts.data?.every(a => a.id !== data.id)) {
         try {
           await postData(this.productService.addProductToWishlist(data));
           this.wishListedProducts.data.push(data);
@@ -97,8 +98,42 @@ export class ProductStoreService extends BaseService {
     }
   }
 
+  public queryCart(): Observable<Product[] | null> {
+    if (!this.cart.data?.length) {
+      return this.productService.queryCart().pipe(
+        tap((a) => this.cart.data = a),
+        catchError((e) => {
+          return throwError(() => e)
+        })
+      );
+    }
+    return of(this.cart.data)
+  }
+
   public async addProductToCart(data: Product): Promise<boolean> {
-    return true;
+    // Check if cart data exists and is not empty
+    if ((this.cart.data?.length ?? -1) > -1) {
+      // Check if the product is not already in the cart
+      if (this.cart.data?.every(a => a.id !== data.id)) {
+        try {
+          await postData(this.productService.addProductToCart(data));
+          this.cart.data.push(data);
+          this.showAddedToCartToast(data);
+          return true;
+        } catch (error) {
+          console.error("Error adding product to cart:", error);
+          return false;
+        }
+      }
+      this.showAddedToCartToast(data);
+      // Return false if product is already in cart
+      return false;
+    } else {
+      // If cart data is empty or undefined, fetch it
+      await getData(this.queryCart());
+      // Retry adding product to cart after fetching
+      return this.addProductToCart(data);
+    }
   }
 
   public queryOffers(): Observable<Offer[] | null> {

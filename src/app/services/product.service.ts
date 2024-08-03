@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
 import { Product } from '@app/modals/product';
 import { BaseService } from '@core/base/base.service';
@@ -30,6 +31,14 @@ export class ProductService extends BaseService {
 
   public queryOffers() {
     return this.http.get<Offer[]>(this.apiRoutes.offers);
+  }
+
+  public queryCart() {
+    return this.http.get<Cart[]>(this.apiRoutes.cart);
+  }
+
+  public addProductToCart(data: Product) {
+    return this.http.post<Product>(this.apiRoutes.cart, data);
   }
 
 }

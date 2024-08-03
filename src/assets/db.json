@@ -2346,5 +2346,116 @@
       "info": "Flat ₹100 on Airtel Payments Bank transactions on a min spend of ₹1,000. TCA",
       "link": ""
     }
+  ],
+  "cart": [
+    {
+      "id": "072d",
+      "uuid": "9d128f71-8fc3-49e8-8131-99ecc594dc9a",
+      "name": "Luxurious Steel Jeans",
+      "brand": "Roob, Reichert and Rohan",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart Future-proofed global local area network",
+      "actualPrice": 373,
+      "sellingPrice": 350.62,
+      "discount": 6,
+      "ratings": 0.3,
+      "reviewsCount": 170,
+      "promotion": false,
+      "urls": [
+        "https://picsum.photos/seed/Dnfeib/640/480",
+        "https://picsum.photos/seed/XiJVf/640/480",
+        "https://picsum.photos/seed/vV0OVZX1K/640/480",
+        "https://loremflickr.com/640/480?lock=1805523898859520",
+        "https://loremflickr.com/640/480?lock=1089201493770240",
+        "https://loremflickr.com/640/480?lock=8888594898878464"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Bespoke Cotton Shoes",
+          "info": [
+            "Sortitus triumphus admoveo socius tonsor.",
+            "Qui administratio ultra deorsum solum solus."
+          ],
+          "link": "https://delirious-register.org/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Bespoke Granite Chair",
+          "info": [
+            "Mollitia totidem varius credo cubicularis.",
+            "Dicta theologus aveho cultura sol.",
+            "Adfero canonicus curso toties admitto denique et territo.",
+            "Acceptus adulescens comitatus confero decens solum."
+          ],
+          "link": "https://thorny-affiliate.org/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Tasty Concrete Computer",
+          "info": [
+            "Denuncio defaeco agnitio volva maiores.",
+            "Degero brevis corroboro supplanto constans asper eligendi.",
+            "Traho caries tam sequi summisse aggero vigor auxilium.",
+            "Sed dolorem nostrum turpis adnuo cubitum."
+          ],
+          "link": "https://virtual-coach.name",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Handmade Rubber Pants",
+          "info": [
+            "Stillicidium debilito combibo defungo super ubi.",
+            "Advoco velut infit dens ancilla stella.",
+            "Beatus thesis desparatus deputo derelinquo.",
+            "Cerno tremo voluptate natus vir deinde."
+          ],
+          "link": "https://warm-licence.net",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Handmade Steel Chair",
+          "info": [
+            "Caveo vomer cernuus uxor vomer tristis talus arguo.",
+            "Clam aspicio cognatus acquiro denique tenus neque eius.",
+            "Aeternus illo vito suspendo adipiscor defungo."
+          ],
+          "link": "https://passionate-wolf.biz/",
+          "linkLabel": "Explore"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Occasion",
+          "info": "Work guava eek"
+        },
+        {
+          "title": "Main Trend",
+          "info": "thesaurus unus over bridge"
+        },
+        {
+          "title": "Color",
+          "info": "blue purple"
+        },
+        {
+          "title": "Fabric",
+          "info": "Silk"
+        },
+        {
+          "title": "Fabric",
+          "info": "Denim"
+        }
+      ],
+      "availableQuantity": 64
+    }
   ]
 }

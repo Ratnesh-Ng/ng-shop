@@ -15,4 +15,9 @@ export class ProductComponent extends SearchBaseComponent {
   public async addProductToWishlist(data: Product): Promise<void> {
     await this.productStore.addProductToWishlist(data)
   }
+
+  public async addProductToCart(data: Product): Promise<void> {
+    await this.productStore.addProductToCart(data)
+  }
+  
 }
