@@ -142,7 +142,8 @@ export const createFakeProduct = () => {
             name: faker.company.name(),
         },
         deliveredTill: faker.date.soon({ days: 10 }), // delivers within the next 10 days
-        size: faker.helpers.arrayElement(['Small', 'Medium', 'Large', 'X-Large']),
+        size: faker.helpers.arrayElement(['S', 'M', 'L', 'XL']),
+        quantity: faker.number.int({ min: 1, max: 3 }),
     };
 };
 

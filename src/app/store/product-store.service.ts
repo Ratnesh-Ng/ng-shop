@@ -7,6 +7,7 @@ import { BaseService } from '@core/base/base.service';
 import { ProductService } from '@services/product.service';
 import { getData, postData } from '@core/utils/common.util';
 import { Offer } from '@app/modals/offer';
+import { Cart } from '@app/modals/cart';
 
 @Injectable({ providedIn: 'root' })
 
@@ -24,7 +25,7 @@ export class ProductStoreService extends BaseService {
   public productService = inject(ProductService)
   public products: Store<Product[] | null> = new Store(null, { refreshAfter: { minutes: 5 } });
   public wishListedProducts: Store<Product[] | null> = new Store(null);
-  public cart: Store<Product[] | null> = new Store(null);
+  public cart: Store<Cart[] | null> = new Store(null);
   public offers: Store<Offer[] | null> = new Store(null);
 
   public queryProducts(): Observable<Product[] | null> {
@@ -98,7 +99,7 @@ export class ProductStoreService extends BaseService {
     }
   }
 
-  public queryCart(): Observable<Product[] | null> {
+  public queryCart(): Observable<Cart[] | null> {
     if (!this.cart.data?.length) {
       return this.productService.queryCart().pipe(
         tap((a) => this.cart.data = a),

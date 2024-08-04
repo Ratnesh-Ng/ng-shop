@@ -21,7 +21,8 @@ export interface Product {
         name: string,
     }
     deliveredTill: Date;
-    size: string;
+    size: string; //TODO: move it to cart model
+    quantity: number; //TODO: move it to cart model
 }
 
 interface Offers {

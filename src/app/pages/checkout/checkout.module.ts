@@ -6,6 +6,7 @@ import { CheckoutComponent } from './checkout.component';
 import { CartComponent } from './components/cart/cart.component';
 import { AddressComponent } from './components/address/address.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PaymentComponent } from './components/payment/payment.component';
   ],
   imports: [
     CommonModule,
-    CheckoutRoutingModule
+    CheckoutRoutingModule,
+    FormsModule
   ]
 })
 export class CheckoutModule { }

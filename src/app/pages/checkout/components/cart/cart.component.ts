@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
 import { ProductBase } from '@shared/base/product.base';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -11,6 +12,22 @@ import { Observable } from 'rxjs';
 export class CartComponent extends ProductBase {
 
   public offers: Observable<Offer[] | null> = this.productStore.queryOffers();
-  public VisibleOffers = 1;
+  public cartItems: Observable<Cart[] | null> = this.productStore.queryCart().pipe(
+    tap(i => {
+      this.cartLength = i?.length ?? 0;
+    })
+  );
 
+  public VisibleOffers = 1;
+  public cartLength = 0;
+  public selectedItem: Cart[] = [];
+
+  public onItemCheck(item: Cart, index: number) {
+    if (item.isSelected) {
+      this.selectedItem.push(item);
+    } else {
+      this.selectedItem.splice(index, 1);
+    }
+  }
+  
 }
