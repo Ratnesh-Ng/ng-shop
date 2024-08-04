@@ -22,6 +22,8 @@ export class DbService {
 
     // this.clearDataFromDB({ data: generateFakeOffer(), getUrl: this.apiRoutes.offers, getOneUrl: this.apiRoutes.offerByID });
     // this.clearDataFromDB({ data: fakeProducts(20), getUrl: this.apiRoutes.products, getOneUrl: this.apiRoutes.productByID });
+    // this.clearDataFromDB({ data: [], getUrl: this.apiRoutes.wishlist, getOneUrl: this.apiRoutes.wishlistByID });
+    // this.clearDataFromDB({ data: [], getUrl: this.apiRoutes.cart, getOneUrl: this.apiRoutes.cartByID });
   }
 
 

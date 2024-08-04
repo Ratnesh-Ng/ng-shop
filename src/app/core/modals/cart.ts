@@ -1,8 +1,3 @@
 import { Product } from "./product";
 
-export interface Cart extends Product {
-    size: string,
-    sellerName: string;
-    sellerId: number;
-    deliveredTill: Date;
-}
+export interface Cart extends Product {}

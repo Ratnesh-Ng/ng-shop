@@ -27,7 +27,7 @@ export class WishlistComponent extends ProductBase {
         this.products$ = this.queryWishListedProducts()
       })
     } else if (event.eventType == 'moveToBag') {
-      this.productStore.showAddedToCartToast(event.data);
+      this.productStore.addProductToCart(event.data);
     }
   }
 }

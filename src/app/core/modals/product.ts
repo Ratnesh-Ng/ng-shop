@@ -12,20 +12,26 @@ export interface Product {
     promotion: boolean;
     urls: string[];
     sizes: string[];
-    otherInfo:string[];
-    offers:Offers[],
-    specifications:Specifications[]
-    availableQuantity:number
+    otherInfo: string[];
+    offers: Offers[],
+    specifications: Specifications[]
+    availableQuantity: number
+    seller: {
+        id: number,
+        name: string,
+    }
+    deliveredTill: Date;
+    size: string;
 }
 
-interface Offers{
-    title:string;
-    info:string[];
-    link:string
-    linkLabel:string
+interface Offers {
+    title: string;
+    info: string[];
+    link: string
+    linkLabel: string
 }
 
-interface Specifications{
-    title:string;
-    info:string;
+interface Specifications {
+    title: string;
+    info: string;
 }

@@ -117,7 +117,7 @@ export const createFakeProduct = () => {
     const otherInfo = ['100% Original Products', 'Pay on delivery might be available', 'Easy 14 days returns and exchanges']
     const offers = generateOffers(5);
     const specifications = generateSpecifications(5);
-    const availableQuantity = faker.number.int({max:100});
+    const availableQuantity = faker.number.int({ max: 100 });
     // Return object with generated details
     return {
         id: id,
@@ -136,7 +136,13 @@ export const createFakeProduct = () => {
         otherInfo: otherInfo,
         offers: offers,
         specifications: specifications,
-        availableQuantity: availableQuantity
+        availableQuantity: availableQuantity,
+        seller: {
+            id: faker.number.int({ min: 1, max: 1000 }), // assuming seller IDs are between 1 and 1000
+            name: faker.company.name(),
+        },
+        deliveredTill: faker.date.soon({ days: 10 }), // delivers within the next 10 days
+        size: faker.helpers.arrayElement(['Small', 'Medium', 'Large', 'X-Large']),
     };
 };
 
