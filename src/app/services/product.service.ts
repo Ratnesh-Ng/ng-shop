@@ -41,4 +41,8 @@ export class ProductService extends BaseService {
     return this.http.post<Product>(this.apiRoutes.cart, data);
   }
 
+  public removeProductFromCart(id: string | number) {
+    return this.http.delete<Product>(this.apiRoutes.cartByID(id));
+  }
+
 }
