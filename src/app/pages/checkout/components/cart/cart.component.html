@@ -43,19 +43,22 @@
                 <div id="action-add-remove" class="p-4 flex justify-between items-center text-sm">
                     <div class="space-x-2 flex items-center">
                         <input type="checkbox" name="" id="" [(ngModel)]="isAllChecked" (ngModelChange)="onSelectAll()">
-                        <span class="uppercase font-bold">{{totalSelectedItems}}/{{cartItems.length}} item selected</span>
+                        <span class="uppercase font-bold">{{totalSelectedItems()}}/{{cartItems().length}} item
+                            selected</span>
                     </div>
                     <div class="text-[11px] font-bold text-gray-600 flex space-x-8">
-                        <button (click)="removeMultipleItemFromCart()" class="uppercase">remove</button>
+                        <button (click)="removeMultipleItemFromCart();isAllChecked = false"
+                            class="uppercase">remove</button>
                         <div class="h-8 border-l border-gray-300"></div>
-                        <button class="uppercase">move to wishlist</button>
+                        <button (click)="isAllChecked = false" class="uppercase">move to wishlist</button>
                     </div>
                 </div>
                 <div id="cart-item" class="space-y-2">
-                    @for (item of cartItems; let index = $index; track item.id) {
+                    @for (item of cartItems(); let index = $index; track item.id) {
                     <div class="border flex space-x-4 p-4 rounded-md min-h-52 relative">
                         <div class="w-3/12 relative">
-                            <input type="checkbox" class="absolute top-2 left-2" [(ngModel)]="item.isSelected" (ngModelChange)="calculateCheckedLength()">
+                            <input type="checkbox" class="absolute top-2 left-2" [(ngModel)]="item.isSelected"
+                                (ngModelChange)="calculateCheckedLength(index, $event)">
                             <img class="w-full h-full object-cover" [src]="item.urls[0]" [alt]="item.name">
                         </div>
                         <div class="w-11/12">
@@ -93,7 +96,7 @@
                                 <span class="font-semibold">{{item.deliveredTill|date:"dd MMM"}}</span>
                             </p>
                         </div>
-                        <button (click)="removeItemFromCart(item,index)" class="absolute top-2 right-2"><span
+                        <button (click)="removeItemFromCart(item)" class="absolute top-2 right-2"><span
                                 class="material-icons">close</span></button>
                     </div>
                     }
