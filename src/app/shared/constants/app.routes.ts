@@ -4,4 +4,5 @@ export const AppRoutes = {
     product: (UUID: string) => `/product/${UUID}`,
     login: '/auth/login',
     signup: '/auth/signup',
+    wishlist: '/wishlist',
 };

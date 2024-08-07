@@ -7,7 +7,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { AddressComponent } from './components/address/address.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { FormsModule } from '@angular/forms';
-
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CheckoutRoutingModule,
-    FormsModule
-  ]
+    FormsModule,
+    ConfirmDialogModule
+  ],
+  providers:[ConfirmationService]
 })
 export class CheckoutModule { }

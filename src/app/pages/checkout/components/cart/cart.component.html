@@ -50,7 +50,7 @@
                         <button (click)="removeMultipleItemFromCart();isAllChecked = false"
                             class="uppercase">remove</button>
                         <div class="h-8 border-l border-gray-300"></div>
-                        <button (click)="isAllChecked = false" class="uppercase">move to wishlist</button>
+                        <button (click)="moveToWishlist()" class="uppercase">move to wishlist</button>
                     </div>
                 </div>
                 <div id="cart-item" class="space-y-2">
@@ -101,17 +101,18 @@
                     </div>
                     }
                 </div>
-                <div class="border p-4 rounded-md flex justify-between items-center">
+                <a [routerLink]="appRoutes.wishlist"
+                    class="border p-4 rounded-md w-full flex justify-between items-center">
                     <div class="flex items-center space-x-2">
                         <span class="material-icons text-[20px]">bookmark_border</span>
                         <span class="capitalize text-[14px] font-semibold">add more from wishlist</span>
                     </div>
-                    <button class="flex items-center">
+                    <div class="flex items-center">
                         <span class="material-icons text-[20px]">
                             arrow_forward_ios
                         </span>
-                    </button>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="w-3/12 p-2 pl-4">
@@ -145,23 +146,26 @@
                 </div>
                 <div id="price-breakup" class="space-y-4 border-b pb-4">
                     <div class="text-gray-600 space-x-1"><span class="uppercase">product details</span><span
-                            class="text-[10px]">(2 Items)</span></div>
+                            *ngIf="cartItems().length" class="text-[10px]">({{cartItems().length}} Items)</span></div>
                     <div class="grid grid-cols-3 gap-y-2 font-normal">
                         <div class="col-span-2">Total MRP</div>
-                        <div class="text-right">{{1205|currency:'INR'}}</div>
+                        <div class="text-right">{{productDetails.totalMrp|currency:'INR'}}</div>
                         <div class="col-span-2">Discount on MRP</div>
-                        <div class="text-right text-green-600">{{-500|currency:'INR'}}</div>
+                        <div class="text-right text-green-600">{{-productDetails.discountOnMrp|currency:'INR'}}</div>
                         <div class="col-span-2">Coupon Discount</div>
-                        <div class="text-right text-orange-500">Apply Coupon</div>
+                        <div class="text-right text-orange-500 text-nowrap">Apply Coupon</div>
                         <div class="col-span-2">Platform Fee</div>
-                        <div class="text-right">{{20|currency:'INR'}}</div>
+                        <div class="text-right">{{productDetails.platformFee|currency:'INR'}}</div>
                         <div class="col-span-2">Shipping Fee</div>
-                        <div class="text-right text-green-600">Free</div>
+                        <div class="text-right" [ngClass]="{'text-green-600':!productDetails.shippingFee}">
+                            {{productDetails.shippingFee?(productDetails.shippingFee|currency:'INR'):'Free'}}
+                        </div>
                     </div>
                 </div>
                 <div id="total" class="space-y-4">
                     <div class="flex justify-between items-center font-bold text-[13px]">
-                        <span class="uppercase">total amount</span><span>{{692|currency:'INR'}}</span>
+                        <span class="uppercase">total
+                            amount</span><span>{{productDetails.totalAmountToPay|currency:'INR'}}</span>
                     </div>
                     <button class="uppercase text-center py-3 w-full bg-orange-500 text-white rounded">
                         place order
@@ -171,4 +175,4 @@
         </div>
     </div>
 </div>
-<!-- border border-red-500 -->
+<p-confirmDialog />

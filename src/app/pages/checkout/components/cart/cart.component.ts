@@ -1,8 +1,10 @@
-import { Component, computed, OnInit, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
+import { CartProductDetails } from '@app/modals/product';
 import { getData, postData } from '@core/utils/common.util';
 import { ProductBase } from '@shared/base/product.base';
+import { ConfirmationService } from 'primeng/api';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,18 +13,20 @@ import { Observable } from 'rxjs';
   styleUrl: './cart.component.scss'
 })
 export class CartComponent extends ProductBase implements OnInit {
-
+  private confirmationService: ConfirmationService = inject(ConfirmationService)
   public offers: Observable<Offer[] | null> = this.productStore.queryOffers();
   public cartItems: WritableSignal<Cart[]> = signal<Cart[]>([]);
 
   public VisibleOffers = 1;
   public isAllChecked: boolean = false;
-  
+  public productDetails: CartProductDetails = new CartProductDetails();
+
   public totalSelectedItems = computed(() => {
     const length = this.cartItems().filter(a => a?.isSelected).length;
     if (!length) {
       this.isAllChecked = false;
     }
+    this.calculateProductDetails();
     this.productStore.cart.data = this.cartItems();
     return length;
   });
@@ -36,6 +40,17 @@ export class CartComponent extends ProductBase implements OnInit {
   private removeObjectsById(array1: Cart[], array2: Cart[]) {
     const idsToRemove = new Set(array2.map(item => item.id));
     return array1.filter(item => !idsToRemove.has(item.id));
+  }
+
+  private calculateProductDetails() {
+    this.productDetails.totalMrp = this.cartItems().reduce((acc, val) => acc + val.actualPrice, 0);
+    this.productDetails.discountOnMrp = this.cartItems().reduce((acc, val) => (acc + (val.actualPrice - val.sellingPrice)), 0);
+    this.productDetails.totalAmountToPay = this.productDetails.totalMrp - this.productDetails.discountOnMrp;
+    if ((this.productDetails.totalAmountToPay != 0) && (this.productDetails.totalAmountToPay < 500)) {
+      this.productDetails.shippingFee = 40;
+    } else {
+      this.productDetails.shippingFee = 0;
+    }
   }
 
   ////#endregion Private
@@ -73,6 +88,29 @@ export class CartComponent extends ProductBase implements OnInit {
     })
   }
 
+  public moveToWishlist() {
+    if (this.totalSelectedItems()) {
+      this.confirmationService.confirm({
+        header: `Move ${this.totalSelectedItems()} item to wishlist`,
+        message: `Are you sure you want to move ${this.totalSelectedItems()} item from bag.`,
+        acceptLabel: 'MOVE TO WISHLIST',
+        rejectLabel: 'CANCEL',
+        acceptIcon: "none",
+        rejectIcon: "none",
+        acceptButtonStyleClass: 'p-2 ml-12',
+        rejectButtonStyleClass: 'p-2 ',
+        accept: async () => {
+          const selectedItems = this.cartItems().filter(a => a.isSelected);
+          const savePromise = selectedItems.map(a => {
+            return this.productStore.addProductToWishlist(a)
+          })
+          await Promise.all(savePromise);
+          this.cartItems.update(() => (this.removeObjectsById(this.cartItems(), selectedItems) ?? []));
+          this.isAllChecked = false
+        }
+      })
+    }
+  }
   //#endregion public
 
 }

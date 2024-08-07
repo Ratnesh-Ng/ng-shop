@@ -36,3 +36,12 @@ interface Specifications {
     title: string;
     info: string;
 }
+
+export class CartProductDetails {
+    totalMrp: number = 0;
+    discountOnMrp: number = 0;
+    couponDiscount: number = 0;
+    platformFee: number = 20;
+    shippingFee: number = 0;
+    totalAmountToPay: number = 0;
+}
