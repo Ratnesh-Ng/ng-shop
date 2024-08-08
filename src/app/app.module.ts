@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollTopModule } from 'primeng/scrolltop';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     HeaderComponent,
     FooterComponent,
-    ToastModule
+    ToastModule,
+    ScrollTopModule
   ],
   providers: [
     // provideClientHydration() //TODO

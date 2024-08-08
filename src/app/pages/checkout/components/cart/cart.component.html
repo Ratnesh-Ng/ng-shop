@@ -175,4 +175,21 @@
         </div>
     </div>
 </div>
-<p-confirmDialog />
+<p-confirmDialog #cd>
+    <ng-template pTemplate="headless" let-message>
+        <div class="bg-white rounded">
+            <div class="px-6 py-4">
+                <span class="font-bold block mb-2">
+                    {{ message.header }}
+                </span>
+                <p class="mb-0 text-sm text-gray-700">{{ message.message }}</p>
+            </div>
+            <div class="flex border-t mt-2 p-2">
+                <button pButton label="CANCEL" (click)="cd.reject()" class="text-xs text-gray-600 w-1/2 p-2">
+                </button>
+                <button pButton label="MOVE TO WISHLIST" (click)="cd.accept()" class=" text-orange-500 text-xs w-1/2 p-2">
+                </button>
+            </div>
+        </div>
+    </ng-template>
+</p-confirmDialog>

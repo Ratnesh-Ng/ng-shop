@@ -9,6 +9,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { FormsModule } from '@angular/forms';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ConfirmationService } from 'primeng/api';
     CommonModule,
     CheckoutRoutingModule,
     FormsModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    ButtonModule
   ],
   providers:[ConfirmationService]
 })

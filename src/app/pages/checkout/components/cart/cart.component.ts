@@ -31,7 +31,8 @@ export class CartComponent extends ProductBase implements OnInit {
     return length;
   });
 
-  async ngOnInit(): Promise<void> {
+  override async ngOnInit(): Promise<void> {
+    super.ngOnInit()
     this.cartItems.set(await getData(this.productStore.queryCart()) ?? []);
   }
 
@@ -97,16 +98,18 @@ export class CartComponent extends ProductBase implements OnInit {
         rejectLabel: 'CANCEL',
         acceptIcon: "none",
         rejectIcon: "none",
-        acceptButtonStyleClass: 'p-2 ml-12',
-        rejectButtonStyleClass: 'p-2 ',
+        acceptButtonStyleClass: 'p-2 ml-12 text-[11px]',
+        rejectButtonStyleClass: 'p-2 text-[11px]',
         accept: async () => {
           const selectedItems = this.cartItems().filter(a => a.isSelected);
           const savePromise = selectedItems.map(a => {
+            // TODO: Remove this once the backend supports moving products from the cart to the wishlist directly.
+            // This involves removing the product from the cart and adding it to the wishlist.
+            this.productStore.productService.removeProductFromCart(a.id).subscribe();
             return this.productStore.addProductToWishlist(a)
           })
           await Promise.all(savePromise);
           this.cartItems.update(() => (this.removeObjectsById(this.cartItems(), selectedItems) ?? []));
-          this.isAllChecked = false
         }
       })
     }
