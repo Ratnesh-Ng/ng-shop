@@ -1,6 +1,6 @@
 <div class="mt-12 container mx-auto">
-    <div id="main" class="flex justify-center">
-        <div class="w-6/12 p-2 pr-6 md:border-r">
+    <div id="main" class="md:flex md:justify-center">
+        <div class="w-full md:w-6/12 p-2 md:pr-6 md:border-r">
             <div class="space-y-2">
                 <div id="address"
                     class="border p-4 rounded-md bg-orange-100 bg-opacity-50 flex justify-between items-center text-[11px]">
@@ -56,7 +56,7 @@
                 <div id="cart-item" class="space-y-2">
                     @for (item of cartItems(); let index = $index; track item.id) {
                     <div class="border flex space-x-4 p-4 rounded-md min-h-52 relative">
-                        <div class="w-3/12 relative">
+                        <div class="w-6/12 md:w-3/12 relative">
                             <input type="checkbox" class="absolute top-2 left-2" [(ngModel)]="item.isSelected"
                                 (ngModelChange)="calculateCheckedLength(index, $event)">
                             <img class="w-full h-full object-cover" [src]="item.urls[0]" [alt]="item.name">
@@ -115,7 +115,7 @@
                 </a>
             </div>
         </div>
-        <div class="w-3/12 p-2 pl-4">
+        <div class="w-full md:w-3/12 p-2 md:pl-4">
             <div class="space-y-4 text-[12px] font-semibold">
                 <div id="coupon" class="space-y-2 border-b pb-4">
                     <div class="uppercase text-[11px] text-gray-600">Coupons</div>
