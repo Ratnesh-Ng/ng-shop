@@ -11,9 +11,13 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollTopModule } from 'primeng/scrolltop';
+import { ShopLayoutComponent } from './layout/shop-layout/shop-layout.component';
+import { CartLayoutComponent } from './layout/cart-layout/cart-layout.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShopLayoutComponent,
+    CartLayoutComponent,
   ],
   imports: [
     BrowserModule,
