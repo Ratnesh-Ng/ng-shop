@@ -114,6 +114,10 @@ export class CartComponent extends ProductBase implements OnInit {
       })
     }
   }
+
+  public navigateToAddress() {
+    this.router.navigateByUrl(this.appRoutes.address);
+  }
   //#endregion public
 
 }

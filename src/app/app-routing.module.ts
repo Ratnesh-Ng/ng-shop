@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ShopLayoutComponent } from './layout/shop-layout/shop-layout.component';
-import { CartLayoutComponent } from './layout/cart-layout/cart-layout.component';
 
 const routes: Routes = [
   {
@@ -17,13 +16,7 @@ const routes: Routes = [
       { path: ':search', loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule) },
     ]
   },
-  {
-    path: "",
-    component: CartLayoutComponent,
-    children: [
-      { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) }
-    ]
-  }
+  { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
 ];
 
 @NgModule({

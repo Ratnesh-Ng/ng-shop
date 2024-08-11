@@ -5,4 +5,7 @@ export const AppRoutes = {
     login: '/auth/login',
     signup: '/auth/signup',
     wishlist: '/wishlist',
+    cart: '/checkout/cart',
+    address: '/checkout/address',
+    payment: '/checkout/payment',
 };

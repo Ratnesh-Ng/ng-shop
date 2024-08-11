@@ -9,12 +9,16 @@ import { FormsModule } from '@angular/forms';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
+import { CheckoutComponent } from './checkout.component';
+import { CheckoutHeaderComponent } from './components/checkout-header/checkout-header.component';
 
 @NgModule({
   declarations: [
+    CheckoutComponent,
     CartComponent,
     AddressComponent,
-    PaymentComponent
+    PaymentComponent,
+    CheckoutHeaderComponent
   ],
   imports: [
     CommonModule,

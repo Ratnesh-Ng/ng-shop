@@ -167,7 +167,7 @@
                         <span class="uppercase">total
                             amount</span><span>{{productDetails.totalAmountToPay|currency:'INR'}}</span>
                     </div>
-                    <button class="uppercase text-center py-3 w-full bg-orange-500 text-white rounded">
+                    <button (click)="navigateToAddress()" class="uppercase text-center py-3 w-full bg-orange-500 text-white rounded">
                         place order
                     </button>
                 </div>
