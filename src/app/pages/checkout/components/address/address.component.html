@@ -1,1 +1,88 @@
-<p>address works!</p>
+<div class="mt-12 container mx-auto">
+    <div id="main" class="md:flex md:justify-center">
+        <div class="w-full md:w-6/12 p-2 md:pr-6 md:border-r">
+            <div class="space-y-2">
+                <div id="add-address" class="flex justify-between items-center">
+                    <span class="capitalize font-semibold">Select delivery address</span>
+                    <button
+                        class="rounded text-[11px] border border-orange-500 font-semibold px-3 py-2 uppercase text-orange-600 align-middle">
+                        Add new address
+                    </button>
+                </div>
+
+                <div id="cart-item" class="space-y-2">
+                    @for (item of addresses(); let index = $index; track item.id) {
+                    <div class="border p-4 rounded-md min-h-40 relative">
+                        <div class="space-y-2">
+                            <div class="space-x-2 flex items-center">
+                                <input type="checkbox" class="" [(ngModel)]="item.isDefaultAddress" (ngModelChange)="onAddressSelect(item)">
+                                <span class="font-bold ">{{item.name}}</span>
+                                <span class="font-bold uppercase text-[10px] border border-orange-500 rounded-2xl px-2 py-[2px]">{{item.type}}</span>
+                            </div>
+                            <p id="brand" class="capitalize text-[13px]">
+                                {{item.address}} {{item.locality}} {{item.city}},{{item.state}}-{{item.pinCode}}
+                            </p>
+                            <p class="text-[12px] space-x-2">
+                                <span class="text-gray-600">Mobile</span>
+                                <span class="font-semibold">{{item.mobile}}</span>
+                            </p>
+                            <p class="text-[12px] flex items-center space-x-1 mt-2">
+                                <span class="material-icons text-sm text-green-600 font-bold">done</span>
+                                <span>Pay on delivery available</span>
+                            </p>
+                        </div>
+                        <div class="space-x-3 flex items-center absolute top-2 right-2">
+                            <button (click)="true" class="">
+                                <span class="material-icons text-[18px] text-orange-500">edit</span>
+                            </button>
+                            <button (click)="true" class="">
+                                <span class="material-icons text-md">close</span>
+                            </button>
+                        </div>
+                    </div>
+                    }
+                </div>
+                <!-- <div class=""> -->
+                <div class="flex items-center space-x-2 border p-4 rounded-md w-full">
+                    <span class="material-icons text-[20px]">add</span>
+                    <span class="capitalize text-[14px] font-semibold">add new address</span>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="w-full md:w-3/12 p-2 md:pl-4">
+            <div class="space-y-4 text-[12px] font-semibold">
+                <div id="coupon" class="space-y-2 border-b pb-4">
+                    <div class="uppercase text-[11px] text-gray-600">Delivery estimates</div>
+
+                </div>
+                <div id="price-breakup" class="space-y-4 border-b pb-4">
+                    <div class="text-gray-600 space-x-1"><span class="uppercase">Price details</span>
+                        <span class="text-[10px]">({{0}} Items)</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-y-2 font-normal">
+                        <div class="col-span-2">Total MRP</div>
+                        <div class="text-right">{{productDetails.totalMrp|currency:'INR'}}</div>
+                        <div class="col-span-2">Discount on MRP</div>
+                        <div class="text-right text-green-600">{{-productDetails.discountOnMrp|currency:'INR'}}</div>
+                        <div class="col-span-2">Platform Fee</div>
+                        <div class="text-right">{{productDetails.platformFee|currency:'INR'}}</div>
+                        <div class="col-span-2">Shipping Fee</div>
+                        <div class="text-right" [ngClass]="{'text-green-600':!productDetails.shippingFee}">
+                            {{productDetails.shippingFee?(productDetails.shippingFee|currency:'INR'):'Free'}}
+                        </div>
+                    </div>
+                </div>
+                <div id="total" class="space-y-4">
+                    <div class="flex justify-between items-center font-bold text-[13px]">
+                        <span class="uppercase">total amount</span><span>{{productDetails.totalAmountToPay|currency:'INR'}}</span>
+                    </div>
+                    <button (click)="navigateToPayment()"
+                        class="uppercase text-center py-3 w-full bg-orange-500 text-white rounded">
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
