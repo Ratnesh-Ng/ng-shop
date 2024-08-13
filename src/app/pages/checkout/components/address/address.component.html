@@ -40,6 +40,8 @@
                             </button>
                         </div>
                     </div>
+                    }@empty {
+                        <p class="text-[11px] text-gray-500 text-center">No address found</p>
                     }
                 </div>
                 <!-- <div class=""> -->
@@ -58,7 +60,7 @@
                 </div>
                 <div id="price-breakup" class="space-y-4 border-b pb-4">
                     <div class="text-gray-600 space-x-1"><span class="uppercase">Price details</span>
-                        <span class="text-[10px]">({{0}} Items)</span>
+                        <span class="text-[10px]">({{totalCartItems()}} Items)</span>
                     </div>
                     <div class="grid grid-cols-3 gap-y-2 font-normal">
                         <div class="col-span-2">Total MRP</div>

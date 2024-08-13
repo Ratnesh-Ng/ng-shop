@@ -11,5 +11,7 @@ export const ApiRoutes = {
     offerByID: (ID: string | number) => `${baseUrl}/offers/${ID}`,
     cart: `${baseUrl}/cart`,
     cartByID: (ID: string | number) => `${baseUrl}/cart/${ID}`,
+    address: `${baseUrl}/addresses`,
+    addressByID: (ID: string | number) => `${baseUrl}/addresses/${ID}`,
 };
 

@@ -1,22 +1,33 @@
-import { Component, signal, WritableSignal } from '@angular/core';
-import { generateFakeAddresses } from '@app/faker/address.faker';
+import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { Address } from '@app/modals/address';
-import { CartProductDetails } from '@app/modals/product';
-import { ProductBase } from '@shared/base/product.base';
+import { getData } from '@core/utils/common.util';
+import { UserService } from '@services/user.service';
+import { CheckoutBase } from '../../base/checkout-base';
 
 @Component({
   selector: 'app-address',
   templateUrl: './address.component.html',
   styleUrl: './address.component.scss'
 })
-export class AddressComponent extends ProductBase {
+export class AddressComponent extends CheckoutBase implements OnInit {
 
-  public productDetails: CartProductDetails = new CartProductDetails();
-  public addresses: WritableSignal<Address[]> = signal<Address[]>(generateFakeAddresses(3));
+  public userService: UserService = inject(UserService);
+  public addresses: WritableSignal<Address[]> = signal<Address[]>([]);
   public selectedAddress: WritableSignal<Address | null> = signal<Address | null>(null);
 
-  //#region public
+  override async ngOnInit() {
+    super.ngOnInit();
+    this.addresses.set(await getData(this.userService.queryAddress()));
+  }
 
+  //#region public
+  
+  public totalCartItems = computed(() => {
+    this.calculateProductDetails();
+    this.productStore.cart.data = this.cartItems();
+    return this.cartItems().length;
+  });
+  
   public navigateToPayment() {
     this.router.navigateByUrl(this.appRoutes.payment)
   }
@@ -33,5 +44,10 @@ export class AddressComponent extends ProductBase {
     this.selectedAddress.set({ ...item, isDefaultAddress: true });
   }
   ////#endregion public
+
+  //#region Private
+
+
+  //#endregion Private
 
 }

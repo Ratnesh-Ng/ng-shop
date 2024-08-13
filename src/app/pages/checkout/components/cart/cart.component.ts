@@ -1,25 +1,22 @@
-import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, OnInit } from '@angular/core';
 import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
-import { CartProductDetails } from '@app/modals/product';
-import { getData, postData } from '@core/utils/common.util';
-import { ProductBase } from '@shared/base/product.base';
+import { postData } from '@core/utils/common.util';
 import { ConfirmationService } from 'primeng/api';
 import { Observable } from 'rxjs';
+import { CheckoutBase } from '../../base/checkout-base';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
-export class CartComponent extends ProductBase implements OnInit {
+export class CartComponent extends CheckoutBase implements OnInit {
+
   private confirmationService: ConfirmationService = inject(ConfirmationService)
   public offers: Observable<Offer[] | null> = this.productStore.queryOffers();
-  public cartItems: WritableSignal<Cart[]> = signal<Cart[]>([]);
-
   public VisibleOffers = 1;
   public isAllChecked: boolean = false;
-  public productDetails: CartProductDetails = new CartProductDetails();
 
   public totalSelectedItems = computed(() => {
     const length = this.cartItems().filter(a => a?.isSelected).length;
@@ -31,11 +28,6 @@ export class CartComponent extends ProductBase implements OnInit {
     return length;
   });
 
-  override async ngOnInit(): Promise<void> {
-    super.ngOnInit()
-    this.cartItems.set(await getData(this.productStore.queryCart()) ?? []);
-  }
-
   //#region Private
 
   private removeObjectsById(array1: Cart[], array2: Cart[]) {
@@ -43,16 +35,6 @@ export class CartComponent extends ProductBase implements OnInit {
     return array1.filter(item => !idsToRemove.has(item.id));
   }
 
-  private calculateProductDetails() {
-    this.productDetails.totalMrp = this.cartItems().reduce((acc, val) => acc + val.actualPrice, 0);
-    this.productDetails.discountOnMrp = this.cartItems().reduce((acc, val) => (acc + (val.actualPrice - val.sellingPrice)), 0);
-    this.productDetails.totalAmountToPay = this.productDetails.totalMrp - this.productDetails.discountOnMrp;
-    if ((this.productDetails.totalAmountToPay != 0) && (this.productDetails.totalAmountToPay < 500)) {
-      this.productDetails.shippingFee = 40;
-    } else {
-      this.productDetails.shippingFee = 0;
-    }
-  }
 
   ////#endregion Private
 

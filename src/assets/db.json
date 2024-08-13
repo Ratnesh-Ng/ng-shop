@@ -2726,116 +2726,6 @@
   ],
   "cart": [
     {
-      "id": "6041",
-      "uuid": "a3860e84-84e4-4b16-935d-61f0e658788a",
-      "name": "Bespoke Fresh Backpack",
-      "brand": "Wehner - Kling",
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Optimized methodical definition",
-      "actualPrice": 345,
-      "sellingPrice": 175.95,
-      "discount": 49,
-      "ratings": 4.6,
-      "reviewsCount": 404,
-      "promotion": true,
-      "urls": [
-        "https://picsum.photos/seed/MOUw9FtY/640/480",
-        "https://loremflickr.com/640/480?lock=6272874734157824",
-        "https://picsum.photos/seed/C0TrtKEU/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Handmade Plastic Bike",
-          "info": [
-            "Bos crux una sub odio sollicito eos vivo."
-          ],
-          "link": "https://entire-disk.info/",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Unbranded Frozen Chair",
-          "info": [
-            "Benigne toties error consectetur barba carcer theatrum."
-          ],
-          "link": "https://chilly-alliance.name/",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Incredible Metal Table",
-          "info": [
-            "Auctor iusto vicissitudo odit appono.",
-            "Sponte culpa curis arcus adfectus.",
-            "Illo aer amoveo certus sumptus vinculum demens.",
-            "Terreo vitiosus communis coniecto admitto conqueror."
-          ],
-          "link": "https://teeming-eyeliner.org/",
-          "linkLabel": "Explore"
-        },
-        {
-          "title": "Fantastic Concrete Pizza",
-          "info": [
-            "Cum despecto commemoro clamo carpo caecus.",
-            "Vesica casso molestias casso venia benevolentia.",
-            "Contego doloribus vere tracto.",
-            "Crux strenuus cernuus admitto demonstro."
-          ],
-          "link": "https://probable-fabric.org",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Practical Metal Soap",
-          "info": [
-            "Bardus antiquus texo agnosco volo tardus cinis.",
-            "Tremo armarium cuius bis ratione copiose damno.",
-            "Vivo curatio stipes claustrum cui.",
-            "Amissio arbitro eligendi creator uterque cicuta."
-          ],
-          "link": "https://tough-dealer.net/",
-          "linkLabel": "Get It Now"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Main Trend",
-          "info": "nesciunt vacuus hastily provided amongst"
-        },
-        {
-          "title": "Season",
-          "info": "Autumn Line"
-        },
-        {
-          "title": "Fit",
-          "info": "Oversized"
-        },
-        {
-          "title": "Fit",
-          "info": "Slim Fit"
-        },
-        {
-          "title": "Occasion",
-          "info": "Casual caddy awkwardly hear"
-        }
-      ],
-      "availableQuantity": 91,
-      "seller": {
-        "id": 152,
-        "name": "Reynolds, Hauck and Kassulke"
-      },
-      "deliveredTill": "2024-08-06T00:45:30.620Z",
-      "size": "M",
-      "quantity": 1
-    },
-    {
       "id": "96bc",
       "uuid": "6336c8af-9909-4ebf-b897-f04591f0486b",
       "name": "Gorgeous Concrete Watch",
@@ -2941,7 +2831,151 @@
       "deliveredTill": "2024-08-09T01:02:06.422Z",
       "size": "L",
       "quantity": 3
+    },
+    {
+      "id": "8160",
+      "uuid": "49f86dc3-c88c-4989-bf03-83a580014143",
+      "name": "Unbranded Bronze Smart TV",
+      "brand": "McDermott Group",
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals Upgradable responsive capability",
+      "actualPrice": 554,
+      "sellingPrice": 277,
+      "discount": 50,
+      "ratings": 4.1,
+      "reviewsCount": 45,
+      "promotion": true,
+      "urls": [
+        "https://loremflickr.com/640/480?lock=385945052381184",
+        "https://picsum.photos/seed/wVII6Svsu/640/480",
+        "https://picsum.photos/seed/5jbqsnFU/640/480",
+        "https://loremflickr.com/640/480?lock=991629343195136"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Licensed Fresh Ball",
+          "info": [
+            "Ut talis acsi sordeo cibus textilis bellum peccatus."
+          ],
+          "link": "https://neglected-verve.com/",
+          "linkLabel": "Discover"
+        },
+        {
+          "title": "Recycled Fresh Mouse",
+          "info": [
+            "Auctus adipiscor vel summisse error coniecto.",
+            "Eveniet vita tenus spiculum cattus cursim absorbeo tergo."
+          ],
+          "link": "https://quixotic-angel.name",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Practical Bronze Keyboard",
+          "info": [
+            "Adsuesco suppellex ex appono acquiro auctus velut.",
+            "Doloremque amita deleniti calco vulnus repudiandae.",
+            "Aveho nemo vigilo ultra thesaurus somnus spiritus."
+          ],
+          "link": "https://wet-pork.name",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Sleek Plastic Chair",
+          "info": [
+            "Creptio thymum ulterius coadunatio.",
+            "Tres caritas confugo degusto administratio animi ara."
+          ],
+          "link": "https://subtle-imitation.info",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Generic Soft Bike",
+          "info": [
+            "Vulariter repudiandae depopulo dolore adficio.",
+            "Adsuesco thesaurus sperno tempus."
+          ],
+          "link": "https://rough-downfall.com/",
+          "linkLabel": "Discover"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Occasion",
+          "info": "Work commonly delightfully"
+        },
+        {
+          "title": "Main Trend",
+          "info": "denuncio voro whether upside-down"
+        },
+        {
+          "title": "Occasion",
+          "info": "Work provided bitter"
+        },
+        {
+          "title": "Color",
+          "info": "plum pink"
+        },
+        {
+          "title": "Fit",
+          "info": "Regular Fit"
+        }
+      ],
+      "availableQuantity": 87,
+      "seller": {
+        "id": 590,
+        "name": "Yost, Vandervort and Schowalter"
+      },
+      "deliveredTill": "2024-08-10T16:56:44.119Z",
+      "size": "M",
+      "quantity": 2
     }
   ],
-  "addresses": []
+  "addresses": [
+    {
+      "id": "6a62",
+      "name": "Bryant DuBuque Sr.",
+      "mobile": "(269) 262-7223 x867",
+      "pinCode": "22361-5991",
+      "address": "60681 Wellington Street",
+      "locality": "Suite 809",
+      "city": "Folsom",
+      "state": "Nevada",
+      "type": "Work",
+      "isDefaultAddress": true
+    },
+    {
+      "id": "6091",
+      "name": "Ms. Cassandra Padberg",
+      "mobile": "1-661-408-5942",
+      "pinCode": "48395-1645",
+      "address": "84132 Bay Street",
+      "locality": "Suite 358",
+      "city": "Gulfport",
+      "state": "Louisiana",
+      "type": "Home",
+      "isDefaultAddress": false
+    },
+    {
+      "id": "3cb0",
+      "name": "Gerald Bednar",
+      "mobile": "(848) 231-5818 x22815",
+      "pinCode": "18841",
+      "address": "4119 Uriel Lakes",
+      "locality": "Apt. 677",
+      "city": "Torphystad",
+      "state": "Minnesota",
+      "type": "Work",
+      "isDefaultAddress": false
+    }
+  ]
 }

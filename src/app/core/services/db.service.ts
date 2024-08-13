@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { generateFakeAddresses } from '@app/faker/address.faker';
 import { generateFakeOffer } from '@app/faker/offer.faker';
 import { fakeProducts } from '@app/faker/product.faker';
 import { Product } from '@app/modals/product';
@@ -24,6 +25,7 @@ export class DbService {
     // this.clearDataFromDB({ data: fakeProducts(20), getUrl: this.apiRoutes.products, getOneUrl: this.apiRoutes.productByID });
     // this.clearDataFromDB({ data: [], getUrl: this.apiRoutes.wishlist, getOneUrl: this.apiRoutes.wishlistByID });
     // this.clearDataFromDB({ data: [], getUrl: this.apiRoutes.cart, getOneUrl: this.apiRoutes.cartByID });
+    // this.clearDataFromDB({ data: generateFakeAddresses(3), getUrl: this.apiRoutes.address, getOneUrl: this.apiRoutes.addressByID });
   }
 
 
