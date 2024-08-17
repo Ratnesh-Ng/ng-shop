@@ -1,10 +1,10 @@
 export class FilterOptions {
-    sortBy: { key: string, value: unknown } = { value: SortBy.Recommended, key: "Recommended" }
+    sortBy: { key: string, value: unknown } = { value: SortBy.What_sNew, key: "What's New" }
 }
 
 export enum SortBy {
     Recommended = "Recommended",
-    New = "New",
+    What_sNew = "New",
     Popularity = "Popularity",
     BetterDiscount = "Discount",
     PriceHighToLow = "PriceHTL",

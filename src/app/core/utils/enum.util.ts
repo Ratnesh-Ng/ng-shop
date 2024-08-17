@@ -2,8 +2,12 @@
 
 export const formatEnumToArray = <T>(enumObj: any): { key: string, value: T }[] => {
     return Object.keys(enumObj).map((key) => {
-        // Split camel case key by uppercase letters and join with space
-        const formattedKey = key.replace(/([a-z])([A-Z])/g, '$1 $2');
+
+        const formattedKey = key
+            .replace(/_/g, '')         // Replace underscores
+            .replace(/s([A-Z])/g, "'s $1")  // Add apostrophe before 's' followed by an uppercase letter
+            .replace(/([a-z])([A-Z])/g, '$1 $2');  // Split camel case key by uppercase letters
+
         return {
             key: formattedKey,
             value: (enumObj as any)[key]
