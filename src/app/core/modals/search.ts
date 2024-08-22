@@ -1,37 +1,37 @@
 import { Gender } from "@core/enums/gender.enum"
 import { Product } from "./product";
 
-interface Discount {
+export interface Discount {
     name: string; // Name of the discount (e.g., "10% Off", "Summer Sale")
     value: number; // Discount value in percentage (e.g., 10 for 10% off)
 }
 
-interface CategoryFilter {
-    id: string; // Unique identifier for the category
+export interface CategoryFilter {
+    id: string|number; // Unique identifier for the category
     name: string; // Name of the category
     totalItems: number; // Total items in the category
 }
 
-interface GenderFilter {
+export interface GenderFilter {
     id: Gender; // Unique identifier for the gender
     name: Gender; // Name of the gender (e.g., "Male", "Female", "Unisex")
     totalItems: number; // Total items in the gender category
 }
 
-interface PriceRangeFilter {
+export interface PriceRangeFilter {
     min: number; // Minimum price
     max: number; // Maximum price
 }
 
-interface ColorFilter {
-    id: string; // Unique identifier for the color
+export interface ColorFilter {
+    id: string|number; // Unique identifier for the color
     name: string; // Name of the color (e.g., "Red", "Blue")
     hexCode: string; // HEX code for the color
     totalItems: number; // Total items in the color category
 }
 
-interface BrandFilter {
-    id: string; // Unique identifier for the brand
+export interface BrandFilter {
+    id: string|number; // Unique identifier for the brand
     name: string; // Name of the brand
     totalItems: number; // Total items in the brand category
 }
@@ -50,4 +50,16 @@ export interface Search {
     filterOption: FilterOptions
 }
 
+export class QueryOptions {
+    sortBy: { key: string, value: unknown } = { value: SortBy.What_sNew, key: "What's New" }
+}
 
+export enum SortBy {
+    Recommended = "Recommended",
+    What_sNew = "New",
+    Popularity = "Popularity",
+    BetterDiscount = "Discount",
+    PriceHighToLow = "PriceHTL",
+    PriceLowToHigh = "PriceLTH",
+    CustomerRating = "Rating",
+}

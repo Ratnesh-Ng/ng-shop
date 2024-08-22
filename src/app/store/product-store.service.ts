@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Product } from '@app/modals/product';
 import { Store } from './store';
-import { fakeProducts } from '@app/faker/product.faker';
+import { generateFakeProducts } from '@app/faker/product.faker';
 import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
 import { BaseService } from '@core/base/base.service';
 import { ProductService } from '@services/product.service';
@@ -16,7 +16,7 @@ export class ProductStoreService extends BaseService {
   constructor() {
     super();
     this.products.refreshEvent.subscribe(() => {
-      this.products.data = [...fakeProducts(this.productsLength), ...this.products.data ?? []]
+      this.products.data = [...generateFakeProducts(this.productsLength), ...this.products.data ?? []]
     });
     // this.db.clearProductsFromDB();
   }

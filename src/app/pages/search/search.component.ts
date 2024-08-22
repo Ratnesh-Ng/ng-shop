@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { fakeProducts } from '@app/faker/product.faker';
-import { FilterOptions, SortBy } from '@app/modals/filter-options';
+import { Component, OnInit } from '@angular/core';
+import { generateFakeSearchData } from '@app/faker/search.faker';
+import { Search, QueryOptions, SortBy } from '@app/modals/search';
 import { SearchBaseComponent } from '@core/base/search-base.component';
 import { formatEnumToArray } from '@core/utils/enum.util';
 
@@ -9,14 +9,17 @@ import { formatEnumToArray } from '@core/utils/enum.util';
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
-export class SearchComponent extends SearchBaseComponent {
-  products = fakeProducts(20);
-  sortByOptions = formatEnumToArray(SortBy);
-  filterOptions: FilterOptions = new FilterOptions();
+export class SearchComponent extends SearchBaseComponent implements OnInit {
 
-  constructor() {
-    super();
+  sortByOptions = formatEnumToArray(SortBy);
+  filterOptions: QueryOptions = new QueryOptions();
+
+  searchResult: Search = generateFakeSearchData();
+
+  override ngOnInit(): void {
+    super.ngOnInit()
     this.getParams();
+    console.log(this.searchResult)
   }
 
   private getParams() {

@@ -148,4 +148,4 @@ export const createFakeProduct = () => {
 };
 
 // Example usage:
-export const fakeProducts = (length: number) => Array.from<Product>({ length: length }).map(createFakeProduct);
+export const generateFakeProducts = (length: number) => Array.from<Product>({ length: length }).map(createFakeProduct);
