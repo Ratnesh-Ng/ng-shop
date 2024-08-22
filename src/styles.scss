@@ -14,3 +14,10 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.sortByDropdown{
+  p-dropdown{
+    width: 100%;
+    display: grid !important;
+  }
+}

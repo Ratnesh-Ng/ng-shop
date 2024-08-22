@@ -1,8 +1,36 @@
+<div class="flex py-4 items-center">
+    <!-- Sidebar Container -->
+    <div class="hidden md:block w-[20%] px-4">
+        <p class="uppercase text-base font-semibold">Filters</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="w-full md:w-[80%]">
+        <div class="flex justify-between items-center px-4">
+            <p>Other options</p>
+            <div class="w-72 border sortByDropdown">
+                <p-dropdown [options]="sortByOptions" [(ngModel)]="filterOptions.sortBy" optionLabel="name" [showClear]="true"
+                    placeholder="Sort By" [ngClass]="{'w-full d-flex':true}">
+                    <ng-template pTemplate="selectedItem">
+                        <div class="flex items-center w-full" *ngIf="filterOptions.sortBy">
+                            <div>{{ filterOptions.sortBy.key }}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-item pTemplate="item">
+                        <div class="flex items-center w-full">
+                            <div>{{ item.key }}</div>
+                        </div>
+                    </ng-template>
+                </p-dropdown>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="flex">
     <!-- Sidebar Container -->
     <div class="hidden md:block w-[20%] px-4 border border-r-0">
         <div class="sticky top-24 h-[calc(100vh-4rem)] w-full overflow-y-auto scrollbar-hide">
-            side bar
+            <app-filter/>
         </div>
     </div>
 
@@ -14,7 +42,7 @@
                 <app-product-card [data]="item"></app-product-card>
             </div>
             }@empty {
-                <p class="text-center capitalize w-full text-sm">No item found</p>
+            <p class="text-center capitalize w-full text-sm">No item found</p>
             }
         </div>
     </div>

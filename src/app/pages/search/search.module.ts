@@ -4,16 +4,21 @@ import { CommonModule } from '@angular/common';
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 import { CoreModule } from '../../core/core.module';
-
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
-    SearchComponent
+    SearchComponent,
+    FilterComponent
   ],
   imports: [
     CommonModule,
     SearchRoutingModule,
-    CoreModule
+    CoreModule,
+    DropdownModule,
+    FormsModule
   ]
 })
 export class SearchModule { }

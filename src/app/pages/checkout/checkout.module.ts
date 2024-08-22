@@ -11,6 +11,8 @@ import { ConfirmationService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { CheckoutComponent } from './checkout.component';
 import { CheckoutHeaderComponent } from './components/checkout-header/checkout-header.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { AddressCardComponent } from './components/address-card/address-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CheckoutHeaderComponent } from './components/checkout-header/checkout-h
     CartComponent,
     AddressComponent,
     PaymentComponent,
-    CheckoutHeaderComponent
+    CheckoutHeaderComponent,
+    CartItemComponent,
+    AddressCardComponent
   ],
   imports: [
     CommonModule,
