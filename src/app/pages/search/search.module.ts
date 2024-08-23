@@ -7,7 +7,7 @@ import { CoreModule } from '../../core/core.module';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './components/filter/filter.component';
-
+import { SliderModule } from 'primeng/slider';
 @NgModule({
   declarations: [
     SearchComponent,
@@ -18,7 +18,8 @@ import { FilterComponent } from './components/filter/filter.component';
     SearchRoutingModule,
     CoreModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    SliderModule
   ]
 })
 export class SearchModule { }

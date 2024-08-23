@@ -1,1 +1,57 @@
-<p class="">filter works!</p>
+<div class="text-[13px]">
+    <div class="flec flex-col space-y-2 border-b p-4">
+        @for (item of genderEnumArr; track item.key; let index = $index) {
+        <div class="space-x-3">
+            <input type="radio" name="gender" [value]="item.value" [id]="index+'gender'">
+            <label [for]="index+'gender'" class="font-semibold">{{item.key}}</label>
+        </div>
+        }
+    </div>
+    <div class="flec flex-col space-y-2 border-b p-4">
+        <h3 class="uppercase font-bold mb-4">Categories</h3>
+        @for (item of filter().categories|slice:0:8; track item.id; let index = $index) {
+        <div class="space-x-3 flex items-center">
+            <input type="checkbox" name="category" [value]="item.id" [id]="index+'category'">
+            <label [for]="index+'category'">{{item.name}} ({{item.totalItems}})</label>
+        </div>
+        }
+    </div>
+    <div class="flec flex-col space-y-2 border-b p-4">
+        <h3 class="uppercase font-bold mb-4">Brand</h3>
+        @for (item of filter().brands|slice:0:8; track item.id; let index = $index) {
+        <div class="space-x-3 flex items-center">
+            <input type="checkbox" name="brands" [value]="item.id" [id]="index+'brands'">
+            <label [for]="index+'brands'">{{item.name}} ({{item.totalItems}})</label>
+        </div>
+        }
+    </div>
+    <div *ngIf="filter().priceRange as price" class="flec flex-col space-y-2 border-b p-4">
+        <h3 class="uppercase font-bold mb-4">Price</h3>
+        <div class="space-x-3 flex flex-col">
+            <input type="range" id="price" name="price" [min]="price.min" [max]="price.max">
+            <!-- <p-slider [(ngModel)]="priceRange" [range]="true" styleClass="w-14rem" /> -->
+            <label for="price">{{price.min|currency:"INR"}} - {{price.max|currency:"INR"}}</label>
+        </div>
+    </div>
+    <div class="flec flex-col space-y-2 border-b p-4">
+        <h3 class="uppercase font-bold mb-4">Color</h3>
+        @for (item of filter().colors|slice:0:8; track item.id; let index = $index) {
+        <div class="space-x-3 flex items-center">
+            <input type="checkbox" name="brands" [value]="item.id" [id]="index+'brands'">
+            <label [for]="index+'brands'" class="flex space-x-2 items-center">
+                <div class="h-4 w-4 rounded-full" [ngStyle]="{'background-color':item.hexCode}">&nbsp;</div>
+                <span>{{item.name}} ({{item.totalItems}})</span>
+            </label>
+        </div>
+        }
+    </div>
+    <div class="flec flex-col space-y-2 border-b p-4">
+        <h3 class="uppercase font-bold mb-4">Discount Range</h3>
+        @for (item of filter().discount; track item.value; let index = $index) {
+        <div class="space-x-3 flex items-center">
+            <input type="radio" name="discount" [value]="item.value" [id]="index+'discount'">
+            <label [for]="index+'discount'">{{item.name}}</label>
+        </div>
+        }
+    </div>
+</div>
