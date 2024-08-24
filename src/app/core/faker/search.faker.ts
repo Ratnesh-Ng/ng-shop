@@ -45,7 +45,7 @@ const generateColors = (): ColorFilter[] => {
 const generateBrands = (): BrandFilter[] => {
     return Array.from({ length: 5 }, () => ({
         id: generateUniqueId(),
-        name: faker.company.name(),
+        name: faker.word.words({ count: 2 }),
         totalItems: faker.number.int({ min: 10, max: 100 })
     }));
 };
@@ -71,8 +71,8 @@ function generateUniqueId(min = 1, max = 10000): number {
 }
 
 
-export const generateFakeSearchData = (): Search => ({
-    items: generateFakeProducts(20),
+export const generateFakeSearchData = (keyword: string = ""): Search => ({
+    items: generateFakeProducts(20, keyword),
     filterOption: generateFilterOptions()
 });
 

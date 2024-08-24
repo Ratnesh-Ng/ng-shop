@@ -1,18 +1,18 @@
 import { Product } from "@app/modals/product";
 import { faker } from "@faker-js/faker";
-// Customized product types for more specific names
+
 const productTypes = [
     'T-shirt', 'Jeans', 'Sneakers', 'Backpack', 'Smartphone', 'Headphones',
     'Watch', 'Gaming Laptop', 'Coffee Maker', 'Yoga Mat', 'Running Shoes',
     'Digital Camera', 'Guitar', 'E-reader', 'Portable Speaker', 'Smart TV'
 ];
 
-// Custom function to generate a more genuine product name
-const generateProductName = () => {
+// Custom function to generate a more genuine product name with keyword
+const generateProductName = (keyword: string = "") => {
     const type = faker.helpers.arrayElement(productTypes);
     const adjective = faker.commerce.productAdjective();
     const material = faker.commerce.productMaterial();
-    return `${adjective} ${material} ${type}`;
+    return `${keyword} ${adjective} ${material} ${type}`;
 };
 
 // Custom function to generate a more genuine product description
@@ -25,16 +25,7 @@ const generateProductDescription = () => {
 const generateOffers = (numOffers: number) => {
     const offers = [];
 
-    // Define meaningful link labels
-    const linkLabels = [
-        "Learn More",
-        "Get It Now",
-        "Discover",
-        "Explore",
-        "Find Out More",
-        "Shop Now",
-        "Check It Out"
-    ];
+    const linkLabels = ["Learn More", "Get It Now", "Discover", "Explore", "Find Out More", "Shop Now", "Check It Out"];
 
     for (let i = 0; i < numOffers; i++) {
         // Generate random number of info items (between 1 to 4)
@@ -89,12 +80,11 @@ const generateSpecifications = (numSpecifications: number) => {
     return specifications;
 }
 
-// Function to generate random product details
-export const createFakeProduct = () => {
-    // Generate random details
+// Function to generate random product details with keyword
+export const createFakeProduct = (keyword: string) => {
     const id = faker.number.int();
     const uuid = faker.string.uuid();
-    const name = generateProductName();
+    const name = generateProductName(keyword);
     const brand = faker.company.name();
     const description = generateProductDescription();
     const actualPrice = parseFloat(faker.commerce.price());
@@ -147,5 +137,5 @@ export const createFakeProduct = () => {
     };
 };
 
-// Example usage:
-export const generateFakeProducts = (length: number) => Array.from<Product>({ length: length }).map(createFakeProduct);
+// Function to generate multiple products based on a search keyword
+export const generateFakeProducts = (length: number, keyword: string = "") => Array.from<Product>({ length: length }).map(() => createFakeProduct(keyword));
