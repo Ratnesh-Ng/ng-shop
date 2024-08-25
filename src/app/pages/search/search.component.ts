@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { generateFakeSearchData } from '@app/faker/search.faker';
+import { Component, inject, OnInit } from '@angular/core';
 import { Search, QueryOptions, SortBy } from '@app/modals/search';
 import { SearchBaseComponent } from '@core/base/search-base.component';
 import { formatEnumToArray } from '@core/utils/enum.util';
+import { ProductStoreService } from '../../store/product-store.service';
+import { getData } from '@core/utils/common.util';
 
 @Component({
   selector: 'app-search',
@@ -11,20 +12,26 @@ import { formatEnumToArray } from '@core/utils/enum.util';
 })
 export class SearchComponent extends SearchBaseComponent implements OnInit {
 
+  productStoreService = inject(ProductStoreService)
   sortByOptions = formatEnumToArray(SortBy);
   filterOptions: QueryOptions = new QueryOptions();
 
-  searchResult: Search = generateFakeSearchData();
+  searchResult!: Search | null;
 
   override ngOnInit(): void {
     super.ngOnInit()
     this.getParams();
-    console.log(this.searchResult)
   }
 
   private getParams() {
-    this.activatedRoute.params.subscribe(params => {
-      console.log(params)
+    this.activatedRoute.queryParams.subscribe((params) => {
+      this.searchProductByKeyword(params["rawQuery"])
+    });
+  }
+
+  private async searchProductByKeyword(keyword: string) {
+    getData(this.productStoreService.searchProducts(keyword)).then(a => {
+      this.searchResult = a;
     });
   }
 

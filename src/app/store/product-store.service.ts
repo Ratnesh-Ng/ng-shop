@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Product } from '@app/modals/product';
+import { Product, ProductFrom } from '@app/modals/product';
 import { Store } from './store';
 import { generateFakeProducts } from '@app/faker/product.faker';
 import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
@@ -8,6 +8,7 @@ import { ProductService } from '@services/product.service';
 import { getData, postData } from '@core/utils/common.util';
 import { Offer } from '@app/modals/offer';
 import { Cart } from '@app/modals/cart';
+import { Search } from '@app/modals/search';
 
 @Injectable({ providedIn: 'root' })
 
@@ -27,6 +28,7 @@ export class ProductStoreService extends BaseService {
   public wishListedProducts: Store<Product[] | null> = new Store(null);
   public cart: Store<Cart[] | null> = new Store(null);
   public offers: Store<Offer[] | null> = new Store(null);
+  public searchedProduct: Store<Search | null> = new Store(null);
 
   public queryProducts(): Observable<Product[] | null> {
     if ((this.products.data?.length ?? 0) < this.productsLength) {
@@ -42,10 +44,27 @@ export class ProductStoreService extends BaseService {
     return of(this.products.data)
   }
 
-  public queryProductByID(UUID: string): Observable<Product> {
+  public queryProductByID(UUID: string, type: ProductFrom): Observable<Product> {
     let product;
     if (UUID) {
-      product = this.wishListedProducts.data?.find(a => a.uuid == UUID) || this.products.data?.find(a => a.uuid == UUID);
+      switch (type) {
+        case "cart": {
+          product = this.cart.data?.find(a => a.uuid == UUID);
+          break;
+        }
+        case "search": {
+          product = this.searchedProduct.data?.items?.find(a => a.uuid == UUID);
+          break;
+        }
+        case "wishlist": {
+          product = this.wishListedProducts.data?.find(a => a.uuid == UUID)
+          break;
+        }
+        default: {
+          product = this.products.data?.find(a => a.uuid == UUID);
+          break;
+        }
+      }
     }
     if (product) {
       return of(product);
@@ -135,6 +154,26 @@ export class ProductStoreService extends BaseService {
       // Retry adding product to cart after fetching
       return this.addProductToCart(data);
     }
+  }
+
+  private searchedProductMap = new Map<string, Search>();
+  public searchProducts(keyword: string): Observable<Search | null> {
+    const mapKey = keyword?.toLowerCase();
+    if (this.searchedProductMap.has(mapKey)) {
+      const data = this.searchedProductMap.get(mapKey);
+      this.searchedProduct.data = data!;
+      return of(data!);
+    }
+
+    return this.productService.searchProduct(keyword).pipe(
+      tap((a) => {
+        this.searchedProduct.data = a;
+        this.searchedProductMap.set(mapKey, a);
+      }),
+      catchError((e) => {
+        return throwError(() => e)
+      })
+    );
   }
 
   public queryOffers(): Observable<Offer[] | null> {

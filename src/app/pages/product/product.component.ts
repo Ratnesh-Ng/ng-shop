@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Product } from '@app/modals/product';
+import { Product, ProductFrom } from '@app/modals/product';
 import { SearchBaseComponent } from '@core/base/search-base.component';
 import { ProductStoreService } from '@store/product-store.service';
 
@@ -10,7 +10,7 @@ import { ProductStoreService } from '@store/product-store.service';
 })
 export class ProductComponent extends SearchBaseComponent {
   private productStore: ProductStoreService = inject(ProductStoreService);
-  product$ = this.productStore.queryProductByID(this.activatedRoute.snapshot.paramMap.get('UUID') ?? '');
+  product$ = this.productStore.queryProductByID(this.activatedRoute.snapshot.paramMap.get('UUID') ?? '', this.productFrom);
 
   public async addProductToWishlist(data: Product): Promise<void> {
     await this.productStore.addProductToWishlist(data)
@@ -19,5 +19,8 @@ export class ProductComponent extends SearchBaseComponent {
   public async addProductToCart(data: Product): Promise<void> {
     await this.productStore.addProductToCart(data)
   }
-  
+
+  private get productFrom(): ProductFrom {
+    return (this.activatedRoute.snapshot.queryParamMap.get("type") as ProductFrom) ?? "other"
+  }
 }

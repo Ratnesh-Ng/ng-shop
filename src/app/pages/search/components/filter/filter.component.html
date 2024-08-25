@@ -9,7 +9,7 @@
     </div>
     <div class="flec flex-col space-y-2 border-b p-4">
         <h3 class="uppercase font-bold mb-4">Categories</h3>
-        @for (item of filter().categories|slice:0:8; track item.id; let index = $index) {
+        @for (item of filter()?.categories|slice:0:8; track item.id; let index = $index) {
         <div class="space-x-3 flex items-center">
             <input type="checkbox" name="category" [value]="item.id" [id]="index+'category'">
             <label [for]="index+'category'">{{item.name}} ({{item.totalItems}})</label>
@@ -18,14 +18,14 @@
     </div>
     <div class="flec flex-col space-y-2 border-b p-4">
         <h3 class="uppercase font-bold mb-4">Brand</h3>
-        @for (item of filter().brands|slice:0:8; track item.id; let index = $index) {
+        @for (item of filter()?.brands|slice:0:8; track item.id; let index = $index) {
         <div class="space-x-3 flex items-center">
             <input type="checkbox" name="brands" [value]="item.id" [id]="index+'brands'">
             <label [for]="index+'brands'">{{item.name}} ({{item.totalItems}})</label>
         </div>
         }
     </div>
-    <div *ngIf="filter().priceRange as price" class="flec flex-col space-y-2 border-b p-4">
+    <div *ngIf="filter()?.priceRange as price" class="flec flex-col space-y-2 border-b p-4">
         <h3 class="uppercase font-bold mb-4">Price</h3>
         <div class="space-x-3 flex flex-col">
             <input type="range" id="price" name="price" [min]="price.min" [max]="price.max">
@@ -35,7 +35,7 @@
     </div>
     <div class="flec flex-col space-y-2 border-b p-4">
         <h3 class="uppercase font-bold mb-4">Color</h3>
-        @for (item of filter().colors|slice:0:8; track item.id; let index = $index) {
+        @for (item of filter()?.colors|slice:0:8; track item.id; let index = $index) {
         <div class="space-x-3 flex items-center">
             <input type="checkbox" name="brands" [value]="item.id" [id]="index+'brands'">
             <label [for]="index+'brands'" class="flex space-x-2 items-center">
@@ -47,7 +47,7 @@
     </div>
     <div class="flec flex-col space-y-2 border-b p-4">
         <h3 class="uppercase font-bold mb-4">Discount Range</h3>
-        @for (item of filter().discount; track item.value; let index = $index) {
+        @for (item of filter()?.discount; track item.value; let index = $index) {
         <div class="space-x-3 flex items-center">
             <input type="radio" name="discount" [value]="item.value" [id]="index+'discount'">
             <label [for]="index+'discount'">{{item.name}}</label>

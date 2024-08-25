@@ -1,4 +1,4 @@
-import { Component, model, ModelSignal, OnInit } from '@angular/core';
+import { Component, model, ModelSignal } from '@angular/core';
 import { formatEnumToArray } from '../../../../core/utils/enum.util';
 import { Gender } from '@core/enums/gender.enum';
 import { FilterOptions } from '@app/modals/search';
@@ -8,14 +8,9 @@ import { FilterOptions } from '@app/modals/search';
   templateUrl: './filter.component.html',
   styleUrl: './filter.component.scss'
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent {
   
   genderEnumArr = formatEnumToArray(Gender);
-  filter: ModelSignal<FilterOptions> = model.required<FilterOptions>();
-  priceRange:number[] = [];
-  
-  ngOnInit(): void {
-    this.priceRange = [this.filter().priceRange.min, this.filter().priceRange.max]
-  }
+  filter: ModelSignal<FilterOptions|undefined> = model.required<FilterOptions|undefined>();
 
 }

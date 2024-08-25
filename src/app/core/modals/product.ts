@@ -45,3 +45,5 @@ export class CartProductDetails {
     shippingFee: number = 0;
     totalAmountToPay: number = 0;
 }
+
+export type ProductFrom = "wishlist" | "cart" | "search" | "other";

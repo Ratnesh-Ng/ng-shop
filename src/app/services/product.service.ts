@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { generateFakeSearchData } from '@app/faker/search.faker';
 import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
 import { Product } from '@app/modals/product';
 import { BaseService } from '@core/base/base.service';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -45,4 +47,8 @@ export class ProductService extends BaseService {
     return this.http.delete<Product>(this.apiRoutes.cartByID(id));
   }
 
+  public searchProduct(keyword: string) {
+    return of(generateFakeSearchData(keyword))
+  }
+  
 }
