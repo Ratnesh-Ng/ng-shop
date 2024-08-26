@@ -1,10 +1,11 @@
 import { Component, computed, inject, OnInit } from '@angular/core';
 import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
-import { postData } from '@core/utils/common.util';
+import { postData } from '@core/utils/http.util';
 import { ConfirmationService } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { CheckoutBase } from '../../base/checkout-base';
+import { scrollToTop } from '@core/utils/common.util';
 
 @Component({
   selector: 'app-cart',
@@ -27,6 +28,10 @@ export class CartComponent extends CheckoutBase implements OnInit {
     this.productStore.cart.data = this.cartItems();
     return length;
   });
+
+  ngOnInit(): void {
+    scrollToTop();
+  }
 
   //#region Private
 

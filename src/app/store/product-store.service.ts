@@ -5,7 +5,7 @@ import { generateFakeProducts } from '@app/faker/product.faker';
 import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
 import { BaseService } from '@core/base/base.service';
 import { ProductService } from '@services/product.service';
-import { getData, postData } from '@core/utils/common.util';
+import { getData, postData } from '@core/utils/http.util';
 import { Offer } from '@app/modals/offer';
 import { Cart } from '@app/modals/cart';
 import { Search } from '@app/modals/search';

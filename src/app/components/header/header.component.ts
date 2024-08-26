@@ -24,7 +24,9 @@ export class HeaderComponent extends BaseComponent {
   public search() {
     const searchedKeyword = removeSpecialCharacter(removeExtraSpaces(this.fullText), specialCharacters);
     const route = generateRoute(this.fullText);
-    this.router.navigateByUrl(`/${route}?rawQuery=${searchedKeyword}`)
+    if(route){
+      this.router.navigateByUrl(`/${route}?rawQuery=${searchedKeyword}`)
+    }
   }
   
   public showDropdown(subItems: HeaderCategory[]) {

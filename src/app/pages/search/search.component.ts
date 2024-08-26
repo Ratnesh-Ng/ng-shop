@@ -3,7 +3,7 @@ import { Search, QueryOptions, SortBy } from '@app/modals/search';
 import { SearchBaseComponent } from '@core/base/search-base.component';
 import { formatEnumToArray } from '@core/utils/enum.util';
 import { ProductStoreService } from '../../store/product-store.service';
-import { getData } from '@core/utils/common.util';
+import { getData } from '@core/utils/http.util';
 
 @Component({
   selector: 'app-search',
@@ -17,22 +17,38 @@ export class SearchComponent extends SearchBaseComponent implements OnInit {
   filterOptions: QueryOptions = new QueryOptions();
 
   searchResult!: Search | null;
-
-  override ngOnInit(): void {
-    super.ngOnInit()
+  searchedKeyword: string = "";
+  totalPages = 5;
+  currentPage = 0;
+  ngOnInit(): void {
     this.getParams();
   }
 
   private getParams() {
     this.activatedRoute.queryParams.subscribe((params) => {
-      this.searchProductByKeyword(params["rawQuery"])
+      this.searchedKeyword = params["rawQuery"];
+      this.searchProductByKeyword()
     });
   }
 
-  private async searchProductByKeyword(keyword: string) {
-    getData(this.productStoreService.searchProducts(keyword)).then(a => {
+  isLoading = false;
+  private async searchProductByKeyword() {
+    this.isLoading = true;
+    getData(this.productStoreService.searchProducts(this.searchedKeyword), { busy: true }).then(a => {
       this.searchResult = a;
+      this.currentPage++;
+      this.isLoading = false;
     });
   }
-
+  
+  loadMoreItems() {
+    if (this.currentPage < this.totalPages) {
+      this.isLoading = true;
+      this.currentPage++;
+      getData(this.productStoreService.searchProducts(this.searchedKeyword), { busy: true }).then(a => {
+        this.searchResult?.items.push(...a?.items ?? []);
+        this.isLoading = false;
+      });
+    }
+  }
 }

@@ -4,6 +4,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { RatingCardComponent } from './components/rating-card/rating-card.component';
 import { RouterModule } from '@angular/router';
 import { ClickStopPropagationDirective } from './directives/click-stop-propagation.directive';
+import { InfiniteScrollDirective } from './directives/infinite-scroll.directive';
 
 
 
@@ -12,6 +13,7 @@ import { ClickStopPropagationDirective } from './directives/click-stop-propagati
     ProductCardComponent,
     RatingCardComponent,
     ClickStopPropagationDirective,
+    InfiniteScrollDirective,
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { ClickStopPropagationDirective } from './directives/click-stop-propagati
     ProductCardComponent,
     RatingCardComponent,
     RouterModule,
-    ClickStopPropagationDirective
+    ClickStopPropagationDirective,
+    InfiniteScrollDirective,
   ]
 })
 export class CoreModule { }

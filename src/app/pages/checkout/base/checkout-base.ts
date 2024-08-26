@@ -1,7 +1,7 @@
 import { signal, WritableSignal } from "@angular/core";
 import { Cart } from "@app/modals/cart";
 import { CartProductDetails } from "@app/modals/product";
-import { getData } from "@core/utils/common.util";
+import { getData } from "@core/utils/http.util";
 import { ProductBase } from "@shared/base/product.base";
 
 export class CheckoutBase extends ProductBase {
