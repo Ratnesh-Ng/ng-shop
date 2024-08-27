@@ -31,7 +31,7 @@
     <div class="hidden md:block w-[18%] border border-r-0 relative">
         <div *ngIf="searchResult?.filterOption" class="">
             <!-- <div class="sticky top-24  w-full overflow-y-auto scrollbar-hide"> -->
-            <app-filter [filter]="searchResult?.filterOption" />
+            <app-filter [filter]="searchResult?.filterOption" [(value)]="filterValue" />
         </div>
     </div>
 

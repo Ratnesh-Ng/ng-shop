@@ -7,7 +7,7 @@ export interface Discount {
 }
 
 export interface CategoryFilter {
-    id: string|number; // Unique identifier for the category
+    id: string | number; // Unique identifier for the category
     name: string; // Name of the category
     totalItems: number; // Total items in the category
 }
@@ -24,14 +24,14 @@ export interface PriceRangeFilter {
 }
 
 export interface ColorFilter {
-    id: string|number; // Unique identifier for the color
+    id: string | number; // Unique identifier for the color
     name: string; // Name of the color (e.g., "Red", "Blue")
     hexCode: string; // HEX code for the color
     totalItems: number; // Total items in the color category
 }
 
 export interface BrandFilter {
-    id: string|number; // Unique identifier for the brand
+    id: string | number; // Unique identifier for the brand
     name: string; // Name of the brand
     totalItems: number; // Total items in the brand category
 }
@@ -62,4 +62,13 @@ export enum SortBy {
     PriceHighToLow = "PriceHTL",
     PriceLowToHigh = "PriceLTH",
     CustomerRating = "Rating",
+}
+
+export class FilterValue {
+    categories: (number | string)[] = []; // category filters
+    genders!: Gender; // gender filters
+    priceRange!: number; // Price range filter
+    colors: (number | string)[] = []; // color filters
+    brands: (number | string)[] = []; // brand filters
+    discount!: number; // Discount filter
 }

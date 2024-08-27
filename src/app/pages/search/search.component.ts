@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Search, QueryOptions, SortBy } from '@app/modals/search';
+import { Search, QueryOptions, SortBy, FilterValue } from '@app/modals/search';
 import { SearchBaseComponent } from '@core/base/search-base.component';
 import { formatEnumToArray } from '@core/utils/enum.util';
 import { ProductStoreService } from '../../store/product-store.service';
@@ -15,6 +15,7 @@ export class SearchComponent extends SearchBaseComponent implements OnInit {
   productStoreService = inject(ProductStoreService)
   sortByOptions = formatEnumToArray(SortBy);
   filterOptions: QueryOptions = new QueryOptions();
+  filterValue: FilterValue = new FilterValue();
 
   searchResult!: Search | null;
   searchedKeyword: string = "";
@@ -40,7 +41,7 @@ export class SearchComponent extends SearchBaseComponent implements OnInit {
       this.isLoading = false;
     });
   }
-  
+
   loadMoreItems() {
     if (this.currentPage < this.totalPages) {
       this.isLoading = true;

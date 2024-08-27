@@ -1,7 +1,7 @@
-import { Component, model, ModelSignal } from '@angular/core';
+import { Component, input, InputSignal, model, ModelSignal } from '@angular/core';
 import { formatEnumToArray } from '../../../../core/utils/enum.util';
 import { Gender } from '@core/enums/gender.enum';
-import { FilterOptions } from '@app/modals/search';
+import { FilterOptions, FilterValue } from '@app/modals/search';
 
 @Component({
   selector: 'app-filter',
@@ -9,8 +9,18 @@ import { FilterOptions } from '@app/modals/search';
   styleUrl: './filter.component.scss'
 })
 export class FilterComponent {
-  
+
   genderEnumArr = formatEnumToArray(Gender);
-  filter: ModelSignal<FilterOptions|undefined> = model.required<FilterOptions|undefined>();
+  value: ModelSignal<FilterValue> = model.required<FilterValue>();
+  filter: InputSignal<FilterOptions | undefined> = input.required<FilterOptions | undefined>();
+
+  onCheck(event: Event, value: number | string, type: "brands" | "colors" | "categories") {
+    const checked = (event.target as HTMLInputElement).checked;
+    if (checked) {
+      this.value()[type].push(value)
+    } else {
+      this.value()[type] = this.value()[type].filter(a => a != value)
+    }
+  }
 
 }
