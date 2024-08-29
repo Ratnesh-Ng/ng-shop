@@ -8,7 +8,7 @@ import { ProductService } from '@services/product.service';
 import { getData, postData } from '@core/utils/http.util';
 import { Offer } from '@app/modals/offer';
 import { Cart } from '@app/modals/cart';
-import { Search } from '@app/modals/search';
+import { ProductFilterValue, QueryOptions, Search } from '@app/modals/search';
 
 @Injectable({ providedIn: 'root' })
 
@@ -157,15 +157,15 @@ export class ProductStoreService extends BaseService {
   }
 
   private searchedProductMap = new Map<string, Search>();
-  public searchProducts(keyword: string): Observable<Search | null> {
-    const mapKey = keyword?.toLowerCase();
+  public searchProducts(options: QueryOptions<ProductFilterValue>): Observable<Search | null> {
+    const mapKey = options.fullText?.toLowerCase();
     if (this.searchedProductMap.has(mapKey)) {
       const data = this.searchedProductMap.get(mapKey);
       this.searchedProduct.data = data!;
       return of(data!);
     }
 
-    return this.productService.searchProduct(keyword).pipe(
+    return this.productService.searchProduct(options).pipe(
       tap((a) => {
         this.searchedProduct.data = a;
         this.searchedProductMap.set(mapKey, a);

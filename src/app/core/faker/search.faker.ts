@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { FilterOptions, Search, CategoryFilter, GenderFilter, PriceRangeFilter, ColorFilter, BrandFilter, Discount } from '@app/modals/search';
+import { ProductFilterOptions, Search, CategoryFilter, GenderFilter, PriceRangeFilter, ColorFilter, BrandFilter, Discount } from '@app/modals/search';
 import { generateFakeProducts } from './product.faker';
 import { Gender } from '@core/enums/gender.enum';
 
@@ -50,7 +50,7 @@ const generateBrands = (): BrandFilter[] => {
     }));
 };
 
-const generateFilterOptions = (): FilterOptions => ({
+const generateFilterOptions = (): ProductFilterOptions => ({
     categories: generateCategories(),
     genders: generateGenders(),
     priceRange: generatePriceRange(),

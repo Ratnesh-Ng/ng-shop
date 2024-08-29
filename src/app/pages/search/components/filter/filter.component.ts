@@ -1,7 +1,7 @@
 import { Component, input, InputSignal, model, ModelSignal } from '@angular/core';
 import { formatEnumToArray } from '../../../../core/utils/enum.util';
 import { Gender } from '@core/enums/gender.enum';
-import { FilterOptions, FilterValue } from '@app/modals/search';
+import { ProductFilterOptions, ProductFilterValue } from '@app/modals/search';
 
 @Component({
   selector: 'app-filter',
@@ -11,8 +11,8 @@ import { FilterOptions, FilterValue } from '@app/modals/search';
 export class FilterComponent {
 
   genderEnumArr = formatEnumToArray(Gender);
-  value: ModelSignal<FilterValue> = model.required<FilterValue>();
-  filter: InputSignal<FilterOptions | undefined> = input.required<FilterOptions | undefined>();
+  value: ModelSignal<ProductFilterValue> = model.required<ProductFilterValue>();
+  filter: InputSignal<ProductFilterOptions | undefined> = input.required<ProductFilterOptions | undefined>();
 
   onCheck(event: Event, value: number | string, type: "brands" | "colors" | "categories") {
     const checked = (event.target as HTMLInputElement).checked;

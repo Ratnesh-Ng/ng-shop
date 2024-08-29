@@ -9,11 +9,11 @@
         <div class="flex justify-between items-center px-4">
             <p></p>
             <div class="w-72 border sortByDropdown">
-                <p-dropdown [options]="sortByOptions" [(ngModel)]="filterOptions.sortBy" optionLabel="name"
+                <p-dropdown [options]="sortByOptions" [(ngModel)]="queryOptions.sortBy" optionLabel="name"
                     [showClear]="true" placeholder="Sort By" [ngClass]="{'w-full d-flex':true}">
                     <ng-template pTemplate="selectedItem">
-                        <div class="flex items-center w-full" *ngIf="filterOptions.sortBy">
-                            <div>{{ filterOptions.sortBy.key }}</div>
+                        <div class="flex items-center w-full" *ngIf="queryOptions.sortBy">
+                            <div>{{ queryOptions.sortBy.key }}</div>
                         </div>
                     </ng-template>
                     <ng-template let-item pTemplate="item">
@@ -31,7 +31,7 @@
     <div class="hidden md:block w-[18%] border border-r-0 relative">
         <div *ngIf="searchResult?.filterOption" class="">
             <!-- <div class="sticky top-24  w-full overflow-y-auto scrollbar-hide"> -->
-            <app-filter [filter]="searchResult?.filterOption" [(value)]="filterValue" />
+            <app-filter [filter]="searchResult?.filterOption" [(value)]="queryOptions.filters" />
         </div>
     </div>
 

@@ -3,6 +3,7 @@ import { generateFakeSearchData } from '@app/faker/search.faker';
 import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
 import { Product } from '@app/modals/product';
+import { ProductFilterValue, QueryOptions } from '@app/modals/search';
 import { BaseService } from '@core/base/base.service';
 import { of } from 'rxjs';
 
@@ -47,8 +48,8 @@ export class ProductService extends BaseService {
     return this.http.delete<Product>(this.apiRoutes.cartByID(id));
   }
 
-  public searchProduct(keyword: string) {
-    return of(generateFakeSearchData(keyword))
+  public searchProduct(options: QueryOptions<ProductFilterValue>) {
+    return of(generateFakeSearchData(options.fullText))
   }
-  
+
 }

@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Search, QueryOptions, SortBy, FilterValue } from '@app/modals/search';
+import { Search, QueryOptions, SortBy, ProductFilterValue } from '@app/modals/search';
 import { SearchBaseComponent } from '@core/base/search-base.component';
 import { formatEnumToArray } from '@core/utils/enum.util';
 import { ProductStoreService } from '../../store/product-store.service';
@@ -14,20 +14,19 @@ export class SearchComponent extends SearchBaseComponent implements OnInit {
 
   productStoreService = inject(ProductStoreService)
   sortByOptions = formatEnumToArray(SortBy);
-  filterOptions: QueryOptions = new QueryOptions();
-  filterValue: FilterValue = new FilterValue();
+  queryOptions: QueryOptions<ProductFilterValue> = new QueryOptions<ProductFilterValue>({ filters: new ProductFilterValue() });
 
   searchResult!: Search | null;
-  searchedKeyword: string = "";
-  totalPages = 5;
-  currentPage = 0;
+  totalPages = 3;
+  
   ngOnInit(): void {
+    console.log(this.queryOptions)
     this.getParams();
   }
 
   private getParams() {
     this.activatedRoute.queryParams.subscribe((params) => {
-      this.searchedKeyword = params["rawQuery"];
+      this.queryOptions.fullText = params["rawQuery"];
       this.searchProductByKeyword()
     });
   }
@@ -35,18 +34,18 @@ export class SearchComponent extends SearchBaseComponent implements OnInit {
   isLoading = false;
   private async searchProductByKeyword() {
     this.isLoading = true;
-    getData(this.productStoreService.searchProducts(this.searchedKeyword), { busy: true }).then(a => {
+    getData(this.productStoreService.searchProducts(this.queryOptions), { busy: true }).then(a => {
       this.searchResult = a;
-      this.currentPage++;
+      this.queryOptions.page++;
       this.isLoading = false;
     });
   }
 
   loadMoreItems() {
-    if (this.currentPage < this.totalPages) {
+    if (this.queryOptions.page <= this.totalPages) {
       this.isLoading = true;
-      this.currentPage++;
-      getData(this.productStoreService.searchProducts(this.searchedKeyword), { busy: true }).then(a => {
+      this.queryOptions.page++;
+      getData(this.productStoreService.searchProducts(this.queryOptions), { busy: true }).then(a => {
         this.searchResult?.items.push(...a?.items ?? []);
         this.isLoading = false;
       });

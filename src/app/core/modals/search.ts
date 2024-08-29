@@ -36,7 +36,7 @@ export interface BrandFilter {
     totalItems: number; // Total items in the brand category
 }
 
-export interface FilterOptions {
+export interface ProductFilterOptions {
     categories: CategoryFilter[]; // Array of category filters
     genders: GenderFilter[]; // Array of gender filters
     priceRange: PriceRangeFilter; // Price range filter
@@ -47,11 +47,20 @@ export interface FilterOptions {
 
 export interface Search {
     items: Product[],
-    filterOption: FilterOptions
+    filterOption: ProductFilterOptions
 }
 
-export class QueryOptions {
+export class QueryOptions<T = unknown> {
+    fullText: string = "";
+    page: number = 1;
+    top: number = 20;
     sortBy: { key: string, value: unknown } = { value: SortBy.What_sNew, key: "What's New" }
+    filters!: T
+
+    constructor(options: Partial<Omit<QueryOptions<T>, 'filters'>> & { filters: T }) {
+        this.filters = options.filters;
+        Object.assign(this, options);
+    }
 }
 
 export enum SortBy {
@@ -64,7 +73,7 @@ export enum SortBy {
     CustomerRating = "Rating",
 }
 
-export class FilterValue {
+export class ProductFilterValue {
     categories: (number | string)[] = []; // category filters
     genders!: Gender; // gender filters
     priceRange!: number; // Price range filter
