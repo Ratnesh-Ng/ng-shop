@@ -1,0 +1,61 @@
+<main class="relative flex-grow" style="min-height: -webkit-fill-available;">
+    <div class="mx-auto max-w-[1920px] px-4 md:px-8 2xl:px-16">
+        <div class="py-16 lg:py-20 px-0 xl:max-w-screen-xl mx-auto flex md:flex-row w-full">
+            <div class="flex flex-col md:flex-row w-full sm:space-x-2">
+                <nav class="flex flex-col pb-2 md:w-2/6 2xl:w-4/12 ltr:md:pr-8 rtl:md:pl-8 ltr:lg:pr-12 rtl:lg:pl-12 ltr:xl:pr-16 rtl:xl:pl-16 ltr:2xl:pr-20 rtl:2xl:pl-20 md:pb-0">
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account" routerLinkActive="font-semibold bg-gray-100">
+                        <!-- Dashboard Icon -->
+                        <span class="ltr:pl-2 rtl:pr-2">Dashboard</span>
+                    </a>
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account/orders" routerLinkActive="font-semibold bg-gray-100">
+                        <!-- Orders Icon -->
+                        <span class="ltr:pl-2 rtl:pr-2">Orders</span>
+                    </a>
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account/details" routerLinkActive="font-semibold bg-gray-100">
+                        <!-- Account Details Icon -->
+                        <span class="ltr:pl-2 rtl:pr-2">Account Details</span>
+                    </a>
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account/change-password" routerLinkActive="font-semibold bg-gray-100">
+                        <!-- Change Password Icon -->
+                        <span class="ltr:pl-2 rtl:pr-2">Change Password</span>
+                    </a>
+                    <button class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 focus:outline-none">
+                        <!-- Logout Icon -->
+                        <span class="ltr:pl-2 rtl:pr-2">Logout</span>
+                    </button>
+                </nav>
+                <div class="md:w-4/6 2xl:w-8/12 mt-4 md:mt-0">
+                    <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-heading mb-3 xl:mb-5">Dashboard</h2>
+                    <p class="text-sm leading-7 md:text-base md:leading-loose lowercase">
+                        From your account dashboard you can view your 
+                        <a class="text-heading underline font-semibold" routerLink="/my-account/orders">recent orders</a>, 
+                        manage your 
+                        <a class="text-heading underline font-semibold" routerLink="/my-account/details">Account Details</a> 
+                        and 
+                        <a class="text-heading underline font-semibold" routerLink="/my-account/change-password">change your password</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="px-5 sm:px-8 md:px-16 2xl:px-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center rounded-lg bg-gray-100 py-10 md:py-14 lg:py-16">
+            <div class="lg:-mt-2 xl:-mt-0.5 text-center ltr:xl:text-left rtl:xl:text-right mb-7 md:mb-8 lg:mb-9 xl:mb-0">
+                <h3 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl xl:leading-10 font-bold text-heading sm:mb-0 md:mb-2.5 lg:mb-3 xl:mb-3.5">
+                    Get Expert Tips In Your Inbox
+                </h3>
+                <p class="text-body text-xs md:text-sm leading-6 md:leading-7">
+                    Subscribe to our newsletter and stay updated.
+                </p>
+            </div>
+            <form class="flex-shrink-0 w-full sm:w-96 md:w-[545px]" novalidate="">
+                <div class="flex flex-col sm:flex-row sm:space-x-2 items-start justify-end">
+                    <div class="w-full">
+                        <input id="subscription_email" name="subscription_email" type="email" placeholder="Write your email here" class="py-2 md:px-5 w-full appearance-none border text-input text-xs lg:text-sm placeholder-body min-h-12 transition duration-200 ease-in-out border-gray-300 focus:outline-none focus:border-heading text-center ltr:sm:text-left rtl:sm:text-right bg-white rounded-md" autocomplete="off" spellcheck="false" aria-invalid="false">
+                    </div>
+                    <button class="text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer font-semibold text-center justify-center border-2 border-transparent focus-visible:outline-none focus:outline-none rounded-md bg-orange-500 text-white px-5 md:px-6 lg:px-8 py-2.5 md:py-2.5 hover:bg-white hover:text-orange-500 hover:border-orange-500 mt-3 sm:mt-0 w-full sm:w-auto ltr:sm:ml-2 rtl:sm:mr-2 flex-shrink-0">
+                        <span class="lg:py-0.5">Subscribe</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

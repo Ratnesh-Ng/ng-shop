@@ -13,6 +13,7 @@ const routes: Routes = [
       { path: 'product/:UUID', loadChildren: () => import('./pages/product/product.module').then(m => m.ProductModule) },
       { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
       { path: 'wishlist', loadChildren: () => import('./pages/wishlist/wishlist.module').then(m => m.WishlistModule) },
+      { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) },
       { path: ':search', loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule) },
     ]
   },

@@ -8,4 +8,5 @@ export const AppRoutes = {
     cart: '/checkout/cart',
     address: '/checkout/address',
     payment: '/checkout/payment',
+    profile: '/profile',
 };
