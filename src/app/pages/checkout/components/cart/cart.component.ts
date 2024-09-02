@@ -1,5 +1,5 @@
 import { Component, computed, inject, OnInit } from '@angular/core';
-import { Cart } from '@app/modals/cart';
+import { Cart, CartItemEvent } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
 import { postData } from '@core/utils/http.util';
 import { ConfirmationService } from 'primeng/api';
@@ -40,12 +40,7 @@ export class CartComponent extends CheckoutBase implements OnInit {
     return array1.filter(item => !idsToRemove.has(item.id));
   }
 
-
-  ////#endregion Private
-
-  //#region public
-
-  public calculateCheckedLength(index: number, newValue: boolean) {
+  private calculateCheckedLength(index: number, newValue: boolean) {
 
     this.cartItems()[index].isSelected = newValue;
     this.cartItems.update((a) => [...a])
@@ -56,6 +51,16 @@ export class CartComponent extends CheckoutBase implements OnInit {
       this.isAllChecked = true;
     }
   }
+
+  private removeItemFromCart(item: Cart) {
+    postData(this.productStore.productService.removeProductFromCart(item.id)).then(() => {
+      this.cartItems.update(a => a.filter(x => x.id != item.id));
+    })
+  }
+
+  ////#endregion Private
+
+  //#region public
 
   public onSelectAll() {
     this.cartItems.update(a => a.map(b => { return { ...b, isSelected: this.isAllChecked }; }));
@@ -68,12 +73,6 @@ export class CartComponent extends CheckoutBase implements OnInit {
     })
     await Promise.all(deletePromises);
     this.cartItems.update(() => (this.removeObjectsById(this.cartItems(), selectedItems) ?? []));
-  }
-
-  public removeItemFromCart(item: Cart) {
-    postData(this.productStore.productService.removeProductFromCart(item.id)).then(() => {
-      this.cartItems.update(a => a.filter(x => x.id != item.id));
-    })
   }
 
   public moveToWishlist() {
@@ -104,6 +103,14 @@ export class CartComponent extends CheckoutBase implements OnInit {
 
   public navigateToAddress() {
     this.router.navigateByUrl(this.appRoutes.address);
+  }
+
+  public onEventCapture(event: CartItemEvent, index: number) {
+    if (event.eventType == 'removeFromCart') {
+      this.removeItemFromCart(event.data);
+    } else if (event.eventType == 'onCheckToggle') {
+      this.calculateCheckedLength(index, event.data.isSelected ?? false)
+    }
   }
   //#endregion public
 

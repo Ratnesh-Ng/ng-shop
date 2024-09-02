@@ -1,1 +1,42 @@
-<p>cart-item works!</p>
+<div class="border flex space-x-4 p-4 rounded-md min-h-52 mb-2 relative">
+    <div class="w-6/12 md:w-3/12 relative">
+        <input type="checkbox" class="absolute top-2 left-2" [(ngModel)]="data().isSelected"
+            (ngModelChange)="emitEvent('onCheckToggle',$event)">
+        <img class="w-full h-full object-cover" [src]="data().urls[0]" [alt]="data().name">
+    </div>
+    <div class="w-11/12">
+        <h3 id="brand" class="capitalize text-[13px] font-bold">{{data().brand}}</h3>
+        <p id="product-name" class="capitalize text-gray-700 text-[12px]">{{data().name}}</p>
+        <p class="text-gray-500 text-[11px]">Sold by: <span class="uppercase">{{data().description|slice:0:20}}</span>
+        </p>
+        <p class="text-[12px] space-x-2">
+            <span class="font-semibold">{{data().sellingPrice|currency:'INR'}}</span>
+            <span class="text-gray-400 line-through">{{data().actualPrice|currency:'INR'}}</span>
+            <span class="text-orange-500">{{data().discount}}% OFF</span>
+        </p>
+        <div>
+            <div class="py-2 flex space-x-2">
+                <span class="bg-gray-200 p-[1px] px-[5px] font-bold text-[12px] flex items-center w-fit">
+                    Size:{{data().size}}
+                    <span class="material-icons text-sm">expand_more</span>
+                </span>
+                <span class="bg-gray-200 p-[1px] px-[5px] font-bold text-[12px] flex items-center w-fit">
+                    Qty:{{data().quantity}}
+                    <span class="material-icons text-sm">expand_more</span>
+                </span>
+            </div>
+        </div>
+        <p class="text-[12px] flex items-center space-x-1 mt-1">
+            <span class="material-icons text-xs">keyboard_return</span>
+            <span class="font-semibold">14 days</span>
+            <span>return available</span>
+        </p>
+        <p class="text-[12px] flex items-center space-x-1 mt-2">
+            <span class="material-icons text-sm text-green-600 font-bold">done</span>
+            <span>Delivery by</span>
+            <span class="font-semibold">{{data().deliveredTill|date:"dd MMM"}}</span>
+        </p>
+    </div>
+    <button (click)="emitEvent('removeFromCart')" class="absolute top-2 right-2"><span
+            class="material-icons">close</span></button>
+</div>

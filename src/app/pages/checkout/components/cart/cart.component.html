@@ -53,52 +53,9 @@
                         <button (click)="moveToWishlist()" class="uppercase">move to wishlist</button>
                     </div>
                 </div>
-                <div id="cart-item" class="space-y-2">
+                <div id="cart-item">
                     @for (item of cartItems(); let index = $index; track item.id) {
-                    <div class="border flex space-x-4 p-4 rounded-md min-h-52 relative">
-                        <div class="w-6/12 md:w-3/12 relative">
-                            <input type="checkbox" class="absolute top-2 left-2" [(ngModel)]="item.isSelected"
-                                (ngModelChange)="calculateCheckedLength(index, $event)">
-                            <img class="w-full h-full object-cover" [src]="item.urls[0]" [alt]="item.name">
-                        </div>
-                        <div class="w-11/12">
-                            <h3 id="brand" class="capitalize text-[13px] font-bold">{{item.brand}}</h3>
-                            <p id="product-name" class="capitalize text-gray-700 text-[12px]">{{item.name}}</p>
-                            <p class="text-gray-500 text-[11px]">Sold by: <span
-                                    class="uppercase">{{item.description|slice:0:20}}</span></p>
-                            <p class="text-[12px] space-x-2">
-                                <span class="font-semibold">{{item.sellingPrice|currency:'INR'}}</span>
-                                <span class="text-gray-400 line-through">{{item.actualPrice|currency:'INR'}}</span>
-                                <span class="text-orange-500">{{item.discount}}% OFF</span>
-                            </p>
-                            <div>
-                                <div class="py-2 flex space-x-2">
-                                    <span
-                                        class="bg-gray-200 p-[1px] px-[5px] font-bold text-[12px] flex items-center w-fit">
-                                        Size:{{item.size}}
-                                        <span class="material-icons text-sm">expand_more</span>
-                                    </span>
-                                    <span
-                                        class="bg-gray-200 p-[1px] px-[5px] font-bold text-[12px] flex items-center w-fit">
-                                        Qty:{{item.quantity}}
-                                        <span class="material-icons text-sm">expand_more</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <p class="text-[12px] flex items-center space-x-1 mt-1">
-                                <span class="material-icons text-xs">keyboard_return</span>
-                                <span class="font-semibold">14 days</span>
-                                <span>return available</span>
-                            </p>
-                            <p class="text-[12px] flex items-center space-x-1 mt-2">
-                                <span class="material-icons text-sm text-green-600 font-bold">done</span>
-                                <span>Delivery by</span>
-                                <span class="font-semibold">{{item.deliveredTill|date:"dd MMM"}}</span>
-                            </p>
-                        </div>
-                        <button (click)="removeItemFromCart(item)" class="absolute top-2 right-2"><span
-                                class="material-icons">close</span></button>
-                    </div>
+                    <app-cart-item [data]="item" (OnClick)="onEventCapture($event,index)"></app-cart-item>
                     }
                 </div>
                 <a [routerLink]="appRoutes.wishlist"
@@ -167,7 +124,8 @@
                         <span class="uppercase">total
                             amount</span><span>{{productDetails.totalAmountToPay|currency:'INR'}}</span>
                     </div>
-                    <button (click)="navigateToAddress()" class="uppercase text-center py-3 w-full bg-orange-500 text-white rounded">
+                    <button (click)="navigateToAddress()"
+                        class="uppercase text-center py-3 w-full bg-orange-500 text-white rounded">
                         place order
                     </button>
                 </div>
@@ -187,7 +145,8 @@
             <div class="flex border-t mt-2 p-2">
                 <button pButton label="CANCEL" (click)="cd.reject()" class="text-xs text-gray-600 w-1/2 p-2">
                 </button>
-                <button pButton label="MOVE TO WISHLIST" (click)="cd.accept()" class=" text-orange-500 text-xs w-1/2 p-2">
+                <button pButton label="MOVE TO WISHLIST" (click)="cd.accept()"
+                    class=" text-orange-500 text-xs w-1/2 p-2">
                 </button>
             </div>
         </div>
