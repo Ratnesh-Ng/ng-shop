@@ -1,1 +1,28 @@
-<p>address-card works!</p>
+<div class="border p-4 rounded-md min-h-40 relative">
+    <div class="space-y-2">
+        <div class="space-x-2 flex items-center">
+            <input type="checkbox" class="" [(ngModel)]="data().isDefaultAddress" (ngModelChange)="emitEvent('onCheckToggle')">
+            <span class="font-bold ">{{data().name}}</span>
+            <span class="font-bold uppercase text-[10px] border border-orange-500 rounded-2xl px-2 py-[2px]">{{data().type}}</span>
+        </div>
+        <p id="brand" class="capitalize text-[13px]">
+            {{data().address}} {{data().locality}} {{data().city}},{{data().state}}-{{data().pinCode}}
+        </p>
+        <p class="text-[12px] space-x-2">
+            <span class="text-gray-600">Mobile</span>
+            <span class="font-semibold">{{data().mobile}}</span>
+        </p>
+        <p class="text-[12px] flex items-center space-x-1 mt-2">
+            <span class="material-icons text-sm text-green-600 font-bold">done</span>
+            <span>Pay on delivery available</span>
+        </p>
+    </div>
+    <div class="space-x-3 flex items-center absolute top-2 right-2">
+        <button (click)="emitEvent('edit')" class="">
+            <span class="material-icons text-[18px] text-orange-500">edit</span>
+        </button>
+        <button (click)="emitEvent('remove')" class="">
+            <span class="material-icons text-md">close</span>
+        </button>
+    </div>
+</div>

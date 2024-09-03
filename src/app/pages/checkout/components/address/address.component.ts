@@ -1,5 +1,5 @@
 import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
-import { Address } from '@app/modals/address';
+import { Address, AddressCardEvent } from '@app/modals/address';
 import { getData } from '@core/utils/http.util';
 import { UserService } from '@services/user.service';
 import { CheckoutBase } from '../../base/checkout-base';
@@ -33,7 +33,18 @@ export class AddressComponent extends CheckoutBase implements OnInit {
     this.router.navigateByUrl(this.appRoutes.payment)
   }
 
-  public onAddressSelect(item: Address) {
+  public onEventCapture(event: AddressCardEvent) {
+    if (event.eventType == 'remove') {
+      // remove address
+    } else if (event.eventType == 'onCheckToggle') {
+      this.onAddressSelect(event.data);
+    }
+  }
+  ////#endregion public
+
+  //#region Private
+
+  private onAddressSelect(item: Address) {
     this.addresses.update((a) => a.map(element => {
       if (element.id != item.id) {
         element.isDefaultAddress = false;
@@ -44,10 +55,6 @@ export class AddressComponent extends CheckoutBase implements OnInit {
     }));
     this.selectedAddress.set({ ...item, isDefaultAddress: true });
   }
-  ////#endregion public
-
-  //#region Private
-
 
   //#endregion Private
 

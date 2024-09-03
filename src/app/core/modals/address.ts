@@ -1,5 +1,5 @@
 export interface Address {
-    id:number;
+    id: number;
     name: string;
     mobile: string;
     pinCode: string;
@@ -16,3 +16,10 @@ export enum AddressType {
     Work = "Work",
     Office = "Office",
 }
+
+export type AddressCardEvent = {
+    eventType: AddressCardEventType;
+    data: Address;
+}
+
+export type AddressCardEventType = 'remove' | 'edit' | 'onCheckToggle';
