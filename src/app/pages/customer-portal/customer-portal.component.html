@@ -3,19 +3,19 @@
         <div class="py-16 lg:py-20 px-0 xl:max-w-screen-xl mx-auto flex md:flex-row w-full">
             <div class="flex flex-col md:flex-row w-full sm:space-x-2">
                 <nav class="flex flex-col pb-2 md:w-2/6 2xl:w-4/12 ltr:md:pr-8 rtl:md:pl-8 ltr:lg:pr-12 rtl:lg:pl-12 ltr:xl:pr-16 rtl:xl:pl-16 ltr:2xl:pr-20 rtl:2xl:pl-20 md:pb-0">
-                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account" routerLinkActive="font-semibold bg-gray-100">
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my/overview" routerLinkActive="font-semibold bg-gray-100">
                         <!-- Dashboard Icon -->
-                        <span class="ltr:pl-2 rtl:pr-2">Dashboard</span>
+                        <span class="ltr:pl-2 rtl:pr-2">Overview</span>
                     </a>
-                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account/orders" routerLinkActive="font-semibold bg-gray-100">
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my/orders" routerLinkActive="font-semibold bg-gray-100">
                         <!-- Orders Icon -->
                         <span class="ltr:pl-2 rtl:pr-2">Orders</span>
                     </a>
-                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account/details" routerLinkActive="font-semibold bg-gray-100">
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my/details" routerLinkActive="font-semibold bg-gray-100">
                         <!-- Account Details Icon -->
                         <span class="ltr:pl-2 rtl:pr-2">Account Details</span>
                     </a>
-                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my-account/change-password" routerLinkActive="font-semibold bg-gray-100">
+                    <a class="hover:bg-gray-100 flex items-center cursor-pointer text-sm lg:text-base text-heading font-normal py-3.5 px-4 lg:px-5 rounded mb-2" routerLink="/my/change-password" routerLinkActive="font-semibold bg-gray-100">
                         <!-- Change Password Icon -->
                         <span class="ltr:pl-2 rtl:pr-2">Change Password</span>
                     </a>
@@ -25,15 +25,7 @@
                     </button>
                 </nav>
                 <div class="md:w-4/6 2xl:w-8/12 mt-4 md:mt-0">
-                    <h2 class="text-lg md:text-xl xl:text-2xl font-bold text-heading mb-3 xl:mb-5">Dashboard</h2>
-                    <p class="text-sm leading-7 md:text-base md:leading-loose lowercase">
-                        From your account dashboard you can view your 
-                        <a class="text-heading underline font-semibold" routerLink="/my-account/orders">recent orders</a>, 
-                        manage your 
-                        <a class="text-heading underline font-semibold" routerLink="/my-account/details">Account Details</a> 
-                        and 
-                        <a class="text-heading underline font-semibold" routerLink="/my-account/change-password">change your password</a>.
-                    </p>
+                   <router-outlet></router-outlet>
                 </div>
             </div>
         </div>
