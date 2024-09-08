@@ -1,1 +1,43 @@
-<p>dashboard works!</p>
+<div class="container mx-auto px-2 pb-2">
+    <!-- Page Title -->
+    <div class="">
+        <h1 class="text-lg uppercase font-semibold text-gray-800">Dashboard</h1>
+    </div>
+
+    <div class="space-y-4 mt-4">
+        <div class="rounded  border-[1.7px]">
+            <div class="p-4 text-[13px] space-y-2">
+                <div class="flex w-full relative">
+                    <button
+                        class="absolute top-0 right-0 rounded border border-orange-500 font-semibold px-2 py-1 uppercase text-orange-600 align-middle">Edit
+                        profile</button>
+                    <div class="w-24 h-24">
+                        <img src="https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-profile-picture-business-profile-woman-suitable-social-media-profiles-icons-screensavers-as-templatex9_719432-1328.jpg?size=626&ext=jpg&ga=GA1.1.1866778459.1718621485&semt=ais_hybrid"
+                            alt="Product" class="w-full h-full object-cover border">
+                    </div>
+                    <div class="ml-4">
+                        <p class="">Name: <span class="font-medium">Ratnesh siddha</span></p>
+                        <p class="">Email: <span class="font-medium">Test_gmail.com</span></p>
+                        <p class="">Phone: <span class="font-medium">9074XXXX61</span></p>
+                        <p class="">Address: <span class="font-medium">test colony block x house no. 9x2</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 text-[15px]">
+            @for (item of [0,1,2,3,4,5]; track $index) {
+                <div class="flex w-full items-center border p-4 h-56 ">
+                    <div class="text-center w-full space-y-4">
+                        <span class="material-symbols-outlined text-gray-600 text-[40px]">
+                            quick_reorder
+                        </span>
+                        <div class="">
+                            <p class="font-semibold">Ratnesh siddha</p>
+                            <p class="text-[12px] text-gray-400 font-medium">Ratnesh siddha</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
