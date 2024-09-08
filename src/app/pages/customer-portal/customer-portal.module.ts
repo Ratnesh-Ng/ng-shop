@@ -6,6 +6,7 @@ import { CustomerPortalComponent } from './customer-portal.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { AccountDetailsComponent } from './components/account-details/account-details.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
     CustomerPortalComponent,
     OrdersComponent,
     AccountDetailsComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
