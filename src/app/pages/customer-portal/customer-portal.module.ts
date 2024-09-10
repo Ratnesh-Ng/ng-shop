@@ -7,6 +7,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { AccountDetailsComponent } from './components/account-details/account-details.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     OrdersComponent,
     AccountDetailsComponent,
     ChangePasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    OrderDetailsComponent
   ],
   imports: [
     CommonModule,
