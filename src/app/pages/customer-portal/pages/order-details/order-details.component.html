@@ -1,0 +1,88 @@
+<app-portal-container [heading]="'Order Details'">
+  <div class="space-y-4">
+    <!-- Page Header -->
+    <div class="text-[13px] text-gray-600">
+      <p>Order ID: #1234567890</p>
+      <p>Order Date: August 20, 2024</p>
+      <p>Deliver by: August 28, 2024</p>
+    </div>
+
+    <!-- Order Summary -->
+    <h2 class="font-bold">Order Summary</h2>
+    <div id="cart-item">
+      @for (item of products; let index = $index; track item.id) {
+      <app-cart-item [data]="item"></app-cart-item>
+      }
+    </div>
+
+    <!-- Order Total -->
+    <div class="text-[13px] space-y-4">
+      <div id="price-breakup" class="space-y-4 border-b pb-4">
+        <div class="text-gray-600 space-x-1"><span class="uppercase">product details</span><span *ngIf="products.length"
+            class="text-[10px]">({{products.length}} Items)</span></div>
+        <div class="grid grid-cols-3 gap-y-2 font-normal">
+          <div class="col-span-2">Total MRP</div>
+          <div class="text-right">{{productDetails.totalMrp|currency:'INR'}}</div>
+          <div class="col-span-2">Discount on MRP</div>
+          <div class="text-right text-green-600">{{-productDetails.discountOnMrp|currency:'INR'}}</div>
+          <div class="col-span-2">Coupon Discount</div>
+          <div class="text-right text-orange-500 text-nowrap">Apply Coupon</div>
+          <div class="col-span-2">Platform Fee</div>
+          <div class="text-right">{{productDetails.platformFee|currency:'INR'}}</div>
+          <div class="col-span-2">Shipping Fee</div>
+          <div class="text-right" [ngClass]="{'text-green-600':!productDetails.shippingFee}">
+            {{productDetails.shippingFee?(productDetails.shippingFee|currency:'INR'):'Free'}}
+          </div>
+        </div>
+      </div>
+      <div id="total" class="space-y-4 border-b pb-4">
+        <div class="flex justify-between items-center font-bold text-[13px]">
+          <span class="uppercase">total
+            amount</span><span>{{productDetails.totalAmountToPay|currency:'INR'}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shipping Information -->
+    <div class="border p-4 rounded-md min-h-40 relative">
+      <div class="space-y-2">
+        <p class="font-bold">Shipping Information</p>
+        <p id="brand" class="capitalize text-[13px]">John Doe</p>
+        <p class="text-[12px] space-x-2">
+          <span class="text-gray-600">Address</span>
+          <span class="font-semibold">1234 Elm Street, Springfield, IL 62704</span>
+        </p>
+        <p class="text-[12px] space-x-2">
+          <span class="text-gray-600">Phone</span>
+          <span class="font-semibold">(555) 123-4567</span>
+        </p>
+        <p class="text-[12px]">
+          <span class="text-gray-600">Email</span>
+          <span class="font-semibold ms-4">john.doe_example.com</span>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Payment Information -->
+    <div class="border p-4 rounded-md min-h-40 relative">
+      <div class="space-y-2">
+        <p class="font-bold">Payment Information</p>
+        <p id="brand" class="capitalize text-[13px]">Payment Method: Credit Card</p>
+        <p class="text-[12px] space-x-2">
+          <span class="text-gray-600">Mobile</span>
+          <span class="font-semibold">(555) 123-4567</span>
+        </p>
+        <p class="text-[12px]">
+          <span class="text-gray-600">Email</span>
+          <span class="font-semibold ms-4">john.doe_example.com</span>
+        </p>
+        <p class="text-[12px] flex items-center space-x-1 mt-2">
+          <span class="material-icons text-sm text-green-600 font-bold">done</span>
+          <span>Pay on delivery</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</app-portal-container>

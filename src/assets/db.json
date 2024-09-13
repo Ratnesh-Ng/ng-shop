@@ -2650,6 +2650,117 @@
       "deliveredTill": "2024-08-06T00:45:30.620Z",
       "size": "M",
       "quantity": 1
+    },
+    {
+      "id": "9c23",
+      "uuid": "1097bb04-8884-4938-8146-3ffb5d4b0c87",
+      "name": "Handmade Steel Backpack",
+      "brand": "Macejkovic, Kessler and Bosco",
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals Robust coherent neural-net",
+      "actualPrice": 749,
+      "sellingPrice": 501.83,
+      "discount": 33,
+      "ratings": 0.3,
+      "reviewsCount": 350,
+      "promotion": false,
+      "urls": [
+        "https://picsum.photos/seed/so6ignUK/640/480",
+        "https://picsum.photos/seed/CXy0BOn/640/480",
+        "https://loremflickr.com/640/480?lock=8716551853178880",
+        "https://picsum.photos/seed/tWuOH/640/480",
+        "https://loremflickr.com/640/480?lock=7745350798409728",
+        "https://loremflickr.com/640/480?lock=1002896604790784"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Ergonomic Fresh Sausages",
+          "info": [
+            "Vito tredecim atrocitas adamo acidus debeo.",
+            "Viridis amiculum blandior corrigo."
+          ],
+          "link": "https://smooth-piracy.net/",
+          "linkLabel": "Get It Now"
+        },
+        {
+          "title": "Handcrafted Concrete Ball",
+          "info": [
+            "Crapula somnus cumque vestrum supra surgo.",
+            "Verecundia arbustum sumo supplanto usus turbo.",
+            "Ea decimus adamo tot dignissimos claro.",
+            "Acceptus quis quos voluptas terga villa crastinus clarus."
+          ],
+          "link": "https://silent-colon.info",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Bespoke Rubber Keyboard",
+          "info": [
+            "Tero tersus facilis carpo credo ullus maiores armarium.",
+            "Cibo stillicidium appono aptus.",
+            "Ascisco vigilo spoliatio summisse.",
+            "Benevolentia comptus adeo eaque carus complectus depereo."
+          ],
+          "link": "https://numb-pavement.com",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Unbranded Bronze Mouse",
+          "info": [
+            "Modi alienus sustineo sunt defluo bis aestas sublime quis."
+          ],
+          "link": "https://able-swordfight.com/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Refined Granite Shoes",
+          "info": [
+            "Tabesco colo calco tyrannus sub delectus."
+          ],
+          "link": "https://mysterious-notepad.biz",
+          "linkLabel": "Get It Now"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Fabric",
+          "info": "Denim"
+        },
+        {
+          "title": "Fit",
+          "info": "Regular Fit"
+        },
+        {
+          "title": "Color",
+          "info": "sky blue lime"
+        },
+        {
+          "title": "Main Trend",
+          "info": "sed amoveo questioningly versus proud"
+        },
+        {
+          "title": "Occasion",
+          "info": "Party likewise drab"
+        }
+      ],
+      "availableQuantity": 22,
+      "seller": {
+        "id": 705,
+        "name": "Upton, Price and Wisozk"
+      },
+      "deliveredTill": "2024-08-12T03:39:38.294Z",
+      "size": "S",
+      "quantity": 2
     }
   ],
   "offers": [

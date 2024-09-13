@@ -31,6 +31,7 @@ import { AddressCardComponent } from './components/address-card/address-card.com
     ConfirmDialogModule,
     ButtonModule
   ],
-  providers:[ConfirmationService]
+  providers:[ConfirmationService],
+  exports:[CartItemComponent]
 })
 export class CheckoutModule { }
