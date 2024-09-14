@@ -13,6 +13,7 @@ import { CheckoutComponent } from './checkout.component';
 import { CheckoutHeaderComponent } from './components/checkout-header/checkout-header.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { AddressCardComponent } from './components/address-card/address-card.component';
+import { CoreModule } from "../../core/core.module";
 
 @NgModule({
   declarations: [
@@ -29,8 +30,9 @@ import { AddressCardComponent } from './components/address-card/address-card.com
     CheckoutRoutingModule,
     FormsModule,
     ConfirmDialogModule,
-    ButtonModule
-  ],
+    ButtonModule,
+    CoreModule
+],
   providers:[ConfirmationService],
   exports:[CartItemComponent]
 })

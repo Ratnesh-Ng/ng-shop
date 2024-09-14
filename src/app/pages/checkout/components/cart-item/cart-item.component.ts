@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, model, ModelSignal, output, OutputEmitterRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, model, ModelSignal, output, OutputEmitterRef } from '@angular/core';
 import { Cart, CartItemEvent, CartItemEventType } from '@app/modals/cart';
 
 @Component({
@@ -9,6 +9,7 @@ import { Cart, CartItemEvent, CartItemEventType } from '@app/modals/cart';
 })
 export class CartItemComponent {
 
+  public actions = input<boolean>(true);
   public data: ModelSignal<Cart> = model.required<Cart>();
   public OnClick: OutputEmitterRef<CartItemEvent> = output<CartItemEvent>();
 

@@ -11,36 +11,13 @@
     <h2 class="font-bold">Order Summary</h2>
     <div id="cart-item">
       @for (item of products; let index = $index; track item.id) {
-      <app-cart-item [data]="item"></app-cart-item>
+      <app-cart-item [data]="item" [actions]="false"></app-cart-item>
       }
     </div>
 
     <!-- Order Total -->
-    <div class="text-[13px] space-y-4">
-      <div id="price-breakup" class="space-y-4 border-b pb-4">
-        <div class="text-gray-600 space-x-1"><span class="uppercase">product details</span><span *ngIf="products.length"
-            class="text-[10px]">({{products.length}} Items)</span></div>
-        <div class="grid grid-cols-3 gap-y-2 font-normal">
-          <div class="col-span-2">Total MRP</div>
-          <div class="text-right">{{productDetails.totalMrp|currency:'INR'}}</div>
-          <div class="col-span-2">Discount on MRP</div>
-          <div class="text-right text-green-600">{{-productDetails.discountOnMrp|currency:'INR'}}</div>
-          <div class="col-span-2">Coupon Discount</div>
-          <div class="text-right text-orange-500 text-nowrap">Apply Coupon</div>
-          <div class="col-span-2">Platform Fee</div>
-          <div class="text-right">{{productDetails.platformFee|currency:'INR'}}</div>
-          <div class="col-span-2">Shipping Fee</div>
-          <div class="text-right" [ngClass]="{'text-green-600':!productDetails.shippingFee}">
-            {{productDetails.shippingFee?(productDetails.shippingFee|currency:'INR'):'Free'}}
-          </div>
-        </div>
-      </div>
-      <div id="total" class="space-y-4 border-b pb-4">
-        <div class="flex justify-between items-center font-bold text-[13px]">
-          <span class="uppercase">total
-            amount</span><span>{{productDetails.totalAmountToPay|currency:'INR'}}</span>
-        </div>
-      </div>
+    <div class="price-details">
+      <app-pricing-details [products]="products" [actions]="false"></app-pricing-details>
     </div>
 
     <!-- Shipping Information -->

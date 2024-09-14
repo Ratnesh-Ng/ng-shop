@@ -10,6 +10,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { PortalContainerComponent } from './components/portal-container/portal-container.component';
 import { CheckoutModule } from '../checkout/checkout.module';
+import { CoreModule } from "../../core/core.module";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CheckoutModule } from '../checkout/checkout.module';
   imports: [
     CommonModule,
     CustomerPortalRoutingModule,
-    CheckoutModule
-  ]
+    CheckoutModule,
+    CoreModule
+]
 })
 export class CustomerPortalModule { }

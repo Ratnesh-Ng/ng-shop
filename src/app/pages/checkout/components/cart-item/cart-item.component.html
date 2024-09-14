@@ -1,6 +1,6 @@
 <div class="border flex space-x-4 p-4 rounded-md min-h-52 mb-2 relative">
     <div class="w-6/12 md:w-3/12 relative">
-        <input type="checkbox" class="absolute top-2 left-2" [(ngModel)]="data().isSelected"
+        <input *ngIf="actions()" type="checkbox" class="absolute top-2 left-2" [(ngModel)]="data().isSelected"
             (ngModelChange)="emitEvent('onCheckToggle',$event)">
         <img class="w-full h-full object-cover" [src]="data().urls[0]" [alt]="data().name">
     </div>
@@ -37,6 +37,6 @@
             <span class="font-semibold">{{data().deliveredTill|date:"dd MMM"}}</span>
         </p>
     </div>
-    <button (click)="emitEvent('removeFromCart')" class="absolute top-2 right-2"><span
+    <button *ngIf="actions()" (click)="emitEvent('removeFromCart')" class="absolute top-2 right-2"><span
             class="material-icons">close</span></button>
 </div>
