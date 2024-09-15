@@ -25,18 +25,20 @@
             </div>
         </div>
         <div class="grid grid-cols-3 gap-4 text-[15px]">
-            @for (item of [0,1,2,3,4,5]; track $index) {
+            @for (item of dashboardOptions; track $index) {
+                <a [routerLink]="item.path">
                 <div class="flex w-full items-center border p-4 h-56 ">
                     <div class="text-center w-full space-y-4">
                         <span class="material-symbols-outlined text-gray-600 text-[40px]">
-                            quick_reorder
+                            {{item.icon}}
                         </span>
-                        <div class="">
-                            <p class="font-semibold">Ratnesh siddha</p>
-                            <p class="text-[12px] text-gray-400 font-medium">Ratnesh siddha</p>
+                            <div class="">
+                                <p class="font-semibold">{{item.heading}}</p>
+                                <p class="text-[12px] text-gray-400 font-medium">{{item.subHeading}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             }
         </div>
     </div>
