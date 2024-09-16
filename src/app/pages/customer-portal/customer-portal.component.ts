@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { logout } from '@core/utils/common.util';
 
 @Component({
   selector: 'app-customer-portal',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './customer-portal.component.scss'
 })
 export class CustomerPortalComponent {
+
+  public logout() {
+    logout();
+  }
 
 }
