@@ -1,18 +1,28 @@
-<div class="container mx-auto flex justify-center h-screen items-center">
-    <div class="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
-        <h1 class="mb-4 text-2xl font-semibold">Login In & Sign In</h1>
-    <form>
-        <div class="mb-4">
-            <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-            <input type="tel" id="phone" name="phone"
-                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+<div class="container mx-auto flex justify-center h-[calc(100vh-90px)] items-center p-4">
+    <div class="w-full max-w-md bg-white h-full border">
+        <div class="h-48">
+            <img class="h-full w-full object-cover"
+                src="https://plus.unsplash.com/premium_photo-1673429738836-b3581b1b6636?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="special offer">
         </div>
-       
-        <button type="submit"
-            class="w-full rounded-md bg-indigo-500 px-4 py-2 text-white hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50">Get OTP</button>
-    </form>
-    <!-- <p class="mt-4 text-sm text-gray-600">Don't have an account? 
-        <a href="#" class="text-indigo-500 hover:underline">Sign up</a>
-    </p> -->
-</div>
+        <div class="p-8 text-[13px] space-y-6">
+            <h1 class="text-xl font-semibold">Login <span class="text-[13px]">or</span> Signup</h1>
+            <form class="space-y-6">
+                <div>
+                    <input id="username" class="w-full p-2.5 border" placeholder="+91 | Mobile Number" [(ngModel)]="value" />
+                </div>
+                <p class="text-gray-600 text-[13px]">
+                    By continuing, I agree to the 
+                    <a class="text-orange-500 font-semibold"href="#">Terms of Use</a> & <a class="text-orange-500 font-semibold" href="#">Privacy Policy</a>
+                </p>
+                
+                <button class="uppercase bg-orange-500 p-2 px-16 text-white w-full">
+                    Continue
+                </button>
+                <p class="text-gray-600 text-[13px]">
+                    Have trouble logging in? <a class="text-orange-500 font-semibold"href="#">Get help</a>
+                </p>
+            </form>
+        </div>
+    </div>
 </div>
