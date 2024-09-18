@@ -1,4 +1,31 @@
 <div class="container mx-auto flex justify-center h-[calc(100vh-90px)] items-center p-4">
+
+    @if (showOtp) {
+    <div class="w-full max-w-md bg-white h-full border">
+        <div class="h-48">
+            <img class="h-full w-full object-cover"
+                src="https://plus.unsplash.com/premium_photo-1673429738836-b3581b1b6636?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="special offer">
+        </div>
+        <div class="p-8 text-[13px] space-y-6">
+            <div>
+                <h1 class="text-xl font-semibold">Verify with OTP</h1>
+                <p class="text-gray-500">Sent to {{mobileNumber}}</p>
+            </div>
+            <form class="space-y-6">
+                <div>
+                    <input name="otp" class="w-full p-2.5 border" placeholder="OTP" [(ngModel)]="enteredOTP" />
+                </div>
+                <button (click)="validateOtp()" class="uppercase bg-orange-500 p-2 px-16 text-white w-full">
+                    Continue
+                </button>
+                <p class="text-gray-600 text-[13px]">
+                    Have trouble logging in? <a class="text-orange-500 font-semibold" href="#">Get help</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    }@else {
     <div class="w-full max-w-md bg-white h-full border">
         <div class="h-48">
             <img class="h-full w-full object-cover"
@@ -9,20 +36,24 @@
             <h1 class="text-xl font-semibold">Login <span class="text-[13px]">or</span> Signup</h1>
             <form class="space-y-6">
                 <div>
-                    <input id="username" class="w-full p-2.5 border" placeholder="+91 | Mobile Number" [(ngModel)]="value" />
+                    <input name="mobileNumber" class="w-full p-2.5 border" placeholder="+91 | Mobile Number"
+                        [(ngModel)]="mobileNumber" />
                 </div>
                 <p class="text-gray-600 text-[13px]">
-                    By continuing, I agree to the 
-                    <a class="text-orange-500 font-semibold"href="#">Terms of Use</a> & <a class="text-orange-500 font-semibold" href="#">Privacy Policy</a>
+                    By continuing, I agree to the
+                    <a class="text-orange-500 font-semibold" href="#">Terms of Use</a> & <a
+                        class="text-orange-500 font-semibold" href="#">Privacy Policy</a>
                 </p>
-                
-                <button class="uppercase bg-orange-500 p-2 px-16 text-white w-full">
+
+                <button (click)="login()" class="uppercase bg-orange-500 p-2 px-16 text-white w-full">
                     Continue
                 </button>
                 <p class="text-gray-600 text-[13px]">
-                    Have trouble logging in? <a class="text-orange-500 font-semibold"href="#">Get help</a>
+                    Have trouble logging in? <a class="text-orange-500 font-semibold" href="#">Get help</a>
                 </p>
             </form>
         </div>
     </div>
+    }
+
 </div>
