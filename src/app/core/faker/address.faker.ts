@@ -1,7 +1,7 @@
 import { Address, AddressType } from "@app/modals/address";
 import { faker } from "@faker-js/faker";
 
-const generateFakeAddress = (id: number): Address => {
+export const generateFakeAddress = (id: number): Address => {
     return {
         id,
         name: faker.person.fullName(),
@@ -13,6 +13,7 @@ const generateFakeAddress = (id: number): Address => {
         state: faker.location.state(),
         type: faker.helpers.arrayElement(Object.values(AddressType)),
         isDefaultAddress: faker.datatype.boolean(),
+        email:faker.internet.email()
     };
 }
 

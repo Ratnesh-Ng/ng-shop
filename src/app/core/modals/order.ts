@@ -1,12 +1,18 @@
-interface Product {
-    name: string;
-    price: string;
-}
+import { Address } from "./address";
+import { Product } from "./product";
 
 export interface Order {
     orderId: string;
-    placedOn: string;
-    deliveredOn: string;
-    totalAmount: string;
+    orderDate: Date;
+    deliveryDate: Date;
     products: Product[];
+    shippingInfo: Address;
+    paymentInfo: PaymentInfo;
+    status: string;
+}
+export interface PaymentInfo {
+    paymentMethod: string;
+    mobile: string;
+    email: string;
+    amount: string;
 }

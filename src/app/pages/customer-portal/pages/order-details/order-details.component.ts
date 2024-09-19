@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { generateFakeProducts } from '@app/faker/product.faker';
+import { createFakeOrder } from '@app/faker/order.faker';
+import { Order } from '@app/modals/order';
 
 @Component({
     selector: 'app-order-details',
@@ -7,6 +8,7 @@ import { generateFakeProducts } from '@app/faker/product.faker';
     styleUrl: './order-details.component.scss'
 })
 export class OrderDetailsComponent {
-    public products = generateFakeProducts(2);
-   
+    
+    public orderDetails: Order = createFakeOrder();
+
 }

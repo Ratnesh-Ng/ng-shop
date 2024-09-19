@@ -2,6 +2,7 @@ export interface Address {
     id: number;
     name: string;
     mobile: string;
+    email: string;
     pinCode: string;
     address: string;
     locality: string;

@@ -2,40 +2,40 @@
   <div class="space-y-4">
     <!-- Page Header -->
     <div class="text-[13px] text-gray-600">
-      <p>Order ID: #1234567890</p>
-      <p>Order Date: August 20, 2024</p>
-      <p>Deliver by: August 28, 2024</p>
+      <p>Order ID: #{{orderDetails.orderId}}</p>
+      <p>Order Date: {{orderDetails.orderDate|date:'dd MMM yyyy'}}</p>
+      <p>Deliver by: {{orderDetails.deliveryDate|date:'dd MMM yyyy'}}</p>
     </div>
 
     <!-- Order Summary -->
     <h2 class="font-bold">Order Summary</h2>
     <div id="cart-item">
-      @for (item of products; let index = $index; track item.id) {
+      @for (item of orderDetails.products; let index = $index; track item.id) {
       <app-cart-item [data]="item" [actions]="false"></app-cart-item>
       }
     </div>
 
     <!-- Order Total -->
     <div class="price-details">
-      <app-pricing-details [products]="products" [actions]="false"></app-pricing-details>
+      <app-pricing-details [products]="orderDetails.products" [actions]="false"></app-pricing-details>
     </div>
 
     <!-- Shipping Information -->
     <div class="border p-4 rounded-md min-h-40 relative">
       <div class="space-y-2">
         <p class="font-bold">Shipping Information</p>
-        <p id="brand" class="capitalize text-[13px]">John Doe</p>
+        <p id="brand" class="capitalize text-[13px]">{{orderDetails.shippingInfo.name}}</p>
         <p class="text-[12px] space-x-2">
           <span class="text-gray-600">Address</span>
-          <span class="font-semibold">1234 Elm Street, Springfield, IL 62704</span>
+          <span class="font-semibold" *ngIf="orderDetails.shippingInfo as data">{{data.address}} {{data.locality}} {{data.city}},{{data.state}}-{{data.pinCode}}</span>
         </p>
         <p class="text-[12px] space-x-2">
-          <span class="text-gray-600">Phone</span>
-          <span class="font-semibold">(555) 123-4567</span>
+          <span class="text-gray-600">mobile</span>
+          <span class="font-semibold">{{orderDetails.shippingInfo.mobile}}</span>
         </p>
         <p class="text-[12px]">
           <span class="text-gray-600">Email</span>
-          <span class="font-semibold ms-4">john.doe_example.com</span>
+          <span class="font-semibold ms-4">{{orderDetails.shippingInfo.email}}</span>
         </p>
       </div>
 
@@ -45,17 +45,18 @@
     <div class="border p-4 rounded-md min-h-40 relative">
       <div class="space-y-2">
         <p class="font-bold">Payment Information</p>
-        <p id="brand" class="capitalize text-[13px]">Payment Method: Credit Card</p>
+        <p id="brand" class="capitalize text-[13px]">Payment Method: {{orderDetails.paymentInfo.paymentMethod}}</p>
         <p class="text-[12px] space-x-2">
           <span class="text-gray-600">Mobile</span>
-          <span class="font-semibold">(555) 123-4567</span>
+          <span class="font-semibold">{{orderDetails.paymentInfo.mobile}}</span>
         </p>
         <p class="text-[12px]">
           <span class="text-gray-600">Email</span>
-          <span class="font-semibold ms-4">john.doe_example.com</span>
+          <span class="font-semibold ms-4">{{orderDetails.paymentInfo.email}}</span>
         </p>
         <p class="text-[12px] flex items-center space-x-1 mt-2">
           <span class="material-icons text-sm text-green-600 font-bold">done</span>
+          <!-- TODO how can pay on delivery available on prepaid order : fix the label -->
           <span>Pay on delivery</span>
         </p>
       </div>
