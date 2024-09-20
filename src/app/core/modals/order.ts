@@ -16,3 +16,10 @@ export interface PaymentInfo {
     email: string;
     amount: string;
 }
+
+export interface PlaceOrder {
+    id?: number | string
+    addressId?: number | string,
+    productIds?: (number | string)[]
+    PaymentInfo?: PaymentInfo,
+}

@@ -1,9 +1,11 @@
 import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { Address, AddressCardEvent } from '@app/modals/address';
-import { getData } from '@core/utils/http.util';
+import { getData, postData } from '@core/utils/http.util';
 import { UserService } from '@services/user.service';
 import { CheckoutBase } from '../../base/checkout-base';
 import { scrollToTop } from '@core/utils/common.util';
+import { PlaceOrder } from '@app/modals/order';
+import { createFakePayment } from '@app/faker/order.faker';
 
 @Component({
   selector: 'app-address',
@@ -30,7 +32,24 @@ export class AddressComponent extends CheckoutBase implements OnInit {
   });
 
   public navigateToPayment() {
-    this.router.navigateByUrl(this.appRoutes.payment)
+    if (this.selectedAddress()) {
+      const toSave: PlaceOrder = {
+        addressId: this.selectedAddress()?.id,
+        productIds: this.cartItems().map(a => a.id),
+        PaymentInfo: createFakePayment()
+      };
+      //TODO:now delete products from the cart because order is placed
+      postData(this.productStore.productService.placeOrder(toSave)).then(() => {
+        // console.log(a)
+        this.router.navigateByUrl(this.appRoutes.payment)
+      })
+    } else {
+      this.productStore.messageService.add({
+        severity: 'error',
+        detail: `Please select address`,
+        life: 2000
+      })
+    }
   }
 
   public onEventCapture(event: AddressCardEvent) {

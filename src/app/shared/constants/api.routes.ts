@@ -13,5 +13,7 @@ export const ApiRoutes = {
     cartByID: (ID: string | number) => `${baseUrl}/cart/${ID}`,
     address: `${baseUrl}/addresses`,
     addressByID: (ID: string | number) => `${baseUrl}/addresses/${ID}`,
+    orders: `${baseUrl}/orders`,
+    orderByID: (ID: string | number) => `${baseUrl}/orders/${ID}`,
 };
 

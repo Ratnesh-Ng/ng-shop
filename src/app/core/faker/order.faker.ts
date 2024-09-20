@@ -20,24 +20,25 @@ const orderStatuses = [
     "Ready for Pickup"
 ];
 
+export const createFakePayment = () => {
+    return {
+        email: faker.internet.email(),
+        mobile: faker.phone.number(),
+        paymentMethod: faker.helpers.arrayElement(['Credit Card', 'Pay on Delivery']),
+        amount: `${faker.number.int({ max: 50000, min: 500 })}`
+    }
+}
+
 export const createFakeOrder = (): Order => {
     const orderID = `${faker.number.int()}`;
     const orderDate = faker.date.past();
     const deliveryDate = faker.date.between({ from: orderDate, to: faker.date.future() });
     const address = generateFakeAddress(1); //TODO
-    const email = faker.internet.email();
-    const paymentMethod = faker.helpers.arrayElement(['Credit Card', 'Pay on Delivery']);
-    const mobile = faker.phone.number();
     return {
         orderId: orderID,
         orderDate: orderDate,
         deliveryDate: deliveryDate,
-        paymentInfo: {
-            email: email,
-            mobile: mobile,
-            paymentMethod: paymentMethod,
-            amount: `${faker.number.int({ max: 50000, min: 500 })}`
-        },
+        paymentInfo: createFakePayment(),
         products: generateFakeProducts(faker.number.int({ max: 5, min: 1 })),
         shippingInfo: address,
         status: faker.helpers.arrayElement(orderStatuses),

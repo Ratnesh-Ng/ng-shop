@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { generateFakeSearchData } from '@app/faker/search.faker';
 import { Cart } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
+import { PlaceOrder } from '@app/modals/order';
 import { Product } from '@app/modals/product';
 import { ProductFilterValue, QueryOptions } from '@app/modals/search';
 import { BaseService } from '@core/base/base.service';
@@ -50,6 +51,10 @@ export class ProductService extends BaseService {
 
   public searchProduct(options: QueryOptions<ProductFilterValue>) {
     return of(generateFakeSearchData(options.fullText))
+  }
+
+  public placeOrder(options: PlaceOrder) {
+    return this.http.post<PlaceOrder>(this.apiRoutes.orders, options);
   }
 
 }
