@@ -11,6 +11,7 @@ import { OrderDetailsComponent } from './pages/order-details/order-details.compo
 import { PortalContainerComponent } from './components/portal-container/portal-container.component';
 import { CheckoutModule } from '../checkout/checkout.module';
 import { CoreModule } from "../../core/core.module";
+import { OrderCardComponent } from './pages/orders/order-card/order-card.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CoreModule } from "../../core/core.module";
     ChangePasswordComponent,
     DashboardComponent,
     OrderDetailsComponent,
-    PortalContainerComponent
+    PortalContainerComponent,
+    OrderCardComponent
   ],
   imports: [
     CommonModule,

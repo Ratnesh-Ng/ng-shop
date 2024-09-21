@@ -6,28 +6,11 @@
 
     <div class="space-y-2 mt-4">
         @for (item of orders; track item.orderId) {
-            <div>
-                <a [routerLink]="['/my/order/details',item.orderId]">
-                    <div class="rounded border">
-                        <div class="space-y-2 p-4 md:w-2/3 text-[13px]">
-                            <h2 class="flex items-center space-x-4 text-[14px] text-heading font-medium ">
-                                <span class="">Order #{{item.orderId}}</span>
-                            </h2>
-                            <div class="flex space-x-4 w-full">
-                                <div class="w-24 h-24">
-                                    <img [src]="item.products[0].urls[0]" alt="Product" class="w-full h-full object-cover">
-                                </div>
-                                <div>
-                                    <p class="">Order Date: <span class="font-medium">{{item.orderDate|date:'dd MMM yyyy'}}</span></p>
-                                    <p class="">Delivery Date: <span class="font-medium">{{item.deliveryDate|date:'dd MMM yyyy'}}</span></p>
-                                    <p class="">Total: <span class="font-medium">{{item.paymentInfo.amount}}</span></p>
-                                    <p class=""><span class="font-medium">{{item.status}}</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div>
+            <a [routerLink]="['/my/order/details',item.orderId]">
+                <app-order-card [order]="item"></app-order-card>
+            </a>
+        </div>
         }
     </div>
 </div>
