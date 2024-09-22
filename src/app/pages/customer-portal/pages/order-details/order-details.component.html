@@ -1,8 +1,8 @@
 <app-portal-container [heading]="'Order Details'">
-  <div class="space-y-4">
+  <div class="space-y-4" *ngIf="orderDetails$|async as orderDetails">
     <!-- Page Header -->
     <div class="text-[13px] text-gray-600">
-      <p>Order ID: #{{orderDetails.orderId}}</p>
+      <p>Order ID: #{{orderDetails.id}}</p>
       <p>Order Date: {{orderDetails.orderDate|date:'dd MMM yyyy'}}</p>
       <p>Deliver by: {{orderDetails.deliveryDate|date:'dd MMM yyyy'}}</p>
     </div>
@@ -27,7 +27,8 @@
         <p id="brand" class="capitalize text-[13px]">{{orderDetails.shippingInfo.name}}</p>
         <p class="text-[12px] space-x-2">
           <span class="text-gray-600">Address</span>
-          <span class="font-semibold" *ngIf="orderDetails.shippingInfo as data">{{data.address}} {{data.locality}} {{data.city}},{{data.state}}-{{data.pinCode}}</span>
+          <span class="font-semibold" *ngIf="orderDetails.shippingInfo as data">{{data.address}} {{data.locality}}
+            {{data.city}},{{data.state}}-{{data.pinCode}}</span>
         </p>
         <p class="text-[12px] space-x-2">
           <span class="text-gray-600">mobile</span>

@@ -9,6 +9,7 @@ import { getData, postData } from '@core/utils/http.util';
 import { Offer } from '@app/modals/offer';
 import { Cart } from '@app/modals/cart';
 import { ProductFilterValue, QueryOptions, Search } from '@app/modals/search';
+import { Order } from '@app/modals/order';
 
 @Injectable({ providedIn: 'root' })
 
@@ -28,6 +29,7 @@ export class ProductStoreService extends BaseService {
   public wishListedProducts: Store<Product[] | null> = new Store(null);
   public cart: Store<Cart[] | null> = new Store(null);
   public offers: Store<Offer[] | null> = new Store(null);
+  public orders: Store<Order[] | null> = new Store(null);
   public searchedProduct: Store<Search | null> = new Store(null);
 
   public queryProducts(): Observable<Product[] | null> {
@@ -80,6 +82,8 @@ export class ProductStoreService extends BaseService {
     )
   }
 
+  //#region Wishlist
+
   public queryWishListedProducts(): Observable<Product[] | null> {
     if ((this.wishListedProducts.data?.length ?? 0) < 1) {
       return this.productService.queryWishlist().pipe(
@@ -117,6 +121,10 @@ export class ProductStoreService extends BaseService {
       return this.addProductToWishlist(data);
     }
   }
+
+  //#endregion Wishlist
+
+  //#region Cart
 
   public queryCart(): Observable<Cart[] | null> {
     if (!this.cart.data?.length) {
@@ -156,6 +164,10 @@ export class ProductStoreService extends BaseService {
     }
   }
 
+  //#endregion Cart
+
+  //#region search
+
   private searchedProductMap = new Map<string, Search>();
   public searchProducts(options: QueryOptions<ProductFilterValue>): Observable<Search | null> {
     const mapKey = options.fullText?.toLowerCase();
@@ -176,6 +188,8 @@ export class ProductStoreService extends BaseService {
     );
   }
 
+  //#endregion search
+
   public queryOffers(): Observable<Offer[] | null> {
     if (!this.offers.data?.length) {
       return this.productService.queryOffers().pipe(
@@ -189,6 +203,35 @@ export class ProductStoreService extends BaseService {
     }
     return of(this.offers.data)
   }
+
+  //#region Order
+
+  //TODO implement caching in orders
+  public queryOrders(): Observable<Order[] | null> {
+    return this.productService.queryOrders().pipe(
+      tap((a) => this.orders.data = a),
+      catchError((e) => {
+        return throwError(() => e)
+      })
+    );
+  }
+
+  public getOrderById(id: number | string): Observable<Order> {
+    const order = this.orders.data?.find(a => a.id == id);
+    if (!order?.id) {
+      return this.productService.getOrderById(id).pipe(
+        tap((a) => this.orders.data?.push(a)),
+        catchError((e) => {
+          return throwError(() => e)
+        })
+      );
+    }
+    return of(order)
+  }
+
+  //#endregion Order
+
+  //#region toast
 
   public showAddedToWishlistToast(data: Product) {
     this.messageService.add({
@@ -208,4 +251,5 @@ export class ProductStoreService extends BaseService {
     })
   }
 
+  //#endregion toast
 }

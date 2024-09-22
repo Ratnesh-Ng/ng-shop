@@ -11,6 +11,10 @@ export class UserService extends BaseService {
     return this.http.get<Address[]>(this.apiRoutes.address);
   }
 
+  public getAddressById(id: number | string) {
+    return this.http.get<Address[]>(this.apiRoutes.addressByID(id));
+  }
+
   public deleteAddress(id: string | number) {
     return this.http.delete<Address[]>(this.apiRoutes.addressByID(id));
   }

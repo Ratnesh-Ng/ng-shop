@@ -35,7 +35,7 @@ export const createFakeOrder = (): Order => {
     const deliveryDate = faker.date.between({ from: orderDate, to: faker.date.future() });
     const address = generateFakeAddress(1); //TODO
     return {
-        orderId: orderID,
+        id: orderID,
         orderDate: orderDate,
         deliveryDate: deliveryDate,
         paymentInfo: createFakePayment(),

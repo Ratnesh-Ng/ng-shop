@@ -5,9 +5,9 @@
     </div>
 
     <div class="space-y-2 mt-4">
-        @for (item of orders; track item.orderId) {
+        @for (item of orders|async; track item.id) {
         <div>
-            <a [routerLink]="['/my/order/details',item.orderId]">
+            <a [routerLink]="['/my/order/details',item.id]">
                 <app-order-card [order]="item"></app-order-card>
             </a>
         </div>

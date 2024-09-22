@@ -4,8 +4,9 @@ import { getData, postData } from '@core/utils/http.util';
 import { UserService } from '@services/user.service';
 import { CheckoutBase } from '../../base/checkout-base';
 import { scrollToTop } from '@core/utils/common.util';
-import { PlaceOrder } from '@app/modals/order';
+import { Order } from '@app/modals/order';
 import { createFakePayment } from '@app/faker/order.faker';
+import { faker } from '@faker-js/faker';
 
 @Component({
   selector: 'app-address',
@@ -33,14 +34,25 @@ export class AddressComponent extends CheckoutBase implements OnInit {
 
   public navigateToPayment() {
     if (this.selectedAddress()) {
-      const toSave: PlaceOrder = {
-        addressId: this.selectedAddress()?.id,
-        productIds: this.cartItems().map(a => a.id),
-        PaymentInfo: createFakePayment()
-      };
+      // const toSave: PlaceOrder = {
+      //   addressId: this.selectedAddress()?.id,
+      //   products: this.cartItems().map(a => { return { id: a.id, quantity: 1 }; }),//TODO replace with orignal quantity
+      //   PaymentInfo: createFakePayment(),
+      //   orderStatus: "Pending" //TODO replace it with enum
+      // };
       //TODO:now delete products from the cart because order is placed
-      postData(this.productStore.productService.placeOrder(toSave)).then(() => {
-        // console.log(a)
+      //replace "Order" modal with "PlaceOrder" 
+      const orderDate = faker.date.past();
+      const deliveryDate = faker.date.between({ from: orderDate, to: faker.date.future() });
+      const toSave: Order = {
+        deliveryDate: deliveryDate,
+        orderDate: orderDate,
+        paymentInfo: { ...createFakePayment(), amount: this.productDetails.totalAmountToPay },
+        status: "Processing",
+        products: this.cartItems(),
+        shippingInfo: this.selectedAddress()!,
+      }
+      postData<Order>(this.productStore.productService.placeOrder(toSave)).then(() => {
         this.router.navigateByUrl(this.appRoutes.payment)
       })
     } else {

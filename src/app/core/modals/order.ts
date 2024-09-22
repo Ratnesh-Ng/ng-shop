@@ -2,7 +2,7 @@ import { Address } from "./address";
 import { Product } from "./product";
 
 export interface Order {
-    orderId: string;
+    id?: string|number;
     orderDate: Date;
     deliveryDate: Date;
     products: Product[];
@@ -14,12 +14,13 @@ export interface PaymentInfo {
     paymentMethod: string;
     mobile: string;
     email: string;
-    amount: string;
+    amount: string|number;
 }
 
 export interface PlaceOrder {
     id?: number | string
     addressId?: number | string,
-    productIds?: (number | string)[]
+    products?: { id: number | string, quantity: number }[]
     PaymentInfo?: PaymentInfo,
+    orderStatus:string
 }
