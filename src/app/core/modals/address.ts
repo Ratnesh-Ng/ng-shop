@@ -1,5 +1,6 @@
 export interface Address {
     id: number;
+    userId?: number | string;
     name: string;
     mobile: string;
     email: string;

@@ -3,6 +3,7 @@ import { Product } from "./product";
 
 export interface Order {
     id?: string|number;
+    userId?: number | string;
     orderDate: Date;
     deliveryDate: Date;
     products: Product[];

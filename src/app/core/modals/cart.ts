@@ -2,6 +2,7 @@ import { Product } from "./product";
 
 export interface Cart extends Product {
     isSelected?: boolean;
+    userId?: number | string;
 }
 
 export type CartItemEvent = {
