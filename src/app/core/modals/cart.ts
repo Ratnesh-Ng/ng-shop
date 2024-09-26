@@ -5,6 +5,10 @@ export interface Cart extends Product {
     userId?: number | string;
 }
 
+export interface Wishlist extends Product {
+    userId?: number | string;
+}
+
 export type CartItemEvent = {
     eventType: CartItemEventType;
     data: Cart;

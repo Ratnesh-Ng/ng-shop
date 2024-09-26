@@ -16,7 +16,7 @@ export class LoginComponent extends BaseComponent {
   public showOtp: boolean = false
 
   public getOtp() {
-    postData(this.userService.getOtp()).then((otp) => {
+    postData(this.userService.getOtp(this.mobileNumber)).then((otp) => {
       console.log(otp);
       this.requiredOtp = otp;
       this.showOtp = true;
@@ -24,7 +24,7 @@ export class LoginComponent extends BaseComponent {
   }
 
   public validateOtp() {
-    postData(this.userService.validateOtp({ enteredOtp: this.enteredOTP, requiredOtp: this.requiredOtp })).then((res) => {
+    postData(this.userService.validateOtp({ enteredOtp: this.enteredOTP, requiredOtp: this.requiredOtp, mobile: this.mobileNumber })).then((res) => {
       if (res) {
         this.router.navigateByUrl(this.appRoutes.home);
       } else {

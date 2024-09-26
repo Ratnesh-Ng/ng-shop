@@ -1,17 +1,20 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { generateFakeSearchData } from '@app/faker/search.faker';
-import { Cart } from '@app/modals/cart';
+import { Cart, Wishlist } from '@app/modals/cart';
 import { Offer } from '@app/modals/offer';
 import { Order } from '@app/modals/order';
 import { Product } from '@app/modals/product';
 import { ProductFilterValue, QueryOptions } from '@app/modals/search';
 import { BaseService } from '@core/base/base.service';
 import { of } from 'rxjs';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService extends BaseService {
+  public userService: UserService = inject(UserService);
+  private userId = this.userService.loggedInUser?.id;
 
   public queryProducts() {
     return this.http.get<Product[]>(this.apiRoutes.products);
@@ -22,11 +25,12 @@ export class ProductService extends BaseService {
   }
 
   public queryWishlist() {
-    return this.http.get<Product[]>(this.apiRoutes.wishlist);
+    return this.http.get<Product[]>(`${this.apiRoutes.wishlist}?userId=${this.userId}`);
   }
 
   public addProductToWishlist(data: Product) {
-    return this.http.post<Product>(this.apiRoutes.wishlist, data);
+    const wProduct: Wishlist = { ...data, userId: this.userId };
+    return this.http.post<Product>(this.apiRoutes.wishlist, wProduct);
   }
 
   public removeProductFromWishlist(id: string | number) {
@@ -38,11 +42,12 @@ export class ProductService extends BaseService {
   }
 
   public queryCart() {
-    return this.http.get<Cart[]>(this.apiRoutes.cart);
+    return this.http.get<Cart[]>(`${this.apiRoutes.cart}?userId=${this.userId}`);
   }
 
   public addProductToCart(data: Product) {
-    return this.http.post<Product>(this.apiRoutes.cart, data);
+    const cProduct: Cart = { ...data, userId: this.userId };
+    return this.http.post<Product>(this.apiRoutes.cart, cProduct);
   }
 
   public removeProductFromCart(id: string | number) {
@@ -58,7 +63,7 @@ export class ProductService extends BaseService {
   }
 
   public queryOrders() {
-    return this.http.get<Order[]>(this.apiRoutes.orders);
+    return this.http.get<Order[]>(`${this.apiRoutes.orders}?userId=${this.userId}`);
   }
 
   public getOrderById(id: string | number) {

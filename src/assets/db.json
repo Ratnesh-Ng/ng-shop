@@ -2428,7 +2428,230 @@
       "quantity": 1
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "4d63",
+      "uuid": "1feb45a4-7f9f-48ed-8701-f41ffe6c90c0",
+      "name": "Fantastic Wooden Gaming Laptop",
+      "brand": "Casper, Rodriguez and Friesen",
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support Down-sized stable approach",
+      "actualPrice": 334,
+      "sellingPrice": 180.36,
+      "discount": 46,
+      "ratings": 3.2,
+      "reviewsCount": 98,
+      "promotion": false,
+      "urls": [
+        "https://loremflickr.com/640/480?lock=1692011792957440",
+        "https://picsum.photos/seed/CUUXmq/640/480",
+        "https://loremflickr.com/640/480?lock=4503855964356608"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Rustic Frozen Shirt",
+          "info": [
+            "Cohaero sublime sopor alias bibo."
+          ],
+          "link": "https://grizzled-banana.name",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Unbranded Cotton Keyboard",
+          "info": [
+            "Carcer tonsor triumphus tum vox spes tam vulgo accedo.",
+            "Brevis vis valens vulnus ultra bene amplexus cubo temeritas."
+          ],
+          "link": "https://bronze-proof-reader.biz/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Handcrafted Cotton Chips",
+          "info": [
+            "Supplanto autem cursus credo timidus.",
+            "Minima cupio laborum vergo adfectus degero accusamus veniam.",
+            "Ascit comis cetera vitium doloribus comptus.",
+            "Saepe subito virgo eligendi thermae amplexus angustus."
+          ],
+          "link": "https://thankful-pomegranate.biz/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Bespoke Soft Tuna",
+          "info": [
+            "Amo adsidue viduo aperio deleo aptus summopere casus."
+          ],
+          "link": "https://woozy-frosting.info",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Ergonomic Soft Keyboard",
+          "info": [
+            "Succedo cohibeo solitudo aveho dolore.",
+            "Temeritas vestigium viridis deorsum uxor cunabula cuius.",
+            "Crinis utrum tardus via astrum ver."
+          ],
+          "link": "https://motionless-reasoning.info",
+          "linkLabel": "Discover"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Season",
+          "info": "Spring Line"
+        },
+        {
+          "title": "Season",
+          "info": "Autumn Line"
+        },
+        {
+          "title": "Season",
+          "info": "Autumn Collection"
+        },
+        {
+          "title": "Fabric",
+          "info": "Polyester"
+        },
+        {
+          "title": "Main Trend",
+          "info": "unde contabesco sorbet for"
+        }
+      ],
+      "availableQuantity": 38,
+      "seller": {
+        "id": 734,
+        "name": "Kirlin Inc"
+      },
+      "deliveredTill": "2024-08-12T06:46:30.984Z",
+      "size": "S",
+      "quantity": 1,
+      "userId": "5fd3"
+    },
+    {
+      "id": "8a62",
+      "uuid": "33e6067b-ced4-4371-88a6-046e6bc1e939",
+      "name": " Intelligent Bronze T-shirt",
+      "brand": "Kerluke and Sons",
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016 Digitized multi-state definition",
+      "actualPrice": 916,
+      "sellingPrice": 861.04,
+      "discount": 6,
+      "ratings": 1.5,
+      "reviewsCount": 188,
+      "promotion": false,
+      "urls": [
+        "https://picsum.photos/seed/SJucAfbRsF/640/480",
+        "https://loremflickr.com/640/480?lock=2206594355953664",
+        "https://picsum.photos/seed/D02zSB/640/480",
+        "https://picsum.photos/seed/Pzwd2o/640/480",
+        "https://picsum.photos/seed/4opO2DXl/640/480",
+        "https://loremflickr.com/640/480?lock=363872800210944"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Rustic Steel Shoes",
+          "info": [
+            "Amita confugo arca laborum sto spes caput pecto amitto.",
+            "Theca curiositas subiungo defero tergiversatio sit.",
+            "Soleo torqueo talus tener cotidie tener nostrum."
+          ],
+          "link": "https://lustrous-calculation.net/",
+          "linkLabel": "Check It Out"
+        },
+        {
+          "title": "Unbranded Soft Gloves",
+          "info": [
+            "Colligo vester adimpleo absconditus.",
+            "Conor vomica depopulo cohors socius dolore vulariter facere.",
+            "Vos earum solum ter suscipio centum adhaero.",
+            "Cerno altus cicuta arma utilis studio vulariter."
+          ],
+          "link": "https://courageous-replication.info/",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Practical Soft Keyboard",
+          "info": [
+            "Theca virgo tantillus iusto vae deprecator anser.",
+            "Apparatus adiuvo comptus peior."
+          ],
+          "link": "https://necessary-minor.info/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Recycled Plastic Cheese",
+          "info": [
+            "Vorax velit tantum voluptate contigo.",
+            "Deripio celebrer corpus theologus adeo venio vomer.",
+            "At denuo deorsum desino solvo curis creator quam tolero.",
+            "Censura aspernatur doloribus cognatus testimonium."
+          ],
+          "link": "https://hopeful-innocence.net/",
+          "linkLabel": "Find Out More"
+        },
+        {
+          "title": "Licensed Granite Sausages",
+          "info": [
+            "Substantia tyrannus tribuo bellicus."
+          ],
+          "link": "https://flamboyant-airbag.info",
+          "linkLabel": "Learn More"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Color",
+          "info": "cyan yellow"
+        },
+        {
+          "title": "Color",
+          "info": "grey yellow"
+        },
+        {
+          "title": "Season",
+          "info": "Autumn Collection"
+        },
+        {
+          "title": "Fit",
+          "info": "Regular Fit"
+        },
+        {
+          "title": "Fit",
+          "info": "Regular Fit"
+        }
+      ],
+      "availableQuantity": 27,
+      "seller": {
+        "id": 156,
+        "name": "Harris - Wilderman"
+      },
+      "deliveredTill": "2024-09-23T05:58:31.598Z",
+      "size": "M",
+      "quantity": 2,
+      "userId": "b3dd"
+    }
+  ],
   "offers": [
     {
       "id": "1286",
@@ -2501,118 +2724,7 @@
       "link": ""
     }
   ],
-  "cart": [
-    {
-      "id": "6041",
-      "uuid": "a3860e84-84e4-4b16-935d-61f0e658788a",
-      "name": "Bespoke Fresh Backpack",
-      "brand": "Wehner - Kling",
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Optimized methodical definition",
-      "actualPrice": 345,
-      "sellingPrice": 175.95,
-      "discount": 49,
-      "ratings": 4.6,
-      "reviewsCount": 404,
-      "promotion": true,
-      "urls": [
-        "https://picsum.photos/seed/MOUw9FtY/640/480",
-        "https://loremflickr.com/640/480?lock=6272874734157824",
-        "https://picsum.photos/seed/C0TrtKEU/640/480"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "otherInfo": [
-        "100% Original Products",
-        "Pay on delivery might be available",
-        "Easy 14 days returns and exchanges"
-      ],
-      "offers": [
-        {
-          "title": "Handmade Plastic Bike",
-          "info": [
-            "Bos crux una sub odio sollicito eos vivo."
-          ],
-          "link": "https://entire-disk.info/",
-          "linkLabel": "Learn More"
-        },
-        {
-          "title": "Unbranded Frozen Chair",
-          "info": [
-            "Benigne toties error consectetur barba carcer theatrum."
-          ],
-          "link": "https://chilly-alliance.name/",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Incredible Metal Table",
-          "info": [
-            "Auctor iusto vicissitudo odit appono.",
-            "Sponte culpa curis arcus adfectus.",
-            "Illo aer amoveo certus sumptus vinculum demens.",
-            "Terreo vitiosus communis coniecto admitto conqueror."
-          ],
-          "link": "https://teeming-eyeliner.org/",
-          "linkLabel": "Explore"
-        },
-        {
-          "title": "Fantastic Concrete Pizza",
-          "info": [
-            "Cum despecto commemoro clamo carpo caecus.",
-            "Vesica casso molestias casso venia benevolentia.",
-            "Contego doloribus vere tracto.",
-            "Crux strenuus cernuus admitto demonstro."
-          ],
-          "link": "https://probable-fabric.org",
-          "linkLabel": "Get It Now"
-        },
-        {
-          "title": "Practical Metal Soap",
-          "info": [
-            "Bardus antiquus texo agnosco volo tardus cinis.",
-            "Tremo armarium cuius bis ratione copiose damno.",
-            "Vivo curatio stipes claustrum cui.",
-            "Amissio arbitro eligendi creator uterque cicuta."
-          ],
-          "link": "https://tough-dealer.net/",
-          "linkLabel": "Get It Now"
-        }
-      ],
-      "specifications": [
-        {
-          "title": "Main Trend",
-          "info": "nesciunt vacuus hastily provided amongst"
-        },
-        {
-          "title": "Season",
-          "info": "Autumn Line"
-        },
-        {
-          "title": "Fit",
-          "info": "Oversized"
-        },
-        {
-          "title": "Fit",
-          "info": "Slim Fit"
-        },
-        {
-          "title": "Occasion",
-          "info": "Casual caddy awkwardly hear"
-        }
-      ],
-      "availableQuantity": 91,
-      "seller": {
-        "id": 152,
-        "name": "Reynolds, Hauck and Kassulke"
-      },
-      "deliveredTill": "2024-08-06T00:45:30.620Z",
-      "size": "M",
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "addresses": [
     {
       "id": "d1b1",
@@ -2791,6 +2903,16 @@
         "isDefaultAddress": true,
         "email": "Arlie.Cruickshank@yahoo.com"
       }
+    }
+  ],
+  "users": [
+    {
+      "id": "5fd3",
+      "mobile": "9074647461"
+    },
+    {
+      "id": "b3dd",
+      "mobile": "7999248309"
     }
   ]
 }
