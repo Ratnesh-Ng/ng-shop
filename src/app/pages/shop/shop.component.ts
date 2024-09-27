@@ -17,8 +17,7 @@ export class ShopComponent extends SearchBaseComponent {
   }
 
   private getParams() {
-    this.activatedRoute.params.subscribe(params => {
-      console.log(params)
+    this.activatedRoute.params.subscribe(() => {
       this.shopDashboard = generateFakeDashboardData()
     });
   }

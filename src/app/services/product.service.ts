@@ -17,11 +17,11 @@ export class ProductService extends BaseService {
   private userId = this.userService.loggedInUser?.id;
 
   public queryProducts() {
-    return this.http.get<Product[]>(this.apiRoutes.products);
+    return this.http.get<Product[]>(this.apiRoutes.products,{headers:this.skipAuthHeader});
   }
 
   public getProduct(uuid: string) {
-    return this.http.get<Product[]>(this.apiRoutes.productByUUID(uuid))
+    return this.http.get<Product[]>(this.apiRoutes.productByUUID(uuid),{headers:this.skipAuthHeader})
   }
 
   public queryWishlist() {
@@ -38,7 +38,7 @@ export class ProductService extends BaseService {
   }
 
   public queryOffers() {
-    return this.http.get<Offer[]>(this.apiRoutes.offers);
+    return this.http.get<Offer[]>(this.apiRoutes.offers,{headers:this.skipAuthHeader});
   }
 
   public queryCart() {

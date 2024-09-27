@@ -3,14 +3,29 @@ import { Address } from '@app/modals/address';
 import { User } from '@app/modals/user';
 import { BaseService } from '@core/base/base.service';
 import { generateOTP } from '@core/utils/common.util';
-import { Observable, of, switchMap, tap } from 'rxjs';
+import { Environment } from '@environment/environment.dev';
+import { map, Observable, of, switchMap, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService extends BaseService {
 
-  public loggedInUser?: User;
+  private _loggedInUser?: User;
+
+  public get loggedInUser(): User | null {
+    if (this._loggedInUser) {
+      return this._loggedInUser;
+    }
+    const base64 = localStorage.getItem(Environment.tokenKey);
+    if (base64) {
+      let user: unknown = atob(base64);
+      user = JSON.parse(user as string);
+      return user as User;
+    }
+    return null;
+  }
+  
   //#region Auth
 
   public getOtp(mobile: string): Observable<string> {
@@ -28,18 +43,23 @@ export class UserService extends BaseService {
   }
 
   public registerUser(mobile: string): Observable<User> {
-    return this.http.post<User>(this.apiRoutes.user, { mobile });
+    return this.http.post<User>(this.apiRoutes.user, { mobile },{headers:this.skipAuthHeader});
   }
 
   private getUser(mobile: string) {
-    return this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`);
+    return this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`,{headers:this.skipAuthHeader});
   }
 
   public validateOtp(data: { enteredOtp: number | string, requiredOtp: number | string, mobile: string }) {
     // return this.http.post<number>(this.apiRoutes.validateOtp,data);
     if (data.enteredOtp == data.requiredOtp) {
       return this.getUser(data.mobile).pipe(
-        tap(user => this.loggedInUser = user[0]),
+        map(a => a[0]),
+        tap(user => {
+          const userInfo = btoa(JSON.stringify(user));
+          localStorage.setItem(Environment.tokenKey, userInfo)
+          this._loggedInUser = user
+        }),
         switchMap(() => of(true))
       );
     }

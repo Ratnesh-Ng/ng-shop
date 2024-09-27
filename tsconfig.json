@@ -32,6 +32,7 @@
       "@core/pipe/*": ["./src/app/core/pipe/*"],
       "@app/faker/*": ["./src/app/core/faker/*"],
       "@core/utils/*": ["./src/app/core/utils/*"],
+      "@core/interceptors/*": ["./src/app/core/interceptors/*"],
       "@app/modals/*": ["./src/app/core/modals/*"],
       "@store/*": ["./src/app/store/*"],
       "@core/service/*": ["./src/app/core/services/*"],
