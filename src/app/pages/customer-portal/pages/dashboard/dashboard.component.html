@@ -15,30 +15,30 @@
                         <img src="https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-profile-picture-business-profile-woman-suitable-social-media-profiles-icons-screensavers-as-templatex9_719432-1328.jpg?size=626&ext=jpg&ga=GA1.1.1866778459.1718621485&semt=ais_hybrid"
                             alt="Product" class="w-full h-full object-cover border">
                     </div>
-                    <div class="ml-4">
-                        <p class="">Name: <span class="font-medium">Ratnesh siddha</span></p>
-                        <p class="">Email: <span class="font-medium">Test_gmail.com</span></p>
-                        <p class="">Phone: <span class="font-medium">9074XXXX61</span></p>
-                        <p class="">Address: <span class="font-medium">test colony block x house no. 9x2</span></p>
+                    <div class="ml-4" *ngIf="userService.loggedInUser as user">
+                        <p class="">Name: <span class="font-medium">{{user.name}}</span></p>
+                        <p class="">Email: <span class="font-medium">{{user.email}}</span></p>
+                        <p class="">Mobile: <span class="font-medium">{{user.mobile}}</span></p>
+                        <p class="">Address: <span class="font-medium">{{user.address|address}}</span></p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="grid grid-cols-3 gap-4 text-[15px]">
             @for (item of dashboardOptions; track $index) {
-                <a [routerLink]="item.path">
+            <a [routerLink]="item.path">
                 <div class="flex w-full items-center border p-4 h-56 ">
                     <div class="text-center w-full space-y-4">
                         <span class="material-symbols-outlined text-gray-600 text-[40px]">
                             {{item.icon}}
                         </span>
-                            <div class="">
-                                <p class="font-semibold">{{item.heading}}</p>
-                                <p class="text-[12px] text-gray-400 font-medium">{{item.subHeading}}</p>
-                            </div>
+                        <div class="">
+                            <p class="font-semibold">{{item.heading}}</p>
+                            <p class="text-[12px] text-gray-400 font-medium">{{item.subHeading}}</p>
                         </div>
                     </div>
-                </a>
+                </div>
+            </a>
             }
         </div>
     </div>

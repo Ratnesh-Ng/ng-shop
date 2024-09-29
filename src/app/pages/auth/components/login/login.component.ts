@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { BaseComponent } from '@core/base/base.component';
 import { postData } from '@core/utils/http.util';
-import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +8,6 @@ import { UserService } from '@services/user.service';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent extends BaseComponent {
-  private userService: UserService = inject(UserService);
   private requiredOtp = '';
   public mobileNumber = "";
   public enteredOTP = "";

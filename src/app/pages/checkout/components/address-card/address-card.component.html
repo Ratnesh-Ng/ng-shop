@@ -6,7 +6,7 @@
             <span class="font-bold uppercase text-[10px] border border-orange-500 rounded-2xl px-2 py-[2px]">{{data().type}}</span>
         </div>
         <p id="brand" class="capitalize text-[13px]">
-            {{data().address}} {{data().locality}} {{data().city}},{{data().state}}-{{data().pinCode}}
+            {{data()|address}}
         </p>
         <p class="text-[12px] space-x-2">
             <span class="text-gray-600">Mobile</span>

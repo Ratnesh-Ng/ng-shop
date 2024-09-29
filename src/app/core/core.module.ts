@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ClickStopPropagationDirective } from './directives/click-stop-propagation.directive';
 import { InfiniteScrollDirective } from './directives/infinite-scroll.directive';
 import { PricingDetailsComponent } from './components/pricing-details/pricing-details.component';
+import { AddressPipe } from './pipes/address.pipe';
 
 
 
@@ -16,6 +17,7 @@ import { PricingDetailsComponent } from './components/pricing-details/pricing-de
     ClickStopPropagationDirective,
     InfiniteScrollDirective,
     PricingDetailsComponent,
+    AddressPipe,
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,7 @@ import { PricingDetailsComponent } from './components/pricing-details/pricing-de
     ClickStopPropagationDirective,
     InfiniteScrollDirective,
     PricingDetailsComponent,
+    AddressPipe,
   ]
 })
 export class CoreModule { }

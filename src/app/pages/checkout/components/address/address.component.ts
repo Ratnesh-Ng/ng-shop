@@ -1,7 +1,6 @@
-import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
+import { Component, computed, OnInit, signal, WritableSignal } from '@angular/core';
 import { Address, AddressCardEvent } from '@app/modals/address';
 import { getData, postData } from '@core/utils/http.util';
-import { UserService } from '@services/user.service';
 import { CheckoutBase } from '../../base/checkout-base';
 import { scrollToTop } from '@core/utils/common.util';
 import { Order } from '@app/modals/order';
@@ -15,7 +14,6 @@ import { faker } from '@faker-js/faker';
 })
 export class AddressComponent extends CheckoutBase implements OnInit {
 
-  public userService: UserService = inject(UserService);
   public addresses: WritableSignal<Address[]> = signal<Address[]>([]);
   public selectedAddress: WritableSignal<Address | null> = signal<Address | null>(null);
 

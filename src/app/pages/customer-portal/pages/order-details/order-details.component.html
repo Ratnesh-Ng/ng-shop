@@ -27,8 +27,7 @@
         <p id="brand" class="capitalize text-[13px]">{{orderDetails.shippingInfo.name}}</p>
         <p class="text-[12px] space-x-2">
           <span class="text-gray-600">Address</span>
-          <span class="font-semibold" *ngIf="orderDetails.shippingInfo as data">{{data.address}} {{data.locality}}
-            {{data.city}},{{data.state}}-{{data.pinCode}}</span>
+          <span class="font-semibold" *ngIf="orderDetails.shippingInfo as data">{{data|address}}</span>
         </p>
         <p class="text-[12px] space-x-2">
           <span class="text-gray-600">mobile</span>
