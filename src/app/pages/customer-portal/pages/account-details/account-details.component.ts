@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrl: './account-details.component.scss'
 })
 export class AccountDetailsComponent {
+  public editMode = false;
 
+  public editProfile() {
+    this.editMode = true;
+  }
+  
+  public save() {
+    this.editMode = false;
+  }
+
+  public cancel() {
+    this.editMode = false;
+  }
 }

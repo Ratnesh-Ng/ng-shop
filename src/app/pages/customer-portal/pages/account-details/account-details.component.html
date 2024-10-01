@@ -1,44 +1,141 @@
-<!-- Container -->
-<div class="mx-auto mt-10 max-w-4xl p-4 text-[13px]">
-    <!-- Profile Header -->
-    <div class="flex items-center space-x-6 rounded-lg bg-white p-6 border">
-        <img src="https://via.placeholder.com/150" alt="Profile Picture"
-            class="h-32 w-32 rounded-full border-4 border-blue-500 object-cover" />
-        <div>
-            <h2 class="text-2xl font-bold text-gray-800">John Doe</h2>
-            <p class="mt-1 text-gray-600">john.doe_example.com</p>
-            <p class="text-gray-600">+1 (555) 123-4567</p>
-            <button class="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600">Edit
-                Profile</button>
-        </div>
+<div class="container mx-auto px-2 pb-2">
+    <div class="flex justify-between">
+        <!-- Page Title -->
+        <h1 class="text-lg uppercase font-semibold text-gray-800">{{editMode?'Edit Account Details':'Account Details'}}
+        </h1>
+        <button (click)="editProfile()" class="">
+            <span class="material-icons text-[18px] text-orange-500">edit</span>
+        </button>
     </div>
 
-    <!-- Profile Details -->
-    <div class="mt-6 space-y-4 rounded-lg bg-white p-6 border">
-        <h3 class="text-xl font-semibold text-gray-800">Profile Details</h3>
+    <div class="text-[13px] space-y-4 mt-4">
+        @if(editMode){
+        <!-- Edit Account Details Container -->
+        <div>
+            <!-- Edit Form -->
+            <div class="space-y-6 rounded-lg bg-white p-6 border">
 
-        <!-- Address -->
-        <div class="flex items-center">
-            <span class="w-32 font-medium text-gray-600">Address:</span>
-            <p class="text-gray-800">1234 Main St, Springfield, IL</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Full name -->
+                    <div>
+                        <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe"
+                            class="mt-1 block w-full rounded-md border border-gray-300 p-2 " />
+                    </div>
+                    <!-- Username -->
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                        <input type="text" id="username" name="username" placeholder="John_Doe"
+                            class="mt-1 block w-full rounded-md border border-gray-300 p-2 " />
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                            class="mt-1 block w-full rounded-md border border-gray-300 p-2 " />
+                    </div>
+                    <!-- DOB -->
+                    <div>
+                        <label for="dob" class="block text-sm font-medium text-gray-700">Date Of Birth</label>
+                        <input type="date" id="dob" name="dob"
+                            class="mt-1 block w-full rounded-md border border-gray-300 p-2 " />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567"
+                            class="mt-1 block w-full rounded-md border border-gray-300 p-2 " />
+                    </div>
+
+                    <!-- Alternate Phone Number -->
+                    <div>
+                        <label for="alternatePhone" class="block text-sm font-medium text-gray-700">Alternate Phone
+                            Number</label>
+                        <input type="tel" id="alternatePhone" name="alternatePhone" placeholder="+1 (555) 123-4567"
+                            class="mt-1 block w-full rounded-md border border-gray-300 p-2 " />
+                    </div>
+
+                </div>
+
+                <!-- gender -->
+                <div>
+                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <div class="mt-2 space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="male" class="form-radio text-blue-600">
+                            <span class="ml-2 text-gray-800">Male</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="female" class="form-radio text-blue-600">
+                            <span class="ml-2 text-gray-800">Female</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="other" class="form-radio text-blue-600">
+                            <span class="ml-2 text-gray-800">Other</span>
+                        </label>
+                    </div>
+                </div>
+                <!-- <div class="grid grid-cols-2 gap-4"></div> -->
+                <!-- Action Buttons -->
+                <div class="flex justify-end space-x-4">
+                    <button
+                        class="rounded border border-orange-500 font-semibold px-2 py-1 uppercase text-orange-600 align-middle"
+                        type="button" (click)="cancel()">Cancel</button>
+                    <button class="rounded bg-orange-500 font-semibold px-2 py-1 uppercase text-white align-middle"
+                        type="submit" (click)="save()">Update</button>
+                </div>
+            </div>
+        </div>
+        }@else {
+        <!-- Profile Header -->
+        <div class="flex items-center space-x-6 rounded-lg bg-white p-6 border">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture"
+                class="h-32 w-32 rounded-full border-4 border-blue-500 object-cover" />
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800">John Doe</h2>
+                <p class="mt-1 text-gray-600">john.doe_example.com</p>
+                <p class="text-gray-600">+1 (555) 123-4567</p>
+
+            </div>
         </div>
 
-        <!-- Bio -->
-        <div class="flex items-center">
-            <span class="w-32 font-medium text-gray-600">Bio:</span>
-            <p class="text-gray-800">Web developer with a passion for creating elegant, responsive web applications.</p>
-        </div>
+        <!-- Profile Details -->
+        <div class="space-y-4 rounded-lg bg-white p-6 border">
 
-        <!-- Date of Birth -->
-        <div class="flex items-center">
-            <span class="w-32 font-medium text-gray-600">Date of Birth:</span>
-            <p class="text-gray-800">January 15, 1990</p>
-        </div>
+            <!-- Address -->
+            <div class="flex items-center">
+                <span class="w-32 font-medium text-gray-600">Address:</span>
+                <p class="text-gray-800">1234 Main St, Springfield, IL</p>
+            </div>
 
-        <!-- Joined Date -->
-        <div class="flex items-center">
-            <span class="w-32 font-medium text-gray-600">Joined:</span>
-            <p class="text-gray-800">March 5, 2020</p>
+            <!-- Bio -->
+            <div class="flex items-center">
+                <span class="w-32 font-medium text-gray-600">Bio:</span>
+                <p class="text-gray-800">Web developer with a passion for creating elegant, responsive web applications.
+                </p>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="flex items-center">
+                <span class="w-32 font-medium text-gray-600">Date of Birth:</span>
+                <p class="text-gray-800">January 15, 1990</p>
+            </div>
+
+            <!-- Joined Date -->
+            <div class="flex items-center">
+                <span class="w-32 font-medium text-gray-600">Joined:</span>
+                <p class="text-gray-800">March 5, 2020</p>
+            </div>
         </div>
+        }
+
     </div>
 </div>
