@@ -12,6 +12,7 @@ import { PortalContainerComponent } from './components/portal-container/portal-c
 import { CheckoutModule } from '../checkout/checkout.module';
 import { CoreModule } from "../../core/core.module";
 import { OrderCardComponent } from './pages/orders/order-card/order-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { OrderCardComponent } from './pages/orders/order-card/order-card.compone
     CommonModule,
     CustomerPortalRoutingModule,
     CheckoutModule,
-    CoreModule
+    CoreModule,
+    ReactiveFormsModule
 ]
 })
 export class CustomerPortalModule { }

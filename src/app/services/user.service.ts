@@ -25,7 +25,12 @@ export class UserService extends BaseService {
     }
     return null;
   }
-  
+
+  public set loggedInUser(user: User) {
+    const userInfo = btoa(JSON.stringify(user));
+    localStorage.setItem(Environment.tokenKey, userInfo)
+    this._loggedInUser = user
+  }
   //#region Auth
 
   public getOtp(mobile: string): Observable<string> {
@@ -43,11 +48,15 @@ export class UserService extends BaseService {
   }
 
   public registerUser(mobile: string): Observable<User> {
-    return this.http.post<User>(this.apiRoutes.user, { mobile },{headers:this.skipAuthHeader});
+    return this.http.post<User>(this.apiRoutes.user, { mobile, createdAt: new Date() }, { headers: this.skipAuthHeader });
+  }
+
+  public updateUser(userDetails: Partial<User>): Observable<User> {
+    return this.http.patch<User>(this.apiRoutes.userById(userDetails.id!), userDetails);
   }
 
   private getUser(mobile: string) {
-    return this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`,{headers:this.skipAuthHeader});
+    return this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`, { headers: this.skipAuthHeader });
   }
 
   public validateOtp(data: { enteredOtp: number | string, requiredOtp: number | string, mobile: string }) {
@@ -56,9 +65,7 @@ export class UserService extends BaseService {
       return this.getUser(data.mobile).pipe(
         map(a => a[0]),
         tap(user => {
-          const userInfo = btoa(JSON.stringify(user));
-          localStorage.setItem(Environment.tokenKey, userInfo)
-          this._loggedInUser = user
+          this.loggedInUser = user;
         }),
         switchMap(() => of(true))
       );

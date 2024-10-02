@@ -29,7 +29,7 @@ export class ProductService extends BaseService {
   }
 
   public addProductToWishlist(data: Product) {
-    const wProduct: Wishlist = { ...data, userId: this.userId };
+    const wProduct: Wishlist = { ...data, userId: this.userId! };
     return this.http.post<Product>(this.apiRoutes.wishlist, wProduct);
   }
 
@@ -46,7 +46,7 @@ export class ProductService extends BaseService {
   }
 
   public addProductToCart(data: Product) {
-    const cProduct: Cart = { ...data, userId: this.userId };
+    const cProduct: Cart = { ...data, userId: this.userId! };
     return this.http.post<Product>(this.apiRoutes.cart, cProduct);
   }
 

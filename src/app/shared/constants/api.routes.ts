@@ -18,5 +18,6 @@ export const ApiRoutes = {
     getOtp:`${baseUrl}/auth/getOtp`,
     validateOtp:`${baseUrl}/auth/validateOtp`,
     user:`${baseUrl}/users`,
+    userById:(ID: string | number) => `${baseUrl}/users/${ID}`,
 };
 
