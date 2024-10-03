@@ -5,7 +5,6 @@ import { CustomerPortalRoutingModule } from './customer-portal-routing.module';
 import { CustomerPortalComponent } from './customer-portal.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { AccountDetailsComponent } from './pages/account-details/account-details.component';
-import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { PortalContainerComponent } from './components/portal-container/portal-container.component';
@@ -20,7 +19,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     CustomerPortalComponent,
     OrdersComponent,
     AccountDetailsComponent,
-    ChangePasswordComponent,
     DashboardComponent,
     OrderDetailsComponent,
     PortalContainerComponent,

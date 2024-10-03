@@ -4,7 +4,7 @@ import { User } from '@app/modals/user';
 import { BaseService } from '@core/base/base.service';
 import { generateOTP } from '@core/utils/common.util';
 import { Environment } from '@environment/environment.dev';
-import { map, Observable, of, switchMap, tap } from 'rxjs';
+import { forkJoin, map, Observable, of, switchMap, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -71,6 +71,14 @@ export class UserService extends BaseService {
       );
     }
     return of(false);
+  }
+
+  public validateMobileNumber(mobile: string): Observable<User[]> {
+    const mobileRequest = this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`);
+    const alternateMobileRequest = this.http.get<User[]>(`${this.apiRoutes.user}?alternateMobile=${mobile}`);
+    return forkJoin({ mobile: mobileRequest, alternateMobile: alternateMobileRequest }).pipe(
+      map(({ mobile, alternateMobile }) => [...mobile, ...alternateMobile.filter(a=>a.alternateMobile)])
+    );
   }
 
   //#endregion Auth

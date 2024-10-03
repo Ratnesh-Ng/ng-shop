@@ -5,7 +5,6 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { AccountDetailsComponent } from './pages/account-details/account-details.component';
-import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 const routes: Routes = [
   {
@@ -16,7 +15,6 @@ const routes: Routes = [
       { path: 'orders', component: OrdersComponent },
       { path: 'order/details/:id', component: OrderDetailsComponent },
       { path: 'profile', component: AccountDetailsComponent },
-      { path: 'change-password', component: ChangePasswordComponent },
     ]
   },
 ];
