@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, AsyncValidatorFn, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { UserDetailsForm } from '@app/modals/user';
 import { BaseComponent } from '@core/base/base.component';
+import { logInvalidControls, scrollToTop } from '@core/utils/common.util';
 import { postData } from '@core/utils/http.util';
 import { catchError, delay, map, Observable, of, switchMap } from 'rxjs';
 
@@ -13,18 +14,20 @@ import { catchError, delay, map, Observable, of, switchMap } from 'rxjs';
 export class AccountDetailsComponent extends BaseComponent implements OnInit {
   public editMode = false;
   public userDetailsForm: FormGroup<UserDetailsForm> = new FormGroup<UserDetailsForm>({
-    alternateMobile: new FormControl(null, { asyncValidators: [this.phoneNumberValidator()] }),
-    dob: new FormControl(null, { validators: [Validators.required] }),
-    email: new FormControl(null, { validators: [Validators.required] }),
-    gender: new FormControl(null, { validators: [Validators.required] }),
+    // eslint-disable-next-line no-useless-escape
+    email: new FormControl(null, { validators: [Validators.required, Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/),] }),
     id: new FormControl(null, { validators: [Validators.required] }),
-    mobile: new FormControl(null, { validators: [Validators.required], asyncValidators: [this.phoneNumberValidator()] }),
-    name: new FormControl(null, { validators: [Validators.required] }),
     profilePicture: new FormControl(null),
-    username: new FormControl(null, { validators: [Validators.required] }),
+    name: new FormControl(null, { validators: [Validators.required, Validators.minLength(3)] }),
+    username: new FormControl(null, { validators: [Validators.required, Validators.minLength(3)] }),
+    mobile: new FormControl(null, { validators: [Validators.required, Validators.pattern(/^\d{10}$/),], asyncValidators: [this.phoneNumberValidator()] }),
+    alternateMobile: new FormControl(null, { validators: [Validators.pattern(/^\d{10}$/)], asyncValidators: [this.phoneNumberValidator()] }),
+    gender: new FormControl(null, { validators: [Validators.required] }),
+    dob: new FormControl(null, { validators: [Validators.required] }),
   })
 
   ngOnInit(): void {
+    scrollToTop();
     this.userDetailsForm.patchValue(this.userService.loggedInUser!);
   }
 
@@ -39,7 +42,7 @@ export class AccountDetailsComponent extends BaseComponent implements OnInit {
         this.editMode = false;
       }).catch(err => console.log(err));
     } else {
-      console.warn('form is invalid')
+      console.warn('form is invalid', logInvalidControls(this.userDetailsForm));
     }
   }
 
