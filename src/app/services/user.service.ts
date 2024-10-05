@@ -93,15 +93,15 @@ export class UserService extends BaseService {
   }
 
   public deleteAddress(id: string | number) {
-    return this.http.delete<Address[]>(this.apiRoutes.addressByID(id));
+    return this.http.delete<Address>(this.apiRoutes.addressByID(id));
   }
 
   public updateAddress(newAddress: Address) {
-    return this.http.put<Address[]>(this.apiRoutes.addressByID(newAddress.id!), newAddress);
+    return this.http.put<Address>(this.apiRoutes.addressByID(newAddress.id!), newAddress);
   }
 
   public addAddress(newAddress: Address) {
-    return this.http.post<Address[]>(this.apiRoutes.address, {...newAddress,userId: this.loggedInUser?.id});
+    return this.http.post<Address>(this.apiRoutes.address, {...newAddress,userId: this.loggedInUser?.id});
   }
   //#endregion Address
 }

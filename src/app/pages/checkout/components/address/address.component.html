@@ -44,7 +44,9 @@
     </div>
 </div>
 
-<p-dialog [(visible)]="showAddressEditModal" modal="true" header="Modal Title" [closable]="false" [resizable]="false"
-    [draggable]="false" (onHide)="showAddressEditModal = false">
-    <app-address-edit (onClose)="onAddressModalEventCapture($event)"></app-address-edit>
-</p-dialog>
+<ng-container *ngIf="showAddressEditModal">
+    <p-dialog [(visible)]="showAddressEditModal" modal="true" header="Modal Title" [closable]="false" [resizable]="false"
+        [draggable]="false" (onHide)="showAddressEditModal = false">
+        <app-address-edit (onClose)="onAddressModalEventCapture($event)" [addressToUpdate]="addressToUpdate()!"></app-address-edit>
+    </p-dialog>
+</ng-container>

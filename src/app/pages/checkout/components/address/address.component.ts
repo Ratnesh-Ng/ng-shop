@@ -16,6 +16,7 @@ export class AddressComponent extends CheckoutBase implements OnInit {
 
   public addresses: WritableSignal<Address[]> = signal<Address[]>([]);
   public selectedAddress: WritableSignal<Address | null> = signal<Address | null>(null);
+  public addressToUpdate = signal<Address | null>(null);
 
   async ngOnInit() {
     scrollToTop()
@@ -64,24 +65,32 @@ export class AddressComponent extends CheckoutBase implements OnInit {
 
   public onEventCapture(event: AddressCardEvent) {
     if (event.eventType == 'remove') {
-      // remove address
+      const addressId = event.data.id;
+      postData(this.userService.deleteAddress(addressId!)).then(() => {
+        this.addresses.update((val) => val.filter(a => a.id != addressId))
+      })
     } else if (event.eventType == 'onCheckToggle') {
       this.onAddressSelect(event.data);
+    } else if (event.eventType == 'edit') {
+      this.addressToUpdate.set(event.data);
+      this.showAddressModal();
     }
   }
 
-  
+
   public showAddressEditModal: boolean = false;
   public showAddressModal() {
     this.showAddressEditModal = true;
   }
 
-  public onAddressModalEventCapture(event:AddressEditModalEvent){
-    if(event.eventType == 'close'){
+  public async onAddressModalEventCapture(event: AddressEditModalEvent) {
+    if (event.eventType == 'close') {
       this.showAddressEditModal = false;
-    }else if(event.eventType == 'submit'){
-      console.log(event.address)
+    } else if (event.eventType == 'submit') {
+      this.showAddressEditModal = false
+      this.addresses.set(await getData(this.userService.queryAddress()));
     }
+    this.addressToUpdate.set(null);
   }
   //#endregion public
 

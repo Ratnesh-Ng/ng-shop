@@ -1,7 +1,9 @@
-import { Component, OnInit, output, } from '@angular/core';
+import { Component, inject, input, OnInit, output, } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AddressEditModalEvent, AddressForm, AddressType } from '@app/modals/address';
+import { Address, AddressEditModalEvent, AddressForm, AddressType } from '@app/modals/address';
 import { logInvalidControls } from '@core/utils/common.util';
+import { postData } from '@core/utils/http.util';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'app-address-edit',
@@ -9,8 +11,9 @@ import { logInvalidControls } from '@core/utils/common.util';
   styleUrl: './address-edit.component.scss'
 })
 export class AddressEditComponent implements OnInit {
-
+  private userService = inject(UserService);
   public onClose = output<AddressEditModalEvent>();
+  public addressToUpdate = input<Address>();
   public addressTypes = AddressType;
 
   public addressForm: FormGroup<AddressForm> = new FormGroup<AddressForm>({
@@ -29,18 +32,23 @@ export class AddressEditComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    console.log('first')
+    if (this.addressToUpdate()) {
+      this.addressForm.patchValue(this.addressToUpdate()!);
+    }
   }
 
-  save(): void {
+  public save(): void {
     if (this.addressForm.valid) {
-      this.onClose.emit({ eventType: 'submit', address: this.addressForm.getRawValue() })
+      const formValue = this.addressForm.getRawValue();
+      postData(formValue.id ? this.userService.updateAddress(formValue) : this.userService.addAddress(formValue)).then(res => {
+        this.onClose.emit({ eventType: 'submit', address: res })
+      }).catch(err => console.log(err));
     } else {
       console.warn('Form is invalid', logInvalidControls(this.addressForm));
     }
   }
 
-  close(): void {
+  public close(): void {
     this.onClose.emit({ eventType: 'close' })
   }
 }
