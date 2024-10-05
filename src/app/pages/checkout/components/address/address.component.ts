@@ -1,5 +1,5 @@
 import { Component, computed, OnInit, signal, WritableSignal } from '@angular/core';
-import { Address, AddressCardEvent } from '@app/modals/address';
+import { Address, AddressCardEvent, AddressEditModalEvent } from '@app/modals/address';
 import { getData, postData } from '@core/utils/http.util';
 import { CheckoutBase } from '../../base/checkout-base';
 import { scrollToTop } from '@core/utils/common.util';
@@ -69,7 +69,21 @@ export class AddressComponent extends CheckoutBase implements OnInit {
       this.onAddressSelect(event.data);
     }
   }
-  ////#endregion public
+
+  
+  public showAddressEditModal: boolean = false;
+  public showAddressModal() {
+    this.showAddressEditModal = true;
+  }
+
+  public onAddressModalEventCapture(event:AddressEditModalEvent){
+    if(event.eventType == 'close'){
+      this.showAddressEditModal = false;
+    }else if(event.eventType == 'submit'){
+      console.log(event.address)
+    }
+  }
+  //#endregion public
 
   //#region Private
 

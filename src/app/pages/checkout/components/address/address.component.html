@@ -4,7 +4,7 @@
             <div class="space-y-2">
                 <div id="add-address" class="flex justify-between items-center">
                     <span class="capitalize font-semibold">Select delivery address</span>
-                    <button
+                    <button (click)="showAddressModal()"
                         class="rounded text-[11px] border border-orange-500 font-semibold px-3 py-2 uppercase text-orange-600 align-middle">
                         Add new address
                     </button>
@@ -43,3 +43,8 @@
         </div>
     </div>
 </div>
+
+<p-dialog [(visible)]="showAddressEditModal" modal="true" header="Modal Title" [closable]="false" [resizable]="false"
+    [draggable]="false" (onHide)="showAddressEditModal = false">
+    <app-address-edit (onClose)="onAddressModalEventCapture($event)"></app-address-edit>
+</p-dialog>

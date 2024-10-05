@@ -13,7 +13,8 @@ export const generateFakeAddress = (id: number): Address => {
         state: faker.location.state(),
         type: faker.helpers.arrayElement(Object.values(AddressType)),
         isDefaultAddress: faker.datatype.boolean(),
-        email:faker.internet.email()
+        email: faker.internet.email(),
+        userId: null
     };
 }
 

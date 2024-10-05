@@ -2195,7 +2195,114 @@
       "quantity": 2
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "b437",
+      "uuid": "430bc5fb-62de-4d6a-add3-84dce1dc8836",
+      "name": " Rustic Fresh Yoga Mat",
+      "brand": "Medhurst LLC",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Open-architected interactive instruction set",
+      "actualPrice": 725,
+      "sellingPrice": 362.5,
+      "discount": 50,
+      "ratings": 4.8,
+      "reviewsCount": 204,
+      "promotion": true,
+      "urls": [
+        "https://picsum.photos/seed/VAIpez1f/640/480",
+        "https://picsum.photos/seed/vONoMJ/640/480",
+        "https://picsum.photos/seed/utLNfSakYe/640/480",
+        "https://loremflickr.com/640/480?lock=1458542840119296",
+        "https://picsum.photos/seed/z2eSIC/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Generic Steel Pizza",
+          "info": [
+            "Vulnero synagoga censura alii cervus.",
+            "Adficio vester admoneo summa carbo defungo considero."
+          ],
+          "link": "https://acceptable-bakeware.info/",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Licensed Frozen Salad",
+          "info": [
+            "Audax adipisci circumvenio crepusculum tam."
+          ],
+          "link": "https://magnificent-tribe.biz",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Intelligent Rubber Towels",
+          "info": [
+            "Chirographum canonicus vapulus claro vinco comptus.",
+            "Cultellus animadverto suus ventus vilitas vetus abstergo."
+          ],
+          "link": "https://unaware-fortress.biz/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Bespoke Bronze Sausages",
+          "info": [
+            "Curtus solum approbo speciosus cognatus."
+          ],
+          "link": "https://prize-dog.org",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Rustic Cotton Soap",
+          "info": [
+            "Vergo vir id vinco conforto totus vir defero decimus."
+          ],
+          "link": "https://dull-ounce.name/",
+          "linkLabel": "Explore"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Fit",
+          "info": "Regular Fit"
+        },
+        {
+          "title": "Occasion",
+          "info": "Casual supposing ha"
+        },
+        {
+          "title": "Fabric",
+          "info": "Denim"
+        },
+        {
+          "title": "Season",
+          "info": "Winter Line"
+        },
+        {
+          "title": "Fabric",
+          "info": "Polyester"
+        }
+      ],
+      "availableQuantity": 61,
+      "seller": {
+        "id": 190,
+        "name": "Hackett and Sons"
+      },
+      "deliveredTill": "2024-10-12T03:26:47.996Z",
+      "size": "M",
+      "quantity": 3,
+      "userId": "91eb"
+    }
+  ],
   "offers": [
     {
       "id": "1286",
@@ -2268,7 +2375,114 @@
       "link": ""
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "b437",
+      "uuid": "430bc5fb-62de-4d6a-add3-84dce1dc8836",
+      "name": " Rustic Fresh Yoga Mat",
+      "brand": "Medhurst LLC",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J Open-architected interactive instruction set",
+      "actualPrice": 725,
+      "sellingPrice": 362.5,
+      "discount": 50,
+      "ratings": 4.8,
+      "reviewsCount": 204,
+      "promotion": true,
+      "urls": [
+        "https://picsum.photos/seed/VAIpez1f/640/480",
+        "https://picsum.photos/seed/vONoMJ/640/480",
+        "https://picsum.photos/seed/utLNfSakYe/640/480",
+        "https://loremflickr.com/640/480?lock=1458542840119296",
+        "https://picsum.photos/seed/z2eSIC/640/480"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "otherInfo": [
+        "100% Original Products",
+        "Pay on delivery might be available",
+        "Easy 14 days returns and exchanges"
+      ],
+      "offers": [
+        {
+          "title": "Generic Steel Pizza",
+          "info": [
+            "Vulnero synagoga censura alii cervus.",
+            "Adficio vester admoneo summa carbo defungo considero."
+          ],
+          "link": "https://acceptable-bakeware.info/",
+          "linkLabel": "Shop Now"
+        },
+        {
+          "title": "Licensed Frozen Salad",
+          "info": [
+            "Audax adipisci circumvenio crepusculum tam."
+          ],
+          "link": "https://magnificent-tribe.biz",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Intelligent Rubber Towels",
+          "info": [
+            "Chirographum canonicus vapulus claro vinco comptus.",
+            "Cultellus animadverto suus ventus vilitas vetus abstergo."
+          ],
+          "link": "https://unaware-fortress.biz/",
+          "linkLabel": "Learn More"
+        },
+        {
+          "title": "Bespoke Bronze Sausages",
+          "info": [
+            "Curtus solum approbo speciosus cognatus."
+          ],
+          "link": "https://prize-dog.org",
+          "linkLabel": "Explore"
+        },
+        {
+          "title": "Rustic Cotton Soap",
+          "info": [
+            "Vergo vir id vinco conforto totus vir defero decimus."
+          ],
+          "link": "https://dull-ounce.name/",
+          "linkLabel": "Explore"
+        }
+      ],
+      "specifications": [
+        {
+          "title": "Fit",
+          "info": "Regular Fit"
+        },
+        {
+          "title": "Occasion",
+          "info": "Casual supposing ha"
+        },
+        {
+          "title": "Fabric",
+          "info": "Denim"
+        },
+        {
+          "title": "Season",
+          "info": "Winter Line"
+        },
+        {
+          "title": "Fabric",
+          "info": "Polyester"
+        }
+      ],
+      "availableQuantity": 61,
+      "seller": {
+        "id": 190,
+        "name": "Hackett and Sons"
+      },
+      "deliveredTill": "2024-10-12T03:26:47.996Z",
+      "size": "M",
+      "quantity": 3,
+      "userId": "91eb"
+    }
+  ],
   "addresses": [
     {
       "id": "d1b1",

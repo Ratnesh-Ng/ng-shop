@@ -97,11 +97,11 @@ export class UserService extends BaseService {
   }
 
   public updateAddress(newAddress: Address) {
-    return this.http.put<Address[]>(this.apiRoutes.addressByID(newAddress.id), newAddress);
+    return this.http.put<Address[]>(this.apiRoutes.addressByID(newAddress.id!), newAddress);
   }
 
   public addAddress(newAddress: Address) {
-    return this.http.post<Address[]>(this.apiRoutes.address, newAddress);
+    return this.http.post<Address[]>(this.apiRoutes.address, {...newAddress,userId: this.loggedInUser?.id});
   }
   //#endregion Address
 }
