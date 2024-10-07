@@ -102,7 +102,15 @@ export class CartComponent extends CheckoutBase implements OnInit {
   }
 
   public navigateToAddress() {
-    this.router.navigateByUrl(this.appRoutes.address);
+    if (this.cartItems().length) {
+      this.router.navigateByUrl(this.appRoutes.address);
+    } else {
+      this.productStore.messageService.add({
+        severity: 'error',
+        detail: `Add some products`,
+        life: 2000
+      })
+    }
   }
 
   public onEventCapture(event: CartItemEvent, index: number) {

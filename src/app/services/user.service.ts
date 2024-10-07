@@ -36,7 +36,7 @@ export class UserService extends BaseService {
   public getOtp(mobile: string): Observable<string> {
     return this.getUser(mobile).pipe(
       switchMap(users => {
-        if (users.length) {
+        if (users) {
           return of(generateOTP()); // If user exists, generate OTP
         } else {
           return this.registerUser(mobile).pipe(
@@ -56,14 +56,31 @@ export class UserService extends BaseService {
   }
 
   private getUser(mobile: string) {
-    return this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`, { headers: this.skipAuthHeader });
+    return this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`, { headers: this.skipAuthHeader })
+      .pipe(
+        switchMap((users: User[]) => {
+          if (users.length > 0) {
+            const user = users[0];
+            // Fetch default address for the user
+            return this.http.get<Address[]>(`${this.apiRoutes.address}?userId=${user.id}&isDefaultAddress=true`, { headers: this.skipAuthHeader })
+              .pipe(
+                map((addresses: Address[]) => {
+                  // Attach the default address to the user object
+                  user.address = addresses.length > 0 ? addresses[0] : null;
+                  return user;
+                })
+              );
+          } else {
+            throw new Error('User not found');
+          }
+        })
+      );
   }
 
   public validateOtp(data: { enteredOtp: number | string, requiredOtp: number | string, mobile: string }) {
     // return this.http.post<number>(this.apiRoutes.validateOtp,data);
     if (data.enteredOtp == data.requiredOtp) {
       return this.getUser(data.mobile).pipe(
-        map(a => a[0]),
         tap(user => {
           this.loggedInUser = user;
         }),
@@ -77,7 +94,7 @@ export class UserService extends BaseService {
     const mobileRequest = this.http.get<User[]>(`${this.apiRoutes.user}?mobile=${mobile}`);
     const alternateMobileRequest = this.http.get<User[]>(`${this.apiRoutes.user}?alternateMobile=${mobile}`);
     return forkJoin({ mobile: mobileRequest, alternateMobile: alternateMobileRequest }).pipe(
-      map(({ mobile, alternateMobile }) => [...mobile, ...alternateMobile.filter(a=>a.alternateMobile)])
+      map(({ mobile, alternateMobile }) => [...mobile, ...alternateMobile.filter(a => a.alternateMobile)])
     );
   }
 
@@ -101,7 +118,7 @@ export class UserService extends BaseService {
   }
 
   public addAddress(newAddress: Address) {
-    return this.http.post<Address>(this.apiRoutes.address, {...newAddress,userId: this.loggedInUser?.id});
+    return this.http.post<Address>(this.apiRoutes.address, { ...newAddress, userId: this.loggedInUser?.id });
   }
   //#endregion Address
 }

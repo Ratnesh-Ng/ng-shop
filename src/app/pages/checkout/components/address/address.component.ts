@@ -32,10 +32,13 @@ export class AddressComponent extends CheckoutBase implements OnInit {
   });
 
   public navigateToPayment() {
-    if (this.selectedAddress()) {
+    const isAddressSelected = this.selectedAddress();
+    const hasCartItem = this.cartItems().length > 0;
+
+    if (hasCartItem && isAddressSelected) {
       // const toSave: PlaceOrder = {
       //   addressId: this.selectedAddress()?.id,
-      //   products: this.cartItems().map(a => { return { id: a.id, quantity: 1 }; }),//TODO replace with orignal quantity
+      //   products: this.cartItems().map(a => { return { id: a.id, quantity: 1 }; }),//TODO replace with original quantity
       //   PaymentInfo: createFakePayment(),
       //   orderStatus: "Pending" //TODO replace it with enum
       // };
@@ -57,7 +60,7 @@ export class AddressComponent extends CheckoutBase implements OnInit {
     } else {
       this.productStore.messageService.add({
         severity: 'error',
-        detail: `Please select address`,
+        detail: hasCartItem ? (isAddressSelected ? undefined : `Please select address`) : `Add some products`,
         life: 2000
       })
     }
