@@ -40,7 +40,9 @@ export class AddressEditComponent implements OnInit {
   public save(): void {
     if (this.addressForm.valid) {
       const formValue = this.addressForm.getRawValue();
-      postData(formValue.id ? this.userService.updateAddress(formValue) : this.userService.addAddress(formValue)).then(res => {
+      const { id, ...restValue } = formValue;
+      const service = formValue.id ? this.userService.updateAddress(formValue) : this.userService.addAddress(restValue)
+      postData(service).then(res => {
         this.onClose.emit({ eventType: 'submit', address: res })
       }).catch(err => console.log(err));
     } else {

@@ -85,7 +85,7 @@ export class UserService extends BaseService {
 
   //#region Address
   public queryAddress() {
-    return this.http.get<Address[]>(this.apiRoutes.address);
+    return this.http.get<Address[]>(`${this.apiRoutes.address}?userId=${this.loggedInUser?.id}`);
   }
 
   public getAddressById(id: number | string) {

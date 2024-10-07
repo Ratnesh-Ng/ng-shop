@@ -2511,6 +2511,20 @@
       "state": "madhya pradesh",
       "type": "Home",
       "isDefaultAddress": null
+    },
+    {
+      "id": "67b1",
+      "email": null,
+      "userId": "5fd3",
+      "name": "Santosh Siddha",
+      "mobile": "9770838402",
+      "pinCode": "742002",
+      "address": "9/4 tante sunar ka bada",
+      "locality": "uprenganj",
+      "city": "Jabalpur",
+      "state": "Madhya pradesh",
+      "type": "Home",
+      "isDefaultAddress": false
     }
   ],
   "orders": [],
