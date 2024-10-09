@@ -44,8 +44,10 @@ export class AddressComponent extends CheckoutBase implements OnInit {
       // };
       //TODO:now delete products from the cart because order is placed
       //replace "Order" modal with "PlaceOrder" 
+      this.calculateProductDetails()
       const orderDate = faker.date.past();
       const deliveryDate = faker.date.between({ from: orderDate, to: faker.date.future() });
+      console.log(this.productDetails)
       const toSave: Order = {
         deliveryDate: deliveryDate,
         orderDate: orderDate,
