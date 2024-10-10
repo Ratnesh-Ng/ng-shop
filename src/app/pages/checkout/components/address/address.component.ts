@@ -57,7 +57,13 @@ export class AddressComponent extends CheckoutBase implements OnInit {
         shippingInfo: this.selectedAddress()!,
       }
       postData<Order>(this.productStore.productService.placeOrder(toSave)).then(() => {
-        this.router.navigateByUrl(this.appRoutes.payment)
+        const deletePromises = this.cartItems().map(a => {
+          return postData(this.productStore.productService.removeProductFromCart(a.id))
+        })
+        Promise.all(deletePromises).then(()=>{
+          this.productStore.cart.data = null;
+          this.router.navigateByUrl(this.appRoutes.payment)
+        })
       })
     } else {
       this.productStore.messageService.add({
