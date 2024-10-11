@@ -206,8 +206,11 @@ export class ProductStoreService extends BaseService {
 
   //#region Order
 
-  //TODO implement caching in orders
+
   public queryOrders(): Observable<Order[] | null> {
+    if (this.orders.data?.length) {
+      return of(this.orders.data);
+    }
     return this.productService.queryOrders().pipe(
       tap((a) => this.orders.data = a),
       catchError((e) => {

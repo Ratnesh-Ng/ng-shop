@@ -47,7 +47,6 @@ export class AddressComponent extends CheckoutBase implements OnInit {
       this.calculateProductDetails()
       const orderDate = faker.date.past();
       const deliveryDate = faker.date.between({ from: orderDate, to: faker.date.future() });
-      console.log(this.productDetails)
       const toSave: Order = {
         deliveryDate: deliveryDate,
         orderDate: orderDate,
@@ -56,11 +55,12 @@ export class AddressComponent extends CheckoutBase implements OnInit {
         products: this.cartItems(),
         shippingInfo: this.selectedAddress()!,
       }
-      postData<Order>(this.productStore.productService.placeOrder(toSave)).then(() => {
+      postData<Order>(this.productStore.productService.placeOrder(toSave)).then((savedOrder) => {
+        this.productStore.orders.data?.push(savedOrder);
         const deletePromises = this.cartItems().map(a => {
           return postData(this.productStore.productService.removeProductFromCart(a.id))
         })
-        Promise.all(deletePromises).then(()=>{
+        Promise.all(deletePromises).then(() => {
           this.productStore.cart.data = null;
           this.router.navigateByUrl(this.appRoutes.payment)
         })
