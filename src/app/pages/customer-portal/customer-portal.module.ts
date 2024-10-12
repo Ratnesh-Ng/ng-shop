@@ -12,6 +12,7 @@ import { CheckoutModule } from '../checkout/checkout.module';
 import { CoreModule } from "../../core/core.module";
 import { OrderCardComponent } from './pages/orders/order-card/order-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SavedAddressComponent } from './pages/saved-address/saved-address.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     OrderDetailsComponent,
     PortalContainerComponent,
-    OrderCardComponent
+    OrderCardComponent,
+    SavedAddressComponent
   ],
   imports: [
     CommonModule,
